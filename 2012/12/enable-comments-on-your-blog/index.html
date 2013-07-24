@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Enable Comments On Your Blog</title>
+  
+
+	
+		<meta name="description" content="If you have a blog and don't have comments enabled then you don't have a blog. You have a soapbox." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>December 10, 2012</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p><a href="http://www.flickr.com/photos/sumit/">Sumit</a></p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm1.staticflickr.com/1/4093665_dbd6d8c170_b.jpg">
+		
+
+		<h1>Enable Comments On Your Blog</h1>
+
+		<div class="content">
+		<p>If you post content on the Internet but don't have comments enabled you're missing out. You're already writing valuable content and sharing ideas, but you're not getting feedback on those ideas? The goal of posting any content is about sharing ideas with others. Your blog should be a place where people come to communicate and discuss subjects around your thoughts and ideas.</p>
+
+<p>Although he uses it for <em>comedic effect</em>, I agree with <a href="http://www.codinghorror.com/blog/2006/04/a-blog-without-comments-is-not-a-blog.html">Jeff Atwood</a> about not having comments enabled on your blog.</p>
+
+<blockquote><p>It's more like a church pulpit. You preach the word, and the audience passively receives your evangelical message. Straight from God's lips to their ears. When the sermon is over, the audience shuffles out of the church, inspired for another week. And there's definitely no question and answer period afterward.</p></blockquote>
+
+<p>Using the Internet to rant is a pretty common use case. The Internet has enough blogs and communities that constantly rant. Standing on a soapbox and shouting out problems doesn't change anything. To enable change you need to <a href="http://www.entrepreneur.com/article/223993">start a conversation</a>. Enabling comments on your blog is the easiest way to begin a conversation around your ideas.</p>
+
+<h2>Default Blogs and Layouts</h2>
+
+<p>Tumblr annoys me. Although I love the idea of giving users awesome default designs and layouts, <a href="http://www.tumblr.com/help">Tumblr doesn't enable comments by default</a>. It infuriates me. Any time I see <em>USER55 posted this from THISAWESOMESITE</em> I get frustrated.</p>
+
+<p><a href="http://krisallenfields.tumblr.com/post/37597373847/trifecta-blocks-challenge">This Guy</a> talks about leaving his wife during pregnancy to study programming in order to provide a better future for his son. It's an awesome post and has great story telling. But, I want to leave a comment. I want to tell him good luck in his endeavors as a father and explain how fatherhood is a true entrepreneurial endeavor. But, I can't. There is no place for me to respond to his thoughts or share my voice.</p>
+
+<p>I like what <a href="http://dcurt.is/">Dustin Curtis</a> has done with Svbtle. Svbtle has beautiful default layouts and many great authors, however, I can't comment on any of their posts. At most, I can give them Kudos. It drives me crazy!</p>
+
+<h2>Leveraging Other Communities</h2>
+
+<p>Leveraging another community for your comments is an interesting idea. Sites like HackerNews and Reddit have already built communities around topics you may write about.</p>
+
+<p>Leveraging other communities for comments is interesting, however, you will be missing out on comments from people who don't know those communities exist. You could do what <a href="http://tom.preston-werner.com/">Tom Preston-Werner</a> does and bring awareness to comments on HackerNews. At the bottom of each post he tells his readers they can , <em>Discuss this post on Hacker News</em>.</p>
+
+<p>You will also not benefit from diverse opinions. Communities that are already established already have a core set of ideas and values they hold to be important. The community was built around these ideas.</p>
+
+<p>If you enable comments on your blog though you create your own community. If someone wants to say something directly to you they can. With third-party sites if someone wants to write something to the author, the author may or may not see it. On HackerNews, I've seen responses that say things like, "The author should do this..." These are the types of comments that should be on their blog. In posting to a third-party site, there is no guarantee the author will ever see their comment.</p>
+
+<p>The comments on your blog should be on your blog, not another site. The information should be kept together.</p>
+
+<h2>Use Disqus For Comments</h2>
+
+<p>I love seeing Disqus on blogs. I'm more likely to post a comment because I know there is an easy way for me to do it. If you host your own comments, through a WordPress instance, I probably won't comment.</p>
+
+<p>I don't want to create credentials for a website or give personal information before I can comment. Although, these methods have been created to deter spam, they increase my barrier to comment on your thoughts, since I don't know if I'm going to contribute to your site more than once.</p>
+
+<p>Disqus has established an identity for commenter's. The person's identity travels from site to site. This is a better way of decreasing spam while also decreasing the barrier to entry for comment.</p>
+
+<p>With Disqus, I can post a comment on one site and then be alerted to a response while reading content on another site. If I decide to comment on a new post, I'm already <a href="/2009/09/understanding-http-cookies/" title="Understanding Cookies">logged in</a>. Disqus has created a central place to manage my responses across all the communities I participate in.</p>
+
+<p>When I first started seeing Disqus on blogs, I was pessimistic. I couldn't see the value of hosting comments through a third-party from an <a href="/2012/10/seo-layout-and-site-tips/">SEO perspective</a>. But, after using Disqus, I changed my mind on the value of their service. They also fixed the original <a href="http://blog.disqus.com/post/22325598158/try-out-disqus-2012">SEO problems</a>.</p>
+
+<p>The Internet allows us to write content and share it with others. Books have been published for thousands of years using this method. An author writes content, gets the content published, and distributes it to an audience.</p>
+
+<p>However, the Internet gives us a better medium than books. Rather than using the traditional method to write and publish, we can enable conversation. We can communicate our ideas and thoughts and allow the world, or anyone with an Internet connection, to weigh in on them. This a much better approach in sharing our ideas.</p>
+
+<p>So turn on comments and begin a conversation.</p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#blogging-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'blogging', 'Enable Comments On Your Blog']);"><i class="icon-tags icon-white"></i> blogging <span>11</span></a></li>
+     
+    	<li><a href="/tags.html#communication-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'communication', 'Enable Comments On Your Blog']);"><i class="icon-tags icon-white"></i> communication <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#community-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'community', 'Enable Comments On Your Blog']);"><i class="icon-tags icon-white"></i> community <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#product experience-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'product experience', 'Enable Comments On Your Blog']);"><i class="icon-tags icon-white"></i> product experience <span>3</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2012/12/enable-comments-on-your-blog/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/12/enable-comments-on-your-blog/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=Enable Comments On Your Blog - bretthard.in/2012/12/enable-comments-on-your-blog/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/12/enable-comments-on-your-blog/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Enable Comments On Your Blog&amp;url=bretthard.in/2012/12/enable-comments-on-your-blog/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2012/12/enable-comments-on-your-blog/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From Enable Comments On Your Blog']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From Enable Comments On Your Blog']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From Enable Comments On Your Blog']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From Enable Comments On Your Blog']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

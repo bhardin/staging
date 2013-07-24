@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Find Long Tail Keywords Using Google Analytics</title>
+  
+
+	
+		<meta name="description" content="How do you find interesting articles to write about? You can use long tail keywords that you already have to generate more traffic from them." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>October 22, 2012</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p><a href="http://www.flickr.com/photos/photophilde/">photophilde</a></p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm4.staticflickr.com/3188/2821648357_c9dff08a6b_b.jpg">
+		
+
+		<h1>Find Long Tail Keywords Using Google Analytics</h1>
+
+		<div class="content">
+		<p>I recently discovered <a href="http://www.hittail.com">HitTail</a>, an awesome service for discovering long tail keywords to <a href="/2012/10/seo-layout-and-site-tips/">maximize SEO</a>.</p>
+
+<p>HitTail uses a proprietary alogrithm for identifying keywords used in search terms which you should target. After using the service for about a week, I wanted to understand how the algorithm worked. I tumbled down the rabbit hole and learned crazy amounts along the way.</p>
+
+<h2>Long Tail Keywords</h2>
+
+<p>In Search Engine Optimization (SEO) there are two types of keywords. <em>Head Terms</em> and <em>Long Tail keywords</em>. Head terms are single keywords that many people target. An example of a head term would be <em>detergent</em>. Examples of long tail keywords would be <em>Tough Stain Detergent</em>, <em>Good for the Environment Detergent</em>, and <em>Mild Gentle on Skin Detergent</em>.</p>
+
+<p>Long tail keywords have many advantages:</p>
+
+<ol>
+<li><p><strong>Higher conversion rates</strong> - Since the user is more specific in their search terms they are more qualified. A user searching for <em>boots</em> is less likely to purchase compared to a user searching for <em>mid-calf black boots with laces</em>.</p></li>
+<li><p><strong>The majority of search traffic is long tail</strong> - Long tail searches make up <a href="http://www.seomoz.org/beginners-guide-to-seo/keyword-research">70% of search traffic</a>. However, I couldn't find a clear definition as to when long tail started and head terms ended.</p></li>
+<li><p><strong>Less competitive</strong> - Sites constantly fight for control of head terms such as Detergent. Long tail keywords, because they are more specific, have less competition.</p></li>
+<li><p><strong>Long Tail helps you capture head terms</strong> - Search engines constantly improve their methods for indexing sites to deliver relevant content to the search being performed. Focusing on long tail keywords can help you capture head terms because you are writing more content, across your site, which all contain head terms.</p></li>
+</ol>
+
+
+<h2>What HitTail does</h2>
+
+<p>According HitTail's <a href="http://www.hittail.com/why.asp">site</a>, "HitTail tells you, in real-time, the most promising organic keywords you should target based on your existing traffic." and is "Guaranteed to increase your organic search traffic"</p>
+
+<p>I really don't care about the "real-time" aspect of the service. What I did want was a way to identify topics I should write about based on what search terms users were using to find my site. This would help me identify posts I could write for <a href="/2012/06/challenge-yourself-always-learn/">additional learning</a>.</p>
+
+<p>Remember, <a href="/2012/10/im-cheap-products-i-pay-for-have-to-be-awesome/">I'm cheap</a> and a service has to be incredible for me to pay for it. I assumed Google Analytics had the same data HitTail was using to determine what long tail keywords I should focus on. So, how could I generate a report in Google Analytics which has the same function as HitTail.</p>
+
+<h2>Identifying the Keywords</h2>
+
+<p>The first thing I did was grab what HitTail was already suggesting for me. Once I had this list, I began searching through <em>Traffic Sources -> Search Engine Optimization -> Queries</em> to identify some common thread among them.</p>
+
+<p>It was interesting that not all of HitTail's suggestions were in Google Analytics. This may be enough for people with larger sites to pay for the service.</p>
+
+<p>Here is a breakdown of the suggested keywords I found in Google Analtyics:</p>
+
+<table class="table">
+<thead>
+<tr>
+<th></th>
+<th align="left"> Query </th>
+<th align="right"> Impressions </th>
+<th align="center"> Clicks </th>
+<th align="center"> Average Position </th>
+<th align="center"> CTR </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> fear of rejection       </td>
+<td align="right"> 170 </td>
+<td align="center">  5  </td>
+<td align="center"> 68  </td>
+<td align="center"> 2.94% </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> market size             </td>
+<td align="right"> 170 </td>
+<td align="center">  5  </td>
+<td align="center"> 140 </td>
+<td align="center"> 2.94% </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> types of personalities  </td>
+<td align="right"> 70  </td>
+<td align="center">  5  </td>
+<td align="center"> 58  </td>
+<td align="center"> 7.14% </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> different personalities </td>
+<td align="right"> 500 </td>
+<td align="center">  16 </td>
+<td align="center"> 30  </td>
+<td align="center"> 3.20% </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> cross site scripting    </td>
+<td align="right"> 90  </td>
+<td align="center">  5  </td>
+<td align="center"> 210 </td>
+<td align="center"> 5.56% </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> different personality   </td>
+<td align="right"> 900 </td>
+<td align="center">  12 </td>
+<td align="center"> 45  </td>
+<td align="center"> 1.33% </td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> types of personality    </td>
+<td align="right"> 60  </td>
+<td align="center">  5  </td>
+<td align="center"> 120 </td>
+<td align="center"> 8.33% </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>My site gets around 400 hits a day. I don't know if the same results would apply to a larger site.</p>
+
+<p>Things I noticed:</p>
+
+<ul>
+<li>Keyword suggestions of either 2 or 3 keywords.</li>
+<li>Average Position was between 30 and 250.</li>
+<li>Click-Through-Rate were all greater than 1.33%.</li>
+<li>Impressions greater than 60.</li>
+</ul>
+
+
+<h2>Creating a Google Analytics Report</h2>
+
+<p>All of the things I noticed seemed to make logical sense. I decided to write a report to filter all of the search queries for the data shown above.</p>
+
+<p>I decided on the following filters:</p>
+
+<ul>
+<li>Clicks Great Than 4</li>
+<li>Average Position Less than 250 and greater than 29.</li>
+<li>CTR greater than 1.5%.</li>
+</ul>
+
+
+<p>I decided to fudge the Click-Through-Rate just a bit, but everything else I left alone. This part was simple through the "Advanced Search" section on the <em>Queries</em> Report.</p>
+
+<p><img src="http://f.cl.ly/items/3W053Y3N2B1W1v2K302p/AdvancedFilter.png" alt="Advanced Search on Google Analytics Queries Report" /></p>
+
+<p>Once I discovered this section, it was easy to create a similar report. I entered all of the filters I decided on.</p>
+
+<p><img src="http://f.cl.ly/items/0a1p0x3Q1R2G1Z072j00/Screen%20shot%202012-10-22%20at%202.01.07%20PM.png" alt="Filtering Queries Report" /></p>
+
+<p>I needed to filter the results one more level by only focusing on search terms of at least 2 words. This was challenging until I figured out I could create filters with regular expressions. I created a regular expressions against the search query with the following:</p>
+
+<pre><code>^([^ ]+ ){1,50}[^ ]+$
+</code></pre>
+
+<p>This filters keywords which have between 1 and 50 spaces in them. This removes all of the "single word" keywords used for head terms. Bam!</p>
+
+<h2>Results</h2>
+
+<p>Although you still need to sift through the terms to identify things to write about, it is pretty awesome to have this report at my finger tips. I don't know whether the report will be as effective as just using a service like HitTail, but it is a start. I will try it for a while and see if it lives up to what I expect.</p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#SEO-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'SEO', 'Find Long Tail Keywords Using Google Analytics']);"><i class="icon-tags icon-white"></i> SEO <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#marketing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'marketing', 'Find Long Tail Keywords Using Google Analytics']);"><i class="icon-tags icon-white"></i> marketing <span>12</span></a></li>
+     
+    	<li><a href="/tags.html#ROI-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'ROI', 'Find Long Tail Keywords Using Google Analytics']);"><i class="icon-tags icon-white"></i> ROI <span>2</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2012/10/find-long-tail-keywords-using-google-analytics/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/10/find-long-tail-keywords-using-google-analytics/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=Find Long Tail Keywords Using Google Analytics - bretthard.in/2012/10/find-long-tail-keywords-using-google-analytics/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/10/find-long-tail-keywords-using-google-analytics/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Find Long Tail Keywords Using Google Analytics&amp;url=bretthard.in/2012/10/find-long-tail-keywords-using-google-analytics/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2012/10/find-long-tail-keywords-using-google-analytics/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From Find Long Tail Keywords Using Google Analytics']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From Find Long Tail Keywords Using Google Analytics']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From Find Long Tail Keywords Using Google Analytics']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From Find Long Tail Keywords Using Google Analytics']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

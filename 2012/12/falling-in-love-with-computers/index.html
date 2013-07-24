@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Falling In Love With Computers</title>
+  
+
+	
+		<meta name="description" content="All of us remember the first time we loved something. This is how I fell in love with computers and technology." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>December 31, 2012</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p>kenfagerdotcom</p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm5.staticflickr.com/4140/4906802490_0997fabd5c_b.jpg">
+		
+
+		<h1>Falling In Love With Computers</h1>
+
+		<div class="content">
+		<p>The first computer I ever used was an Apple IIe. My elementary school had a computer lab and if you went to school early, you could play with computers instead of the playground. Some of the  <em>cool kids</em> would go to the computer room, so I followed. We learned to use <a href="http://en.wikipedia.org/wiki/Logo_(programming_language)">LOGO</a> and BASIC along with playing video games like <a href="http://en.wikipedia.org/wiki/Karateka_(video_game)">Karateka</a>.</p>
+
+<p>These computers, which booted on 5 1/4 floppy disks, were amazing to me and the other kids. I've read about other's early experiences with computers and how they wanted to command them to do their bidding. I was no different. I programmed and entire copy of a Choose Your Own Adventure book using BASIC and GOTO statements.</p>
+
+<p>When I was in 3rd grade, I remember playing some game one of the 5th graders had written. He programmed a space game that procedurally generated a map using the at ("@") symbol. You would use the arrow keys to navigate a space ship, which looked an awful lot like the letter "I", between a ravine. <strong>To this day, I still think how amazing it was that a <a href="http://eviltrout.com/2012/12/30/programming-since-i-was-seven.html">5th grader wrote that program</a>.</strong></p>
+
+<p>Around the same time my father was working at California State University at Sacramento helping professors and other educators connect to the <a href="http://en.wikipedia.org/wiki/PLATO_(computer_system)">PLATO network</a>. In order to understand more about the technology our family purchased our first computer, an Apple Macintosh Classic.</p>
+
+<p>This computer, with it's black and white, monitor wasn't too amazing to me. I couldn't program on it the way I could at school. But, when my dad showed me PLATO my mind was blown. PLATO was an education system and had teaching games you could play. These games would teach all kinds of different things, but my dad decided to show me a math game.</p>
+
+<p>A space ship would fly around the monitor and then face three doors. Upon choosing one of the doors, the game would present a simple math problem, such as 14 minus 6. I would count on my fingers to solve the problem and then enter an answer. The space ship would advance to the next door and present another problem.</p>
+
+<p>After answering the third arithmetic problem, the game said, "stop counting on your fingers." I was mesmerized. How did this computer know I was counting on my fingers? I now understand it was using a simple timer to see how long it took me to enter the answer, but to an 8-year old kid the computer was watching me count on my fingers. <strong>This incident led me to learning as much about computers as I could.</strong></p>
+
+<p>A few years went by and Pentium computers were being released. My frugal family weren't early adopters and couldn't justify the need for a new computer. I would often go to another kids house after school and watch him use DOS commands to install Wolfenstein. The game didn't interest me, but his use of the command line did. After two years of telling my parents stories of him using the command line, my mother sympathized and brought home a 286 which was thrown away from her office. Although, it was ancient, even at that time, I was in love. I quickly destroyed OS/2 and installed DOS 6.22 on the 20MB hard drive and started learning the command line. I tried to install Windows 3.1 on it, but the computer was so old it didn't support it.</p>
+
+<p>My mother also brought home a 14.4 modem, even though 56k modems were already available, I was excited. I quickly went to the grocery store to grab a copy of California Computer News. In the back of CCN was a list of BBS's. Armed with Procomm Plus, I became involved in the BBS community, even though I was mostly interested in playing <a href="http://lord.lordlegacy.com/" title="LORD">LORD</a>.</p>
+
+<p>DOOM soon was released and again my computer wouldn't support it. <strong>The lack of my computer supporting all of these games is probably why I am not as hard core of a gamer as others my age</strong>. Friends of mine would constantly call, <em><a href="http://bbslist.textfiles.com/916/">This BBS sucks</a></em> to try to hopefully play 3 others in a networked version of DOOM.</p>
+
+<p>Since my computer didn't have video games to play, and I had the summer at home by myself, I started delving more into BBS's. Then I discovered the HPVAC scene. An entire underground of BBS's not listed in CCN. Each one had a list of more BBS's. I started calling every local BBS I could find and reading about the hacking, phreaking, virii, anarchy, and cracks scene.</p>
+
+<p>My entire love of computers and information security can be traced to having an old, command-line only, computer that couldn't play video games.</p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#tech-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'tech', 'Falling In Love With Computers']);"><i class="icon-tags icon-white"></i> tech <span>16</span></a></li>
+     
+    	<li><a href="/tags.html#computers-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'computers', 'Falling In Love With Computers']);"><i class="icon-tags icon-white"></i> computers <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#story-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'story', 'Falling In Love With Computers']);"><i class="icon-tags icon-white"></i> story <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#kids-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'kids', 'Falling In Love With Computers']);"><i class="icon-tags icon-white"></i> kids <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#programming-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'programming', 'Falling In Love With Computers']);"><i class="icon-tags icon-white"></i> programming <span>14</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2012/12/falling-in-love-with-computers/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/12/falling-in-love-with-computers/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=Falling In Love With Computers - bretthard.in/2012/12/falling-in-love-with-computers/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/12/falling-in-love-with-computers/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Falling In Love With Computers&amp;url=bretthard.in/2012/12/falling-in-love-with-computers/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2012/12/falling-in-love-with-computers/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From Falling In Love With Computers']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From Falling In Love With Computers']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From Falling In Love With Computers']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From Falling In Love With Computers']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

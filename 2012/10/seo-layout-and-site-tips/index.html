@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: SEO: Layout and Site Tips</title>
+  
+
+	
+		<meta name="description" content="Quick things that I have found about how to layout your site in order to be SEO efficient." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>October 30, 2012</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p>Double--M</p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm5.staticflickr.com/4028/4711121074_c820ccca58_b.jpg">
+		
+
+		<h1>SEO: Layout and Site Tips</h1>
+
+		<div class="content">
+		<p>Every time I create a site layout, I'm always concerned about how to make the site SEO compatible. I'm not talking about hacking the site so that it handles all the <a href="http://www.seomoz.org/google-algorithm-change" title="Changes to Google index algorithm">new algorithms</a> that Google comes out with. I'm talking about just the basics.</p>
+
+<p>The information I can find is always scattered all over the place so I figured for my own reference I would write down all the things I currently know. As I find new things I will add them to this page, so feel free to bookmark this page as a reference.</p>
+
+<p>Please note. If your on Wordpress or an out-of-the-box theme most of this stuff is handled for you. But I like diving into the nitty gritty.</p>
+
+<h2>Understand Keywords</h2>
+
+<p>Keywords are the fundamental thing to understand about SEO. Keywords are the terms people search for in order to find your site. This is what people are constantly battling for with SEO.</p>
+
+<p>You should use keywords <em>a few</em> times in your post. DO NOT over do keywords. There is nothing worse than finding a page that is specifically trying to game the engine. Your content will look nasty and unreadable to humans. If you don't follow this advice I guarantee you at some point you will be penalized by Google.</p>
+
+<p>In order to get the [long tail][] use a keyword phrase. A keyword phrase is going to be 3 to 4 words grouped together that people would search for in order to find your content. Use this phrase at most 2 - 4 times throughout the content of your page. That's it.</p>
+
+<p>This should happen naturally as your write. Don't over do it, the content looks lame and unnatural if you do. I don't even think about keywords when I write anymore. I just write. I did at one point think this was important and even wrote a <a href="/2012/06/jekyll-and-seo-optimization/">Jekyll SEO keyword tool</a>.</p>
+
+<h2>Title Tag</h2>
+
+<p>The title of your post is the <a href="http://www.searchenginejournal.com/on-page-seo-factors-which-ones-have-the-most-impact-on-rankings/40926/">most important</a> factor. You want whatever content you are writing about to be in the title of the page. A title is the first thing humans look at to determine whether what they are about to read is interesting to them. Like humans, search engines use the title for indexing relevant content to keywords. Whatever your post is about should be prominent in the title of the post.</p>
+
+<p>Also, don't put your brand name before what the content is about. The closer the word is to the left of the title the more relevant the content must be.</p>
+
+<p><strong>Good:</strong> SEO: A Quick Blog Primer - Constantly Learning</p>
+
+<p><strong>Bad:</strong> Constantly Learning - SEO: A Quick Blog Primer</p>
+
+<h2>Permalink Structure</h2>
+
+<p>The title of your post should be in the url. Wordpress and most modern blog frameworks, including <a href="https://github.com/mojombo/jekyll/wiki/Permalinks">Jekyll</a> by default put the title of the post in the url.</p>
+
+<p><strong>Good:</strong> http://www.mysite.com/maximizing-seo/</p>
+
+<p><strong>Bad:</strong> http://www.mysite.com/11345/p207.html</p>
+
+<h2>Subfolder or Subdomain</h2>
+
+<p>This is one of the more interesting arguments in the SEO world. To answer this question it <a href="http://www.whitefireseo.com/site-architecture/subdomain-or-subfolder-post-panda/360/">depends on your use case</a>.</p>
+
+<blockquote><p>Subfolders are best for most cases. If your site has a fairly narrow topical focus (movie reviews, an SEO blog, a strictly news site) then subfolders allows you to transfer a lot of the authority that your root domain has to these pages to help them rank quickly.
+If, on the other hand, your site covers a wide variety of topics (product reviews, in-depth book reviews) or has a lot of user generated content (like HubPages, WordPress or Blogger), then separating your content into subdomains will net greater results, assuming you have the SEO resources to do so. In the former case, a tighter topical focus shows Google that your site is focused and relevant, allowing it to rank higher for associated keywords. In the latter, separating user generated content into its own subdomain allows Panda to penalize low-quality content and leaves the quality content producers untouched.</p></blockquote>
+
+<p>If you do want a folder, you can use a <a href="http://www.seomoz.org/blog/what-is-a-reverse-proxy-and-how-can-it-help-my-seo">reverse proxies</a> to accomplish it.</p>
+
+<h2>Alt Tags on Images</h2>
+
+<p>Tag all of your images with an alt tag. Search engines use alt tags for credit towards the keywords.</p>
+
+<h4>Example</h4>
+
+<pre><code> &lt;img src="http://mysite.com/coolpic.jpg" alt="cool pic" title="cool pic"&gt;
+</code></pre>
+
+<p>Alt tags for images can be done fairly simple in Jekyll as follows:</p>
+
+<pre><code> &lt;img src="http://mysite.com/coolpic.jpg" alt="{{ page.title }}" title="{{ page.title }}"&gt;
+</code></pre>
+
+<h2>Get Rid of Broken Links</h2>
+
+<p>Web crawlers judge you by the overall impression of your page. Broken links piss off humans just as much as bots. You will often link to content external to your site which you don't control. This is where using <a href="http://www.searchenginejournal.com/on-page-seo-factors-which-ones-have-the-most-impact-on-rankings/40926/">Google Webmaster Tools</a> is sweet. Webmaster tools will help you find broken links from and to your site.</p>
+
+<p>Once Webmaster tools are setup. Click Health -> Crawl Errors -> Not Found</p>
+
+<p><img src="http://cl.ly/image/3E0w1p280Z20/Screen%20shot%202012-10-30%20at%201.57.42%20PM.png" alt="webmaster tools pic" /></p>
+
+<h2>Duplication caused by pagination</h2>
+
+<p>Only do the following if you have a sitemap.xml or else some of your content won't be found. Upon <a href="http://searchengineland.com/five-step-strategy-for-solving-seo-pagination-problems-95494">doing research</a>, I found out that google penalizes sites that have duplicate content. This means pagination can screw your site.</p>
+
+<p>With pagination you have multiple pages that have the same content. Google sees a bunch of the same content as bad. A simple <a href="http://googlewebmastercentral.blogspot.com/2011/09/pagination-with-relnext-and-relprev.html">fix</a> is to use the <code>rel=next</code> and <code>rel=prev</code> directive on your tags.</p>
+
+<h4>Example</h4>
+
+<pre><code>&lt;a href="/page/1" title="Next Page" class="next" rel="next"&gt;Older Posts&lt;/a&gt;
+</code></pre>
+
+<h2>Frequent Updates &amp; Great Content</h2>
+
+<p>Although only technical things have been mentioned the single most important thing you can do is <a href="http://www.codinghorror.com/blog/2007/10/how-to-achieve-ultimate-blog-success-in-one-easy-step.html">write great content and post frequently</a>.</p>
+
+<p>When people are using search engines they are trying to find a solution to a problem. People tweet things they find interesting. People <a href="/2012/10/the-facebook-like-button-is-a-web-bug/">like</a> things they want to tell their friends about.</p>
+
+<p>Fundamentally people share and find content they are looking for. In order to be the content they find you need to teach them something. Write content that people want to learn and they will share with others. Always keep this in mind when writing content.</p>
+
+<h2>Link to Your Own Content</h2>
+
+<p>Don't over do this. It looks like crap if you do. If you have more than 1 link per 250 words than you are over doing it.</p>
+
+<p>Links help people and search engines navigate your site. Internal links with good anchor text has an impact on your page position in Google results.</p>
+
+<h2>One H1?</h2>
+
+<p>Dave Doolin, the author of hRecipe, says:</p>
+
+<blockquote><p>Matt Cutts states in this video that multiple h1 elements is something Google watches for, and may penalize if the useage [sic] doesn't make sense.</p>
+
+<p>Since Google gets to decide what makes sense, I'm keeping hRecipe titles marked up as h2 elements.
+Also, and this is important, hRecipe is open source under the GPL. Everyone is free to modify, or have someone else modify the plugin any way they see fit.</p></blockquote>
+
+<p>So Google decides what makes sense for layout. Don't over do it.</p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#SEO-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'SEO', 'SEO: Layout and Site Tips']);"><i class="icon-tags icon-white"></i> SEO <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#good enough-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'good enough', 'SEO: Layout and Site Tips']);"><i class="icon-tags icon-white"></i> good enough <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#design-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'design', 'SEO: Layout and Site Tips']);"><i class="icon-tags icon-white"></i> design <span>4</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2012/10/seo-layout-and-site-tips/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/10/seo-layout-and-site-tips/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=SEO: Layout and Site Tips - bretthard.in/2012/10/seo-layout-and-site-tips/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/10/seo-layout-and-site-tips/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=SEO: Layout and Site Tips&amp;url=bretthard.in/2012/10/seo-layout-and-site-tips/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2012/10/seo-layout-and-site-tips/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From SEO: Layout and Site Tips']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From SEO: Layout and Site Tips']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From SEO: Layout and Site Tips']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From SEO: Layout and Site Tips']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

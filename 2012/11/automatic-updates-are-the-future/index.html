@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Automatic Updates Are The Future</title>
+  
+
+	
+		<meta name="description" content="An applications ability to update itself should be built in functionality. It shouldn't be an exception to the rule." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>November 04, 2012</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p><a href="http://www.flickr.com/photos/shanelin/8505342511/in/set-72157632848286261/">Malenkov in Exile</a></p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm9.staticflickr.com/8236/8505342511_03fc666f2f_b.jpg">
+		
+
+		<h1>Automatic Updates Are The Future</h1>
+
+		<div class="content">
+		<p>Kaspersky's Q3 IT Threat Evolution Report was released last week and although reports like these are typically used as marketing fluff by vendors they still provide interesting insights.</p>
+
+<h2>Mobile Threat Landscape</h2>
+
+<p>Since iOS data is hard to come by. The report only focuses on Android devices.According to the <a href="http://www.securelist.com/en/analysis/204792250/IT_Threat_Evolution_Q3_2012">report</a> Gingerbread is the most attacked installation of Android.</p>
+
+<blockquote><p>Android 2.3.6 "Gingerbread", which accounts for 28% of all blocked attempts to install malware, was the most commonly attacked version. It is not new: it was released in September 2011.</p></blockquote>
+
+<p>Although Gingerbread isn't <em>new</em>, it isn't old either. An OS for a mobile device released 13 months ago shouldn't be considered old.</p>
+
+<p>But can an Android device be easily updated? Why are Android users not installing the newest version of Android? Do you need to pay for the newer version? Is it hard to update?</p>
+
+<p>No! Android devices can be upgraded through the settings without having to pay for the new version. Here is how simple it is!</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/EDhAb5b1Fj4" frameborder="0" allowfullscreen></iframe>
+
+
+<p>So, you've updated your phone because <a href="/2012/10/the-security-and-developer-passion-dilema/">security is always an afterthought</a> and newer versions of software are more secure than earlier versions. Awesome! Oh wait.</p>
+
+<blockquote><p>Attacks of cybercriminals in Q3 most commonly targeted Android versions 2.3.6 Gingerbread and 4.0.4 Ice Cream Sandwich</p></blockquote>
+
+<p>So upgrading to newer Android versions aren't protecting you from attacks. So, how is malware getting installed on these newer versions of Android?</p>
+
+<blockquote><p>Attackers are sufficiently good at <strong>bypassing restrictions on installing software from untrusted sources</strong>, primarily using social engineering techniques.</p></blockquote>
+
+<p>and</p>
+
+<blockquote><p> These two types of malware are mostly distributed via so-called alternative app stores created by cybercriminals [sic].</p></blockquote>
+
+<p>So it's the users fault. <strong>Don't install software from untrusted sources.</strong> Only install software from the <a href="/2013/03/automatic-updates-from-the-app-store/">app store</a>. If you try to get around paying for the software by downloading a <em>pirated</em> version you will eventually pay for it by having your phone owned.</p>
+
+<h2>Desktop &amp; Microsoft</h2>
+
+<p>Desktops on the other hand aren't owned by users downloading malicious software. They are compromised by drive-by attacks. Drive-by attacks are attacks the user doesn't need to interact with.</p>
+
+<p>Microsoft products were very susceptible to drive-by attacks and used to be a huge target. This is no longer the case.</p>
+
+<blockquote><p>Microsoft products no longer feature among the Top 10 products with vulnerabilities. This is because the automatic updates mechanism has now been well developed in recent versions of Windows OS.</p></blockquote>
+
+<p>From this snippet of information, Emil Protalinski <a href="http://thenextweb.com/microsoft/2012/11/02/microsofts-security-team-is-killing-it-not-one-product-on-kasperskys-top-10-vulnerabilities-list/">stated</a> the Microsoft security team is killing it. Not true. The report points out Microsoft is still being owned.</p>
+
+<blockquote><p>Exploits targeting vulnerabilities in the Windows Help and Support Center, as well as various Internet Explorer (IE) flaws, accounted for 3% of all attacks. Specifically, a new vulnerability (CVE-2012-1876) was discovered in Q3 in IE versions 6-9.</p></blockquote>
+
+<p>I understand Microsoft isn't on Kasperky's top 10. But that doesn't mean the Microsoft Security team is doing awesome. It's because attackers are focusing on plugins. Plugins give attackers a larger market size to attack. Plugins allow attackers to target multiple platforms at once. The <a href="http://www.securelist.com/en/analysis/204792250/IT_Threat_Evolution_Q3_2012">report</a> even says this.</p>
+
+<blockquote><p>Java exploits are sufficiently easy to use under any Windows version and, with some additional work by cybercriminals, as in the case of Flashfake, <strong>cross-platform exploits can be created</strong>. This explains the special interest of cybercriminals in Java vulnerabilities.</p></blockquote>
+
+<h2>Automatic Updates FTW</h2>
+
+<p>The report suggests users and organizations can protect themselves by installing updates.</p>
+
+<blockquote><p>Our advice is that users should install updates of popular programs as they are released and use up-to-date protection against exploits, and companies should also use Patch Management technologies.</p></blockquote>
+
+<p>However, the whole reason why Microsoft isn't on this report is because they implemented an <em>automatic update system</em>.</p>
+
+<blockquote><p>Microsoft products no longer feature among the Top 10 products with vulnerabilities. This is because the automatic updates mechanism has now been well developed in recent versions of Windows OS.</p></blockquote>
+
+<p>Even the automatic update system in Adobe Reader is helping circumvent users being attacked.</p>
+
+<blockquote><p>The popularity of exploits for Adobe Reader is gradually declining due to a realtively [sic] simple mechanism that ensures their detection, as well as to automated updates introduced in the latest versions of the Reader.</p></blockquote>
+
+<p>Both mobile devices and desktops can benefit from an automatic update mechanism. So, is the solution that users and organizations should install updates or the updates should install themselves?</p>
+
+<p>Although mobile devices don't have automatic updates yet, it should be on the horizon. I'm still surprised I have to manually update iOS apps. Why am I required to go into the app store, click updates, and then type in my password to install them. Wouldn't the device and experience benefit from applications being automatically being updated?</p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#infosec-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'infosec', 'Automatic Updates Are The Future']);"><i class="icon-tags icon-white"></i> infosec <span>21</span></a></li>
+     
+    	<li><a href="/tags.html#tech-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'tech', 'Automatic Updates Are The Future']);"><i class="icon-tags icon-white"></i> tech <span>16</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2012/11/automatic-updates-are-the-future/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/11/automatic-updates-are-the-future/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=Automatic Updates Are The Future - bretthard.in/2012/11/automatic-updates-are-the-future/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/11/automatic-updates-are-the-future/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Automatic Updates Are The Future&amp;url=bretthard.in/2012/11/automatic-updates-are-the-future/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2012/11/automatic-updates-are-the-future/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From Automatic Updates Are The Future']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From Automatic Updates Are The Future']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From Automatic Updates Are The Future']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From Automatic Updates Are The Future']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

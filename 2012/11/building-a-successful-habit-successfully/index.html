@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Building a Successful Habit, Successfully</title>
+  
+
+	
+		<meta name="description" content="Successful habits are built by focusing on improving, dedicating time, deliberately practicing and measuring and evaluating." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>November 07, 2012</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p><a href="http://www.flickr.com/photos/jdhancock/">JD Hancock</a></p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm5.staticflickr.com/4116/4896996561_c257b8e3bf_b.jpg">
+		
+
+		<h1>Building a Successful Habit, Successfully</h1>
+
+		<div class="content">
+		<p>In <a href="http://www.amazon.com/gp/product/0316017922/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0316017922&amp;linkCode=as2&amp;tag=breharsblo-20" title="Outliers: The Story of Success">Outliers</a>, Malcolm Gladwell suggests putting 10,000 hours into something will make anyone an expert. No one gets to the top of their field unless they put-in at least 10,000 hours.</p>
+
+<p>To put this in perspective, 10,000 hours is:</p>
+
+<ul>
+<li>5 years of full-time employment (10,000 Hours / 40 Hours per week * 50 working weeks per year = 5 Years)</li>
+<li>10 years working on something 3 hours a day.</li>
+</ul>
+
+
+<p>Gladwell uses Bill Gates as an example in the book. Bill Gates <a href="http://www.youtube.com/watch?v=CsGihiSE6sM" title="Bill Gates on 10,000 Hours and a Lifetime of fanaticism">said this</a> about the 10,000 hour theory:</p>
+
+<blockquote><p>[What Gladwell says is] if you spend 10,000 hours doing something you'll be super good at it. I don't think it's as simple as that. What you do is about 50 hours and 90% drop out because they don't like it or they're not good. You do another 50 hours and 90% drop out... There are these constant cycles and you do have to be lucky enough, but also fanatical enough to keep going. The person who makes it to 10,000 hours is not just someone who has done it for 10,000 hours, they've chosen and they've been chosen many many times.</p></blockquote>
+
+<p>However, it isn't <em>working</em> the 10,000 hours which makes you an expert. The 10,000 hours builds the <a href="http://www.psy.fsu.edu/faculty/ericsson/ericsson.exp.perf.html">foundation of domain-related experience</a> used to identify which actions to take. The <em>expertise</em> comes from nothing more than repeating the <a href="/2012/08/advice-and-advisors/">lessons you've learned before</a>. Venture capitalists call this pattern recognition.</p>
+
+<blockquote><p>Chase and Simon (1973; Simon &amp; Chase, 1973) proposed that experts with extended experience acquire a larger number of more complex patterns and use these new patterns to store knowledge about which actions should be taken in similar situations.</p></blockquote>
+
+<p>The 10,000 hours helps you build the necessary domain-experience in order to identify solutions.</p>
+
+<h2>66 Days to a New Habit</h2>
+
+<p>In order to get to the 10,000 hours we want to build a habit. We force ourselves into doing something on a recurring basis until we no longer notice we are forcing ourselves. But, how often do we need to do something before it becomes automatic?</p>
+
+<p>Habits are formed through a process called <a href="http://blogs.ucl.ac.uk/hbrc/2012/06/29/busting-the-21-days-habit-formation-myth/">context-dependent repetition</a>.</p>
+
+<blockquote><p>Imagine [when] you get home each evening, you eat a snack. When you first eat the snack... a mental link is formed between the context (getting home) and your response to that context (eating a snack). Each time you subsequently snack in response to getting home, this link strengthens, to the point that getting home comes to prompt you to eat a snack automatically, without giving it much prior thought; a habit has formed.</p></blockquote>
+
+<p>I'm sure you've heard it takes 21 days to form a habit. It turns out this is a myth. The idea came from <em><a href="http://www.amazon.com/gp/product/0671700758/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0671700758&amp;linkCode=as2&amp;tag=breharsblo-20" title="Psycho Cybernetics">Psycho-Cybernetics</a></em>.</p>
+
+<blockquote><p>It usually requires a minimum of about 21 days to effect any perceptible change in a mental image. Following plastic surgery it takes about 21 days for the average patient to get used to his new face. When an arm or leg is amputated the <em>phantom limb</em> persists for about 21 days. People must live in a new house for about three weeks before it begins to <em>seem like home</em>. These, and many other commonly observed phenomena tend to show that it requires a minimum of about 21 days for an old mental image to dissolve and a new one to jell.</p></blockquote>
+
+<p><strong>The actual amount of time it takes to form a habit depends on the habit we are attempting to form.</strong> Habits which are more <a href="http://www.spring.org.uk/2009/09/how-long-to-form-a-habit.php">personally challenging for us take longer</a> than those that don't.</p>
+
+<blockquote><p>Drinking a daily glass of water became automatic very quickly but doing 50 sit-ups before breakfast required more dedication.</p></blockquote>
+
+<p>However, the researchers found the <strong>average amount of time to move from behavior to habit is 66 days</strong>.</p>
+
+<p>Once the habit is formed it's <a href="http://tlc.howstuffworks.com/family/form-a-habit.htm">never broken</a>. When you build a habit your brain creates a well-used synaptic pathway. When the habit is repeated the pathway is used. As the pathway is continually accessed it becomes easier for synaptic impulses to travel along those pathways and the habit becomes natural.  When we stop using the pathway it becomes weak, but <a href="http://www.nytimes.com/2008/05/04/business/04unbox.html">it doesn't go away</a>. If the pathway starts becoming used again it gets stronger.</p>
+
+<p>We can use this to our benefit. If we repetitively do something we'll start creating commonly used synaptic pathways. Once these are established we form the habit. Once formed it's not easily broken! Awesome.</p>
+
+<h2>The Plan to Build the Habit</h2>
+
+<p>We now have a way to get to the 10,000 hours by building a habit. But, we can't just <em>show up</em>. We need to do deliberately things to minimize our time to becoming an expert.</p>
+
+<ol>
+<li>Focus on Improving</li>
+<li>Dedicate Time</li>
+<li>Deliberately Practice</li>
+<li>Measure and Evaluate</li>
+</ol>
+
+
+<h5>Focus on Improving</h5>
+
+<p>We need to <a href="http://money.cnn.com/magazines/fortune/fortune_archive/2006/10/30/8391794/index.htm">focus on improving</a>.</p>
+
+<blockquote><p>When amateur singers take a singing lesson, they experience it as fun, a release of tension. But for professional singers, it's the opposite: They increase their concentration and focus on improving their performance during the lesson. Same activity, different mindset.</p></blockquote>
+
+<h5>Dedicate Time</h5>
+
+<p>Having a <a href="http://graphics8.nytimes.com/images/blogs/freakonomics/pdf/DeliberatePractice(PsychologicalReview).pdf" title="The Role of Deliberate Practice in the Acquisition of Expert Performance">fixed amounts of time</a> dedicated to working on it.</p>
+
+<blockquote><p>While completing a novel famous authors tend to write only for 4 [hours] during the morning, leaving the rest of the day for rest and recuperation (Cowley, 1959; Plimpton, 1977). Hence successful authors, who can control their work habits and are motivated to optimize their productivity, limit their most important intellectual activity to a fixed daily amount when working on projects requiring long periods of time to complete.</p></blockquote>
+
+<h5>Deliberately Practice</h5>
+
+<p>We need to methodically and <a href="http://money.cnn.com/magazines/fortune/fortune_archive/2006/10/30/8391794/index.htm">deliberately practice</a>. With deliberate practice we are identifying objectives beyond our current level of competence and understanding. We need to do things which involve high levels of repetition. We need to be specific with our goals of learning.</p>
+
+<blockquote><p>Simply hitting a bucket of balls is not deliberate practice, which is why most golfers don't get better. Hitting an eight-iron 300 times with a goal of leaving the ball within 20 feet of the pin 80 percent of the time, continually observing results and making appropriate adjustments, and doing that for hours every day - that's deliberate practice.</p></blockquote>
+
+<h5>Measure and Evaluate</h5>
+
+<p>We need to create our own training regiment to measure and evaluate our own <a href="http://www.psy.fsu.edu/faculty/ericsson/ericsson.exp.perf.html">performance</a>.</p>
+
+<blockquote><p>The same acquired representations appear to be essential for experts' ability to monitor and evaluate their own performance (Ericsson, 1996; Glaser, 1996) so they can keep improving their own performance by designing their own training and assimilating new knowledge.</p></blockquote>
+
+<h2>Success Is Not Guaranteed</h2>
+
+<p>An important note: 10,000 hours does not imply success. Gladwell specifically tries to invalidate the thought <a href="http://usatoday30.usatoday.com/life/books/news/2008-11-17-gladwell-success_N.htm">that just hardwork will get you to success</a>.</p>
+
+<blockquote><p>The biggest misconception about success is that we do it solely on our smarts, ambition, hustle and hard work. There's an awful lot more that goes into it than we admit.</p></blockquote>
+
+<p>For most people working is hard enough. Asking them to focus and push themselves harder is not something people want to do. It's painful. Just like building a muscle you have to push yourself past the point of pain where the pain doesn't matter. What matters is the result.</p>
+
+<p>You aren't doing something for 10,000 hours to be successful. <strong>You are putting in your 10,000 hours to improve your chances of success.</strong> Great performance is rare because it's so hard to achieve.</p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#success-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'success', 'Building a Successful Habit, Successfully']);"><i class="icon-tags icon-white"></i> success <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#habit-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'habit', 'Building a Successful Habit, Successfully']);"><i class="icon-tags icon-white"></i> habit <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#ritual-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'ritual', 'Building a Successful Habit, Successfully']);"><i class="icon-tags icon-white"></i> ritual <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#lifestyle-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'lifestyle', 'Building a Successful Habit, Successfully']);"><i class="icon-tags icon-white"></i> lifestyle <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#productivity-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'productivity', 'Building a Successful Habit, Successfully']);"><i class="icon-tags icon-white"></i> productivity <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#life-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'life', 'Building a Successful Habit, Successfully']);"><i class="icon-tags icon-white"></i> life <span>9</span></a></li>
+     
+    	<li><a href="/tags.html#learning-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'learning', 'Building a Successful Habit, Successfully']);"><i class="icon-tags icon-white"></i> learning <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#mindset-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'mindset', 'Building a Successful Habit, Successfully']);"><i class="icon-tags icon-white"></i> mindset <span>4</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2012/11/building-a-successful-habit-successfully/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/11/building-a-successful-habit-successfully/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=Building a Successful Habit, Successfully - bretthard.in/2012/11/building-a-successful-habit-successfully/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/11/building-a-successful-habit-successfully/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Building a Successful Habit, Successfully&amp;url=bretthard.in/2012/11/building-a-successful-habit-successfully/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2012/11/building-a-successful-habit-successfully/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From Building a Successful Habit, Successfully']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From Building a Successful Habit, Successfully']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From Building a Successful Habit, Successfully']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From Building a Successful Habit, Successfully']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

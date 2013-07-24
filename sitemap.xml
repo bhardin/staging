@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.sitemaps.org/schemas/sitemap-image/1.1" xmlns:video="http://www.sitemaps.org/schemas/sitemap-video/1.1">
+  
+
+  <url>
+	  <loc>http://bretthard.in/</loc>
+	  <lastmod>2012-12-28T02:12:38+00:00</lastmod>
+	  <changefreq>hourly</changefreq>
+	</url>
+	<url>
+	  <loc>http://bretthard.in/books</loc>
+	  <lastmod>2012-12-28T02:12:38+00:00</lastmod>
+	  <changefreq>monthly</changefreq>
+	</url>
+	<url>
+	  <loc>http://bretthard.in/tags</loc>
+	  <lastmod>2012-12-28T02:12:38+00:00</lastmod>
+	  <changefreq>monthly</changefreq>
+	</url>
+	<url>
+	  <loc>http://bretthard.in/talks</loc>
+	  <lastmod>2012-12-28T02:12:38+00:00</lastmod>
+	  <changefreq>monthly</changefreq>
+	</url>
+	<url>
+	  <loc>http://bretthard.in/about</loc>
+	  <lastmod>2012-12-28T02:12:38+00:00</lastmod>
+	  <changefreq>monthly</changefreq>
+	</url>
+
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/07/foundational-rules-of-code-testing/</loc>
+		    <lastmod>2013-07-24T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/07/team-language-replication/</loc>
+		    <lastmod>2013-07-19T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/07/refactoring-code-improves-the-customer-experience/</loc>
+		    <lastmod>2013-07-03T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/07/another-new-post/</loc>
+		    <lastmod>2013-07-03T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/07/your-code-smells/</loc>
+		    <lastmod>2013-07-01T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/06/developers-spend-half-their-time-fixing-bugs/</loc>
+		    <lastmod>2013-06-13T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/06/upgrading-ruby-186-to-187/</loc>
+		    <lastmod>2013-06-05T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/05/playing-board-games-is-like-watching-sports/</loc>
+		    <lastmod>2013-05-30T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/05/bandit-algorithms-are-better-than-a-b-tests/</loc>
+		    <lastmod>2013-05-23T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/05/successful-marketers-are-creative/</loc>
+		    <lastmod>2013-05-15T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/05/mobile-devices-arent-phones/</loc>
+		    <lastmod>2013-05-08T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/05/limiting-code-damage/</loc>
+		    <lastmod>2013-05-01T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/04/startup-lessons-learned-from-an-auction/</loc>
+		    <lastmod>2013-04-23T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/04/rentership-and-usership/</loc>
+		    <lastmod>2013-04-15T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/04/lawyers-and-interpretation-rule-the-world/</loc>
+		    <lastmod>2013-04-12T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/03/automatic-updates-from-the-app-store/</loc>
+		    <lastmod>2013-03-29T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/03/dizzying-but-invisible-depth/</loc>
+		    <lastmod>2013-03-20T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/03/create-a-website-for-your-github-project/</loc>
+		    <lastmod>2013-03-19T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/03/the-life-of-source-code/</loc>
+		    <lastmod>2013-03-12T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/03/stop-complaining-and-change-it/</loc>
+		    <lastmod>2013-03-04T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/03/sometimes-you-cant-design-simply/</loc>
+		    <lastmod>2013-03-01T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/02/programming-language-adoption/</loc>
+		    <lastmod>2013-02-27T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/02/penetration-testing-is-stupid/</loc>
+		    <lastmod>2013-02-25T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/02/dont-evaluate-yourself-with-bad-metrics/</loc>
+		    <lastmod>2013-02-19T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/02/i-have-a-great-idea/</loc>
+		    <lastmod>2013-02-18T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/02/order-of-magnitude-better/</loc>
+		    <lastmod>2013-02-14T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/02/tests-should-not-begin-with-should/</loc>
+		    <lastmod>2013-02-12T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/02/sightglass-coffee-and-square-wallet/</loc>
+		    <lastmod>2013-02-05T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/02/live-longer-by-writing-unit-tests/</loc>
+		    <lastmod>2013-02-04T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/effectively-consuming-valuable-content/</loc>
+		    <lastmod>2013-01-31T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/a-better-writing-process-in-5-steps/</loc>
+		    <lastmod>2013-01-28T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/lets-kill-subversion/</loc>
+		    <lastmod>2013-01-26T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/personal-insecurities/</loc>
+		    <lastmod>2013-01-23T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/the-dunning-kruger-effect/</loc>
+		    <lastmod>2013-01-22T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/product-timing/</loc>
+		    <lastmod>2013-01-21T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/how-to-hire-people-for-a-startup/</loc>
+		    <lastmod>2013-01-18T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/facebook-authentication-and-oauth/</loc>
+		    <lastmod>2013-01-17T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/retiring-domains/</loc>
+		    <lastmod>2013-01-16T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/identify-hungry-people/</loc>
+		    <lastmod>2013-01-15T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/investment-thesis-for-life/</loc>
+		    <lastmod>2013-01-14T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/the-dip-book-review-seth-godin/</loc>
+		    <lastmod>2013-01-13T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/cool-desktop-backgrounds/</loc>
+		    <lastmod>2013-01-11T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/the-pci-asv-process-sucks/</loc>
+		    <lastmod>2013-01-10T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/acquiring-users-with-a-drip/</loc>
+		    <lastmod>2013-01-09T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/college-doesnt-teach-you-software-development/</loc>
+		    <lastmod>2013-01-08T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/how-oauth-works/</loc>
+		    <lastmod>2013-01-07T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/web-and-mobile-revenue-models/</loc>
+		    <lastmod>2013-01-06T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/traditional-education-is-changing/</loc>
+		    <lastmod>2013-01-04T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/how-to-secure-any-application/</loc>
+		    <lastmod>2013-01-03T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/youre-the-problem/</loc>
+		    <lastmod>2013-01-02T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2013/01/its-good-enough-ship-it/</loc>
+		    <lastmod>2013-01-01T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/falling-in-love-with-computers/</loc>
+		    <lastmod>2012-12-31T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/gift-cards-are-impersonal/</loc>
+		    <lastmod>2012-12-29T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/one-retailer-per-category/</loc>
+		    <lastmod>2012-12-28T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/measure-interest-before-building-products/</loc>
+		    <lastmod>2012-12-27T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/ia-writer-is-my-killer-app/</loc>
+		    <lastmod>2012-12-26T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/the-problem-you-solve/</loc>
+		    <lastmod>2012-12-24T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/dont-let-them-kill-your-ideas/</loc>
+		    <lastmod>2012-12-23T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/extracurricular-activities-of-passionate-people/</loc>
+		    <lastmod>2012-12-22T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/its-the-end-of-the-world-again/</loc>
+		    <lastmod>2012-12-20T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/penetration-testing-as-a-first-step/</loc>
+		    <lastmod>2012-12-19T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/why-we-buy-things-purchase-psychology/</loc>
+		    <lastmod>2012-12-18T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/be-passionate-like-a-kid/</loc>
+		    <lastmod>2012-12-17T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/write-for-yourself-not-others/</loc>
+		    <lastmod>2012-12-14T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/how-to-present-without-sounding-like-a-vendor/</loc>
+		    <lastmod>2012-12-13T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/the-future-is-in-the-past/</loc>
+		    <lastmod>2012-12-12T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/dont-give-developers-access-to-the-operating-system/</loc>
+		    <lastmod>2012-12-11T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/enable-comments-on-your-blog/</loc>
+		    <lastmod>2012-12-10T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/building-your-house-on-sand/</loc>
+		    <lastmod>2012-12-09T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/the-struggle-of-lego/</loc>
+		    <lastmod>2012-12-05T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/dont-make-unsubscribing-from-email-hard/</loc>
+		    <lastmod>2012-12-04T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/12/customer-service-and-customer-satisfaction/</loc>
+		    <lastmod>2012-12-03T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/get-to-profitability-as-fast-as-possible/</loc>
+		    <lastmod>2012-11-29T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/bug-bounty-programs/</loc>
+		    <lastmod>2012-11-28T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/the-worst-time-to-fundraise/</loc>
+		    <lastmod>2012-11-27T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/learn-by-doing-it/</loc>
+		    <lastmod>2012-11-26T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/please-get-to-the-point/</loc>
+		    <lastmod>2012-11-20T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/how-to-create-decoy-pricing-options/</loc>
+		    <lastmod>2012-11-19T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/how-to-use-anchor-pricing/</loc>
+		    <lastmod>2012-11-16T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/how-to-setup-an-rss-feed-with-feedburner-the-right-way/</loc>
+		    <lastmod>2012-11-14T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/designers-and-data-scientists-oh-my/</loc>
+		    <lastmod>2012-11-13T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/value-proposition/</loc>
+		    <lastmod>2012-11-12T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/the-structure-of-an-investor-update/</loc>
+		    <lastmod>2012-11-09T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/be-nice-and-be-helpful/</loc>
+		    <lastmod>2012-11-08T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/building-a-successful-habit-successfully/</loc>
+		    <lastmod>2012-11-07T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/the-tipping-point-state/</loc>
+		    <lastmod>2012-11-06T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/consumerization-of-enterprise-sales/</loc>
+		    <lastmod>2012-11-05T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/automatic-updates-are-the-future/</loc>
+		    <lastmod>2012-11-04T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/programming-makes-you-high/</loc>
+		    <lastmod>2012-11-02T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/11/dont-use-two-spaces-after-a-period/</loc>
+		    <lastmod>2012-11-01T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/dedicated-security-team/</loc>
+		    <lastmod>2012-10-31T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/seo-layout-and-site-tips/</loc>
+		    <lastmod>2012-10-30T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/negotiate-a-better-startup-equity-package/</loc>
+		    <lastmod>2012-10-29T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/appsec-2012-builder-vs-breaker-presentation/</loc>
+		    <lastmod>2012-10-27T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/im-cheap-products-i-pay-for-have-to-be-awesome/</loc>
+		    <lastmod>2012-10-24T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/writing-about-what-i-learn/</loc>
+		    <lastmod>2012-10-23T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/find-long-tail-keywords-using-google-analytics/</loc>
+		    <lastmod>2012-10-22T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/limiting-your-daily-distractions/</loc>
+		    <lastmod>2012-10-19T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/the-facebook-like-button-is-a-web-bug/</loc>
+		    <lastmod>2012-10-18T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/the-security-and-developer-passion-dilema/</loc>
+		    <lastmod>2012-10-16T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/a-blog-is-a-startup/</loc>
+		    <lastmod>2012-10-15T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/thoughts-on-spotify/</loc>
+		    <lastmod>2012-10-11T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/10/the-price-is-right-and-advertising/</loc>
+		    <lastmod>2012-10-08T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/09/increasing-revenues-beyond-initial-sales/</loc>
+		    <lastmod>2012-09-28T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/09/happiness-is-perception/</loc>
+		    <lastmod>2012-09-24T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/09/building-and-growing-a-meetup-community/</loc>
+		    <lastmod>2012-09-21T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/09/use-seclusion-to-optimize-creativity-and-productivity/</loc>
+		    <lastmod>2012-09-18T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/09/believing-in-a-crazy-vision/</loc>
+		    <lastmod>2012-09-14T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/09/investor-deck-market-size/</loc>
+		    <lastmod>2012-09-10T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/09/be-productive-not-busy/</loc>
+		    <lastmod>2012-09-06T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/08/first-floor-labs-free-palo-alto-office-space-for-6-months/</loc>
+		    <lastmod>2012-08-31T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/08/raising-a-seed-round-a-step-by-step-guide/</loc>
+		    <lastmod>2012-08-28T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/08/company-culture-is-defined-by-you-and-your-actions/</loc>
+		    <lastmod>2012-08-24T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/08/reading-is-critical/</loc>
+		    <lastmod>2012-08-22T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/08/overcome-the-fear-of-rejection/</loc>
+		    <lastmod>2012-08-21T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/08/examples-of-liquidation-preferences/</loc>
+		    <lastmod>2012-08-14T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/08/advice-and-advisors/</loc>
+		    <lastmod>2012-08-09T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/07/dream-big/</loc>
+		    <lastmod>2012-07-30T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/07/choosing-a-startups-initial-evaluation/</loc>
+		    <lastmod>2012-07-18T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/07/huge-lifestyle-businesses/</loc>
+		    <lastmod>2012-07-16T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/startup/2012/07/angelpad-experience/</loc>
+		    <lastmod>2012-07-12T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/07/a-minimum-viable-product/</loc>
+		    <lastmod>2012-07-11T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/07/value-hypothesis-and-growth-hypothesis/</loc>
+		    <lastmod>2012-07-10T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/07/jekyll-vs-wordpress-blog-platform-comparison/</loc>
+		    <lastmod>2012-07-06T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/07/investor-deck-company-purpose/</loc>
+		    <lastmod>2012-07-04T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/07/purposely-delaying-features/</loc>
+		    <lastmod>2012-07-02T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/06/challenge-yourself-always-learn/</loc>
+		    <lastmod>2012-06-28T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/06/jekyll-and-seo-optimization/</loc>
+		    <lastmod>2012-06-27T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/06/open-source-attribution/</loc>
+		    <lastmod>2012-06-26T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/06/a-better-email-inbox/</loc>
+		    <lastmod>2012-06-25T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/06/keep-developing-while-you-fundraise-and-put-together-your-round/</loc>
+		    <lastmod>2012-06-22T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/06/get-a-job-be-determined-and-focused/</loc>
+		    <lastmod>2012-06-20T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/06/failure-is-an-opportunity/</loc>
+		    <lastmod>2012-06-18T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/06/The-4-personality-types/</loc>
+		    <lastmod>2012-06-11T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/05/steve-jobs-and-the-next-logo/</loc>
+		    <lastmod>2012-05-29T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/04/equity-valuation-and-getting-rich/</loc>
+		    <lastmod>2012-04-16T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/03/getting-related_posts-lsi-and-gsl-to-work-in-jekyll/</loc>
+		    <lastmod>2012-03-24T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/03/avoid-distractions-and-remain-focused/</loc>
+		    <lastmod>2012-03-12T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/02/security-the-wrong-way/</loc>
+		    <lastmod>2012-02-28T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/02/solving-hard-problems/</loc>
+		    <lastmod>2012-02-09T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/02/hip-hop-wisdom/</loc>
+		    <lastmod>2012-02-01T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/01/foursquare/</loc>
+		    <lastmod>2012-01-31T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/01/trollblock/</loc>
+		    <lastmod>2012-01-30T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/01/jekyll-bootstrap/</loc>
+		    <lastmod>2012-01-29T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2012/01/first-post/</loc>
+		    <lastmod>2012-01-28T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2011/04/focusing-on-what-your-good-at/</loc>
+		    <lastmod>2011-04-01T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2011/02/builders-breakers-and-fixers/</loc>
+		    <lastmod>2011-02-23T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2011/02/youre-alone-enjoy-it/</loc>
+		    <lastmod>2011-02-17T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2011/02/being-sneaky-about-security-and-regulations/</loc>
+		    <lastmod>2011-02-16T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2010/03/bsidessf-2010/</loc>
+		    <lastmod>2010-03-17T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2010/03/no-one-cares-about-security/</loc>
+		    <lastmod>2010-03-08T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2010/02/basecamp-xss/</loc>
+		    <lastmod>2010-02-03T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/11/restricting-url-access/</loc>
+		    <lastmod>2009-11-19T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/11/confidentiality-integrity-availability/</loc>
+		    <lastmod>2009-11-09T00:00:00-08:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/10/interrogating-dns-caches-cache-snoop/</loc>
+		    <lastmod>2009-10-28T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/10/owasp-2007-top-10-presentation/</loc>
+		    <lastmod>2009-10-21T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/10/insecure-communications/</loc>
+		    <lastmod>2009-10-12T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/09/writing-secure-code/</loc>
+		    <lastmod>2009-09-24T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/09/understanding-http-cookies/</loc>
+		    <lastmod>2009-09-22T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/09/insecure-cryptographic-storage/</loc>
+		    <lastmod>2009-09-16T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/08/broken-authentication-and-session-management/</loc>
+		    <lastmod>2009-08-26T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/08/information-leakage-and-improper-error-handling/</loc>
+		    <lastmod>2009-08-12T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/08/cross-site-request-forgery-csrf/</loc>
+		    <lastmod>2009-08-05T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/07/insecure-direct-object-reference/</loc>
+		    <lastmod>2009-07-22T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/07/malicious-file-execution/</loc>
+		    <lastmod>2009-07-08T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/07/injection-flaws/</loc>
+		    <lastmod>2009-07-08T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+    
+		  <url>
+		    <loc>http://bretthard.in/2009/05/xss-cross-site-scripting/</loc>
+		    <lastmod>2009-05-29T00:00:00-07:00</lastmod>
+		    <changefreq>weekly</changefreq>
+		  </url>
+	  
+  
+</urlset>

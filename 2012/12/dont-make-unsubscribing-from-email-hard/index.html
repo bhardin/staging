@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Don't Make Unsubscribing From Email Hard</title>
+  
+
+	
+		<meta name="description" content="Make unsubscribing from your email list easy. Don't make it so complicated that people give up. The experience will be remembered." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>December 04, 2012</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p><a href="http://www.flickr.com/photos/andycastro/">Andy Castro</a></p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm2.staticflickr.com/1185/836326012_db3baba9cd_b.jpg">
+		
+
+		<h1>Don't Make Unsubscribing From Email Hard</h1>
+
+		<div class="content">
+		<p>I sign up for a lot of new products. Any product or service which seems interesting or I can benefit from I will sign up for. But, in the rush to find new shiny things, my email address is put on many lists. Which means I get a lot of email. If I decide the emails I receive aren't benefiting me I will unsubscribe from the mailing list, opting-out of future updates.</p>
+
+<p>These emails aren't spam. Spam is unwanted email that you haven't asked to receive. These emails I've specifically asked to receive. When I signed up for their service or product I told them to communicate with me. I'm okay with receiving updates and cool information about products I like.</p>
+
+<p>Attempting to <a href="/2012/06/a-better-email-inbox/">unsubscribe from many mailing lists</a> has demonstrated that the process is hard. So hard, that Gmail has even <a href="http://gmailblog.blogspot.com/2009/07/unsubscribing-made-easy.html" title="Google Unsubscribe">attempted to build unsubscribe</a> functionality into their client.</p>
+
+<p>Unsubscribing functionality isn't a <a href="/2012/02/solving-hard-problems/">hard problem</a>, but, there isn't a design pattern around it. People do it differently. Large companies seem to be the worst offenders. LinkedIn is an amazing product but to stop receiving their email seems to be impossible.</p>
+
+<p>When companies have been built to <a href="/2012/02/solving-hard-problems/">solve the problem</a>, things are getting out of hand. Both <a href="http://unroll.me/">Unroll.me</a> and <a href="https://theswizzle.com/" title="Clean up your inbox">Theswizzle</a> allows you to unsubscribe from unwanted email and rolls up email into a daily digest.</p>
+
+<p>I understand why companies want to optimize their subscription process and not their unsubscription process. However, It isn't <a href="/2012/12/customer-service-and-customer-satisfaction/">good customer service</a>. If you have a complication unsubscription process, it's just a matter of time before a <a href="http://www.3ones.com/2012/01/14/best-and-worst-practices-for-email-unsubscribing/" title="Best (and Worst) Practices for Email Unsubscribing">negative blog post is written about it</a>. A streamlined unsubscription process can avoid negative press.</p>
+
+<p>All portions of your application should be created for an amazing experience and this includes the unsubscription process. Don't worry about people having an easier time unsubscribing once you streamline the process. The world has been taught clicking unsubscribe links create <a href="http://apcsnh.com/vacm/vacm101304.php" title="Unsubscribing creates spam">spam</a>.</p>
+
+<p>If your using a modern framework then use unsubscribe functions that are already built. Don't roll your own. If you are using mailchimp to manage your email list, then you already <a href="http://kb.mailchimp.com/article/about-unsubscribes">have a streamlined unsubscribe process</a>.</p>
+
+<p>Here is the how your unsubscription process should work:</p>
+
+<ol>
+<li>I receive your email and there is an <a href="http://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003">unsubscribe link at the bottom</a>.</li>
+<li>I click the <em>unsubscribe</em> link and a page is returned saying "you are now unsubscribed from future email communications."</li>
+<li>I no loner receive your emails.</li>
+</ol>
+
+
+<p>Things that shouldn't happen:</p>
+
+<ul>
+<li><p><strong>I have to log in to your website</strong> - All my passwords are unique and saved. However, most people cycle their passwords. If they don't remember their password they have to reset it and then login before they can unsubscribe from your email. Although email is an insecure channel, for things like unsubscribing, trust it. I don't want to reset a password in order to unsubscribe.</p></li>
+<li><p><strong>Confirming the unsubscribe</strong> - After clicking the really small link at the bottom of your email don't then ask for confirmation. I guarantee clicking this was not a mistake. It is exactly what the user wanted to do. Just like the <a href="http://www.amazon.com/gp/product/1591843758/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1591843758&amp;linkCode=as2&amp;tag=breharsblo-20">story of one-click</a>, single click unsubscribe is more complicated than it sounds.</p></li>
+<li><p><strong>Force me to give a reason for unsubscribing</strong> - If you force users to give you a reason for unsubscribing before you unsubscribe them you are going to get data that isn't worthwhile. The responses will range from "asdfasdfasdf" to "stop bothering me." Mailchimp did this the right way. They unsubscribe first, then ask for a reason. A reason does not have to be given.</p></li>
+<li><p><strong>Using words other than unsubscribe</strong> - <a href="http://www.georgesaines.com/?p=484">George Saines</a> puts this incredibly well.</p></li>
+</ul>
+
+
+<blockquote><p>But increasingly, I see emails sent from large, respectable companies that provide me with no unsubscribe link. Instead there is an insidious trend towards "Managing Preferences," which invariably requires a log in, a brief search to find the unsubscribe option, and a form submit. And after all that am I unsubscribed? Apparently not because I keep getting messages.</p></blockquote>
+
+<ul>
+<li><strong>Sending more email</strong> - When I unsubscribe return a page that says, "The email address blah@blah.com has been unsubscribed from an amazing mailing list." Upon unsubscribing, you don't need to send me another email saying I have been unsubscribed. I just told you I don't want to receive emails from you anymore.</li>
+</ul>
+
+
+<p>Do you think these requests are out of line? Do these thing bother you too?</p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#email-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'email', 'Don't Make Unsubscribing From Email Hard']);"><i class="icon-tags icon-white"></i> email <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#subscriptions-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'subscriptions', 'Don't Make Unsubscribing From Email Hard']);"><i class="icon-tags icon-white"></i> subscriptions <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#product experience-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'product experience', 'Don't Make Unsubscribing From Email Hard']);"><i class="icon-tags icon-white"></i> product experience <span>3</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2012/12/dont-make-unsubscribing-from-email-hard/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/12/dont-make-unsubscribing-from-email-hard/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=Don't Make Unsubscribing From Email Hard - bretthard.in/2012/12/dont-make-unsubscribing-from-email-hard/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/12/dont-make-unsubscribing-from-email-hard/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Don't Make Unsubscribing From Email Hard&amp;url=bretthard.in/2012/12/dont-make-unsubscribing-from-email-hard/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2012/12/dont-make-unsubscribing-from-email-hard/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From Don't Make Unsubscribing From Email Hard']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From Don't Make Unsubscribing From Email Hard']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From Don't Make Unsubscribing From Email Hard']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From Don't Make Unsubscribing From Email Hard']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

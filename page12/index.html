@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+	<title>Constantly Learning</title>
+  
+
+	
+		<meta name="description" content="Programming, Information Security, Startups, and Learnings." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="posts">
+	<ul class="thumbnails">
+	
+		<div class="row" style="padding-top: 30px;">
+		<li class="span4">
+			<a href="/2012/10/the-security-and-developer-passion-dilema/" class="thumbnail">
+    	<img src="http://farm3.staticflickr.com/2192/2058198168_fac0e21ee1_b.jpg" alt="The Security and Developer Passion Dilema">
+  		<h3 class="title">The Security and Developer Passion Dilema</h3>
+  		<h5 class="date">October 16, 2012</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2012/10/a-blog-is-a-startup/" class="thumbnail">
+    	<img src="http://farm2.staticflickr.com/1195/633639759_425f9823f9_b.jpg" alt="A Blog is a Startup">
+  		<h3 class="title">A Blog is a Startup</h3>
+  		<h5 class="date">October 15, 2012</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2012/10/thoughts-on-spotify/" class="thumbnail">
+    	<img src="http://farm3.staticflickr.com/2801/4504547877_947cdb20ed_b.jpg" alt="Thoughts on Spotify">
+  		<h3 class="title">Thoughts on Spotify</h3>
+  		<h5 class="date">October 11, 2012</h5>
+  		</a>
+    </li>
+    </div>
+	
+		<div class="row" style="padding-top: 30px;">
+		<li class="span4">
+			<a href="/2012/10/the-price-is-right-and-advertising/" class="thumbnail">
+    	<img src="http://farm8.staticflickr.com/7251/7604871594_9e5e249348_b.jpg" alt="The Price is Right and Advertising">
+  		<h3 class="title">The Price is Right and Advertising</h3>
+  		<h5 class="date">October 08, 2012</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2012/09/increasing-revenues-beyond-initial-sales/" class="thumbnail">
+    	<img src="http://farm1.staticflickr.com/31/64027565_79b890c8c4_b.jpg" alt="Increasing Revenues Beyond Initial Sales">
+  		<h3 class="title">Increasing Revenues Beyond Initial Sales</h3>
+  		<h5 class="date">September 28, 2012</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2012/09/happiness-is-perception/" class="thumbnail">
+    	<img src="http://farm1.staticflickr.com/130/358458442_3c2a178f71_b.jpg" alt="Happiness is Perception">
+  		<h3 class="title">Happiness is Perception</h3>
+  		<h5 class="date">September 24, 2012</h5>
+  		</a>
+    </li>
+    </div>
+	
+		<div class="row" style="padding-top: 30px;">
+		<li class="span4">
+			<a href="/2012/09/building-and-growing-a-meetup-community/" class="thumbnail">
+    	<img src="http://farm9.staticflickr.com/8154/6954844640_ca64cde57d_b.jpg" alt="Building and Growing a Meetup Group">
+  		<h3 class="title">Building and Growing a Meetup Group</h3>
+  		<h5 class="date">September 21, 2012</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2012/09/use-seclusion-to-optimize-creativity-and-productivity/" class="thumbnail">
+    	<img src="http://farm8.staticflickr.com/7278/6881449630_37e31fc143_b.jpg" alt="Use Seclusion To Optimize Creativity and Productivity">
+  		<h3 class="title">Use Seclusion To Optimize Creativity and Productivity</h3>
+  		<h5 class="date">September 18, 2012</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2012/09/believing-in-a-crazy-vision/" class="thumbnail">
+    	<img src="http://farm9.staticflickr.com/8001/7433731222_6c9030d1b0_b.jpg" alt="Believing in A Crazy Vision">
+  		<h3 class="title">Believing in A Crazy Vision</h3>
+  		<h5 class="date">September 14, 2012</h5>
+  		</a>
+    </li>
+    </div>
+	
+	</ul>
+</div>
+
+<!-- Pagination links -->
+<div class="pagination pagination-centered">
+	<ul>
+		
+	    <li class="next"> 
+			<a href="/page13" title="Next Page" class="next" rel="next">&larr; Older Posts</a>
+			</li>
+		
+	
+	  
+	    <li class="prev">
+				
+					<a href="/page11" title="Previous Page" class="prev" rel="prev">Newer Posts &rarr;</a>
+				
+			</li>
+		
+	</ul>
+</div>
+
+<!-- Test Code -->
+<!-- e4e47ef058431a08d714506a09d155a58279e4ee -->
+<div style="display:none;">53c7353d8e45d80a2519b9ecceb048f166a6bd48</div>
+<!-- End test Code -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

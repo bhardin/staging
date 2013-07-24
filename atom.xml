@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Constantly Learning - Brett Hardin</title>
+ <link href="http://bretthard.in/atom.xml" rel="self"/>
+ <link href="http://bretthard.in/"/>
+ <updated>2013-07-24T04:03:12-07:00</updated>
+ <id>http://bretthard.in/</id>
+ <author>
+   <name>Brett Hardin</name>
+   <email>hardin.brett@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Foundational Rules of Code Testing</title>
+   <link href="http://bretthard.in/2013/07/foundational-rules-of-code-testing/"/>
+   <updated>2013-07-24T00:00:00-07:00</updated>
+   <id>http://bretthard.in/2013/07/foundational-rules-of-code-testing</id>
+   <content type="html">
+   	&lt;img src=&quot;http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg&quot; width="400px" /&gt;
+   	&lt;p&gt;I've been doing a lot of refactoring tests lately and have identified some anti-patterns. From talking with other developers it seems some of these rules are widely understood, while others aren't. Even though something is understood, it doesn't mean the community has adopted it. I know a lot of programmers who don't even write tests.&lt;/p&gt;
+
+&lt;p&gt;If you are serious about programming and your test suite these are the rules I've identified which should always be followed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Don't have more than one assertion per test.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a fairly simple one. If you are testing more than one thing or state in a test, don't. Break it up into two tests. There are a few reasons for this. First, it's easier to trouble shoot the failing test.&lt;/p&gt;
+
+&lt;p&gt;Replace this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;it 'has three ingredients' do
+  ingredients = Shortbread.ingredients
+  ingredients[0].should == &quot;sugar&quot;
+  ingredients[1].should == &quot;butter&quot;
+  ingredients[2].should == &quot;flour&quot;
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;it 'has three ingredients' do
+  Shortbread.ingredients.size.should be(3)
+end
+
+describe 'ingredients' do
+  it 'include eggs' do
+    Shortbread.ingredients include(&quot;eggs&quot;)
+  end
+
+  it 'include butter' do
+    Shortbread.ingredients include(&quot;butter&quot;)
+  end
+
+  it 'include flour' do
+    Shortbread.ingredients include(&quot;flour&quot;)
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: If order is important, you could also check this under ingredients description. This is a good thing to point out in the earlier test though. Is order important? If another developer comes along and has the first test to work with, who knows...&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Don't start your test descriptions with the word 'should'&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013/02/tests-should-not-begin-with-should/&quot;&gt;It is implied the test should do something&lt;/a&gt;. Otherwise, it wouldn't be a test. &lt;a href=&quot;http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html&quot;&gt;Rather than use the word should, start the description with a present-tense verb&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Replace this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;it 'should have three ingredients'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;it 'has three ingredients' 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Don't overload classes or class methods in tests.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It can be tempting to overload a class method in your test. Rather than having the method be called, you overload it to make sure it isn't called. This can have unintended side effects.&lt;/p&gt;
+
+&lt;p&gt;If a test which overloads a method is called with a test that tests this method, bad things will ensue.&lt;/p&gt;
+
+&lt;p&gt;Use method stubbing for this and localize it to the individual test. Don't let the test bleed into other tests.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Don't use global variables.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I normally see this used in conjunction with overloading class methods. Although a programming language gives you the tools, it doesn't mean you have to use it. I like languages that give you enough rope to hang yourself with, however, when junior developers develop in these languages, bad things can happen.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Tests should be independent.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One test should not rely on another test. Each test should be able to ran independently. Rspec and other testing frameworks provide ways to build upon the state of the test but still allow the test to be executed independently. Nothing can get your test suite in more trouble than breaking this rule.&lt;/p&gt;
+
+&lt;p&gt;One good way to ensure your test suite does this is by running the tests in random order. Rspec has supported &lt;a href=&quot;http://blog.davidchelimsky.net/2012/01/04/rspec-28-is-released/&quot;&gt;running tests in random order&lt;/a&gt; since 2.8. Check your test suite documentation on how to do this.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. Tests should leave state the way it was found.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is one of the hardest things to do. If one test sets up a database state, make sure you unwind that database state on tear down. If not, you, or someone on your team, will write a test which relies on this database state. Once tests are written this way, it's hard to unwind.&lt;/p&gt;
+
+&lt;p&gt;Have I missed anything? What rules do you use while writing tests?&lt;/p&gt;
+
+   </content>
+ </entry>
+ 
+ <entry>
+   <title>Team Language Replication</title>
+   <link href="http://bretthard.in/2013/07/team-language-replication/"/>
+   <updated>2013-07-19T00:00:00-07:00</updated>
+   <id>http://bretthard.in/2013/07/team-language-replication</id>
+   <content type="html">
+   	&lt;img src=&quot;http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg&quot; width="400px" /&gt;
+   	&lt;p&gt;You've decided to build a new product with a group of people. The product is going to fit into your current portfolio nicely and will get you to the &lt;em&gt;next stage&lt;/em&gt; of your company.&lt;/p&gt;
+
+&lt;p&gt;You, as is every member of the engineering team, are assigned to do some preliminary research on the product. We would hate to take four months building the product and not have it work as expected.&lt;/p&gt;
+
+&lt;p&gt;You've read and built other new products for your company and so you know the first step to a successful product is interviewing the customers. You interview a bunch of customers and present the findings of these interviews back to your team.&lt;/p&gt;
+
+&lt;p&gt;Everyone is in agreement to the new product. Customers want it. Engineers can build it. Marketers can market it. Sales can sell it.&lt;/p&gt;
+
+&lt;p&gt;Now, we need to build it. We know we want it fast and we know that the language our company is most experienced with is a higher level language like Ruby or Python. However, this requires some hard languages. This requires C/C++.&lt;/p&gt;
+
+&lt;p&gt;This is the question. What programming language do you build the new product in?&lt;/p&gt;
+
+&lt;h2&gt;Opt for the Familiar Language&lt;/h2&gt;
+
+&lt;p&gt;I'm assuming that you like your current engineering team. If you don't, get rid of them and get new people. But, let's say you are currently happy with them, they are driven, and they are smart.&lt;/p&gt;
+
+&lt;p&gt;I argue that although you want it to work fast, hence the C++ requirement, &lt;strong&gt;you should use the language that your current team is most familiar with.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Using a language the team knows is similar to replicating data across multiple systems. You don't want a single person to be the only developer who can work on the new system. The whole team should be able to do it. Otherwise, why are you even a team?&lt;/p&gt;
+
+&lt;p&gt;A product is not a one-man show. It is a team effort.&lt;/p&gt;
+
+&lt;p&gt;Always use languages your team knows well. When building future components make sure your team has spent the time researching and identifying problems in those new technologies. You don't want to build something, start using it, and realize it shouldn't have been built on a technology that doesn't do what you need it to do.&lt;/p&gt;
+
+   </content>
+ </entry>
+ 
+ <entry>
+   <title>Refactoring Code Improves The Customer Experience</title>
+   <link href="http://bretthard.in/2013/07/refactoring-code-improves-the-customer-experience/"/>
+   <updated>2013-07-03T00:00:00-07:00</updated>
+   <id>http://bretthard.in/2013/07/refactoring-code-improves-the-customer-experience</id>
+   <content type="html">
+   	&lt;img src=&quot;http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg&quot; width="400px" /&gt;
+   	&lt;p&gt;After posting about developers who don't refactor being worthless, some people mentioned how users don't care about refactored code, they only care about features.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/Hypn&quot;&gt;@Hypn&lt;/a&gt; &lt;a href=&quot;https://twitter.com/mattjay&quot;&gt;@mattjay&lt;/a&gt; &lt;a href=&quot;https://twitter.com/miscsecurity&quot;&gt;@miscsecurity&lt;/a&gt; I agree. Users don&amp;#39;t care what the code looks like only if it works.&lt;/p&gt;&amp;mdash; RΛY (@Raybeorn) &lt;a href=&quot;https://twitter.com/Raybeorn/statuses/351804347262320640&quot;&gt;July 1, 2013&lt;/a&gt;&lt;/blockquote&gt;
+
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;I couldn't agree more. Customers don't care about refactored code. It isn't something they can visually see. However, they do care about getting new features to play with and having bugs fixed.&lt;/p&gt;
+
+&lt;p&gt;If you never refactor code and only focus on implementing new features, something special happens to your code base; It becomes &lt;em&gt;harder to work with&lt;/em&gt;. Being able to iterate fast and fixing bugs quickly are directly correlated to having a code base that is &lt;em&gt;easy to work with&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The bigger your code base becomes the more complex it becomes. Once the code is overly complex, developers can't implement features quickly. It is hard to find bugs in complicated code bases. If the purpose of your company is to iterate as fast as possible. Developers need to be given time to refactor.&lt;/p&gt;
+
+&lt;p&gt;In addition to making the code base easier to work with, refactoring has an additional advantage. As code is refactored developers identify better ways of doing things. They find ways to optimize code.&lt;/p&gt;
+
+&lt;p&gt;It is in both the developers and the companies best interest to refactor code.&lt;/p&gt;
+
+   </content>
+ </entry>
+ 
+ <entry>
+   <title>Purposes of Refactoring</title>
+   <link href="http://bretthard.in/2013/07/another-new-post/"/>
+   <updated>2013-07-03T00:00:00-07:00</updated>
+   <id>http://bretthard.in/2013/07/another-new-post</id>
+   <content type="html">
+   	&lt;img src=&quot;&quot; width="400px" /&gt;
+   	&lt;p&gt;Improving Readability - Writing code with less lines than someone else doesn't make you a good programmer. Great programmers understand they won't be the only ones contributing to the code base. &lt;a href=&quot;http://cobaia.net/php/2013/01/20/some-tips-to-improve-your-codes-readability/&quot;&gt;Great programmers write their code so it's easy to read&lt;/a&gt;. Great code is easy to understand. If you read a piece of code which is hard to understand, refactor it so everyone will have an easier time reading it.&lt;/p&gt;
+
+&lt;p&gt;Reducing Complexity - Initial code you just want to work. You may&lt;/p&gt;
+
+&lt;p&gt;Improving Maintainability - A programmers goal should be writing code that is easy to maintain. It is easy to identify and fix bugs in maintainable code. Areas for improving code maintainability include naming conventions, &lt;a href=&quot;http://blog.hltbra.net/2013/04/08/dry-and-testing.html&quot;&gt;not repeating code&lt;/a&gt;, and &lt;a href=&quot;http://www.jeremymorgan.com/blog/programming/single-responsibility-principle/&quot;&gt;single responsibility methods&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Improving Extensibility - Identifying areas of code that can benefit from a known design pattern. The design patterns you use, don't have to be fancy. They don't have to be unique to your code.&lt;/p&gt;
+
+   </content>
+ </entry>
+ 
+ <entry>
+   <title>Your Code Smells</title>
+   <link href="http://bretthard.in/2013/07/your-code-smells/"/>
+   <updated>2013-07-01T00:00:00-07:00</updated>
+   <id>http://bretthard.in/2013/07/your-code-smells</id>
+   <content type="html">
+   	&lt;img src=&quot;http://farm1.staticflickr.com/32/39894557_c6f20a7444_b.jpg&quot; width="400px" /&gt;
+   	&lt;p&gt;Your code stinks.&lt;/p&gt;
+
+&lt;p&gt;If you don't refactor code, you are a worthless programmer. Reducing the smell of your code helps your own sanity as well as those around you.&lt;/p&gt;
+
+&lt;p&gt;If you don't refactor code your technical debt continues to increase. Programs you work with will be harder to maintain.&lt;/p&gt;
+
+&lt;p&gt;80% of programming is maintenance.&lt;/p&gt;
+
+&lt;p&gt;Programming is refactoring. If you are working on anything of substance, it can benefit from refactoring.&lt;/p&gt;
+
+&lt;p&gt;In startups, speed is preferred over anything else. Once the prototype is written, code can be forgotten because, &quot;Hey, It works.&quot;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gettingreal.37signals.com/ch10_Manage_Debt.php&quot;&gt;Don't let this code continue to smell without being refactored.&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Hack together some bad code that's functional but still a bit hairy and you're building up debt. Throw together a design that's good enough but not really good and you've done it again.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It's ok to do this from time to time&lt;/strong&gt;. In fact, it's often a needed technique that helps you do the whole Get-Real-ASAP thing. But &lt;strong&gt;you still need to recognize it as debt and pay it off at some point&lt;/strong&gt; by cleaning up the hairy code or redesigning that so-so page.&lt;/p&gt;&lt;/blockquote&gt;
+
+   </content>
+ </entry>
+ 
+ <entry>
+   <title>Developers Spend Half Their Time Fixing Bugs</title>
+   <link href="http://bretthard.in/2013/06/developers-spend-half-their-time-fixing-bugs/"/>
+   <updated>2013-06-13T00:00:00-07:00</updated>
+   <id>http://bretthard.in/2013/06/developers-spend-half-their-time-fixing-bugs</id>
+   <content type="html">
+   	&lt;img src=&quot;http://farm4.staticflickr.com/3190/3097134746_71ea6b0842_b.jpg&quot; width="400px" /&gt;
+   	&lt;p&gt;&lt;a href=&quot;http://www.joelonsoftware.com/articles/fog0000000014.html&quot;&gt;Joel Spolsky&lt;/a&gt; says:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Fixing bugs is only important when the value of having the bug fixed exceeds the cost of the fixing it. - Joel Spolsky&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Bugs in legacy systems are wide spread. They live in code bases that you currently work on. &lt;a href=&quot;http://mayerdan.com/ruby/2012/11/11/bugs-per-line-of-code-ratio/&quot;&gt;Application have between 10 - 20 defects per 1,000 lines of code&lt;/a&gt;. Software tools have been developed to even find bugs before they are discovered by external users of the software.&lt;/p&gt;
+
+&lt;p&gt;If you are lucky, the legacy system you work on has tests. Other's don't. If you are working on a code base that doesn't have tests, I feel bad for you son, I got 99 defects but not having tests ain't one.&lt;/p&gt;
+
+&lt;p&gt;Working on a code base that doesn't have tests is awful because you will be introducing bugs as you are fixing others. This is something common when resolving vulnerabilities. A developer will fix a vulnerability incorrectly making a vulnerability harder to find but still exploitable.&lt;/p&gt;
+
+&lt;h2&gt;50% of a Developer's Time&lt;/h2&gt;
+
+&lt;p&gt;According to Rogue Wave Software, &lt;a href=&quot;http://www.roguewave.com/DesktopModules/Bring2mind/DMX/Download.aspx?entryid=1606&amp;amp;command=core_download&amp;amp;PortalId=0&amp;amp;TabId=607&quot;&gt;50% of a developers time is spent debugging&lt;/a&gt;. A developer spends half his time fixing problems with code that's already written. This is the maintenance aspect of any software development lifecycle.&lt;/p&gt;
+
+&lt;p&gt;The problem is that most of these bugs are in code the original author didn't write. I don't mind bug fixing as long as the code is my own. But, when I'm not the person who wrote the original code, the code takes longer to identify problems.&lt;/p&gt;
+
+&lt;p&gt;Fixing bugs in another person's code is similar to reading a handwritten letter. Some letters are beautifully crafted by people who care about the language they are writing in. They use the right words, punctuate correctly, and make sure the letter is legible.&lt;/p&gt;
+
+&lt;p&gt;Other handwritten letters don't do this. The reader of the letter can get frustrated just by reading what the author has written. If the letter is illegible in can make it even harder to understand what the author originally intended.&lt;/p&gt;
+
+&lt;p&gt;Source code is the same way. Everyone who can program can write code. Not everyone can write legible code. When I need to fix a bug and it hits someone's illegible code, I get frustrated.&lt;/p&gt;
+
+&lt;p&gt;With legacy systems, a lot of time is spent fixing bugs on a code base the bug fixer didn't write. Hopefully the code base has unit tests and integration tests in place or fixing code can be like walking through a mine field.&lt;/p&gt;
+
+&lt;p&gt;Management and good developers want to make sure known bugs get fixed in a reasonable time, but how much time should be spent fixing bugs and how much time should be spent developing new features.&lt;/p&gt;
+
+&lt;h2&gt;Approaches to Fixing Bugs&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/743442/implementing-features-vs-bug-fixing&quot;&gt;Brann spends all of his time fixing known bugs&lt;/a&gt;. When he isn't fixing bugs he is developing new features. The commenter's explain how this is impractical on large software projects and unworkable in the real world. Doesn't Brann live and develop in the real world?&lt;/p&gt;
+
+&lt;p&gt;I think Brann's methodology is interesting. I'm curious about the total amount of time Brann fixes bugs compared to time implementing new features. In a typical year how much time does Bran spend fixing bugs? 6 months?&lt;/p&gt;
+
+&lt;p&gt;Although other developers disagree with Brann, the opposite approach can also be taken. &lt;a href=&quot;http://www.joelonsoftware.com/articles/fog0000000043.html&quot;&gt;Infinite defects methodology&lt;/a&gt; is the approach to never fix bugs until after code is released. Microsoft encounter this problem and and changed to a &lt;em&gt;zero defects methodology&lt;/em&gt; similar to Brann's.&lt;/p&gt;
+
+&lt;p&gt;The challenge with either approach is &lt;a href=&quot;http://blogs.mulesoft.org/development-process-estimation-is-futile/&quot;&gt;developers estimation of time to fix bugs is never right&lt;/a&gt; and they even discuss if it's &lt;a href=&quot;http://ruisilva.wordpress.com/2009/10/03/is-it-better-to-overestimate-or-underestimate/&quot;&gt;better to overestimate or underestimate&lt;/a&gt;. What this means is that anytime the schedule estimates how much time a company will take to fix bugs, the estimation is wrong.&lt;/p&gt;
+
+   </content>
+ </entry>
+ 
+ <entry>
+   <title>Upgrading Ruby 1.8.6 to 1.8.7</title>
+   <link href="http://bretthard.in/2013/06/upgrading-ruby-186-to-187/"/>
+   <updated>2013-06-05T00:00:00-07:00</updated>
+   <id>http://bretthard.in/2013/06/upgrading-ruby-186-to-187</id>
+   <content type="html">
+   	&lt;img src=&quot;http://farm4.staticflickr.com/3352/3526698689_1ed4764119_b.jpg&quot; width="400px" /&gt;
+   	&lt;p&gt;Although this post is a little over due I thought it could potentially help other people attempting to do the update. I wanted a guide which could help people do the update and understand what needs to go into doing it.&lt;/p&gt;
+
+&lt;h2&gt;OSX Install&lt;/h2&gt;
+
+&lt;p&gt;For some reason tcl-tk is borked with the Ruby 1.8.7. You can install 1.8.7 by doing the following.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rvm install 1.8.7 --without-tcl --without-tk
+brew install tcl-tk
+rvm reinstall 1.8.7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Searching Your Code Base&lt;/h2&gt;
+
+&lt;p&gt;Ruby 1.8.7 mainly added additional methods to classes. This means that it is pretty much backwards compatible. There are a few exceptions &lt;a href=&quot;http://svn.ruby-lang.org/repos/ruby/tags/v1_8_7/NEWS&quot;&gt;regarding incompatibility&lt;/a&gt;. These exceptions are documented here.&lt;/p&gt;
+
+&lt;h3&gt;String#slice!&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;String#slice!&lt;/code&gt; had some unintentional bugs and they have been fixed  because either they disagreed with documentation or their respective  behavior of &lt;code&gt;#slice&lt;/code&gt;.  Unfortunately, this causes some  incompatibilities in the following (somewhat rare) cases.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;`#slice!` no longer expands the array when an out-of-boundary value is given.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Ruby 1.8.6&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = [1,2]
+a.slice!(4,0)   #=&amp;gt; nil
+a               #=&amp;gt; [1,2,nil,nil]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Ruby 1.8.7&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = [1,2]      
+a.slice!(4,0)   #=&amp;gt; nil      
+a               #=&amp;gt; [1,2]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;`#slice!` no longer raises an exception but returns nil when a negative length or out-of-boundary negative position is given.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Ruby 1.8.6&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = [1,2]      
+a.slice!(1,-1)  #=&amp;gt; (raises IndexError)      
+a.slice!(-5,1)  #=&amp;gt; (raises IndexError)      
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Ruby 1.8.7&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a = [1,2]      
+a.slice!(1,-1)  #=&amp;gt; nil      
+a.slice!(-5,1)  #=&amp;gt; nil
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;String#to_i&lt;/h3&gt;
+
+&lt;p&gt;The behavior in Ruby 1.8.6 was inconsistent with Ruby syntax and considered as  a bug. &lt;code&gt;String#to_i&lt;/code&gt;, &lt;code&gt;String#hex&lt;/code&gt; and &lt;code&gt;String#oct&lt;/code&gt; no longer accept a sequence  of underscores (`__') as part of a number.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ruby 1.8.6&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;'1__0'.to_i     #=&amp;gt; 10    
+'1__0'.to_i(2)  #=&amp;gt; 2  # 0b10    
+'1__0'.oct      #=&amp;gt; 8  # 010    
+'1__0'.hex      #=&amp;gt; 16 # 0x10    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Ruby 1.8.7&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;'1__0'.to_i     #=&amp;gt; 1    
+'1__0'.to_i(2)  #=&amp;gt; 1    
+'1__0'.oct      #=&amp;gt; 1    
+'1__0'.hex      #=&amp;gt; 1  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Date.parse&lt;/h2&gt;
+
+&lt;p&gt;'##.##.##' (where each '#' is a digit) is now taken as 'YY.MM.DD' instead of 'MM.DD.YY'. While the change may confuse you, you can use &lt;code&gt;.strptime&lt;/code&gt; to replicate the old way it was done.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Date.strptime(&quot;01.02.03&quot;, &quot;%m.%d.%Y&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I could not actually replicate this functionality personally. Let me know if you have any success.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1.8.7 :001 &amp;gt; a = Date.parse(&quot;01.02.03&quot;)
+=&amp;gt; #&amp;lt;Date: 3442913/2,0,2299161&amp;gt;
+
+1.8.6 :001 &amp;gt; a = Date.parse(&quot;01.02.03&quot;)
+=&amp;gt; #&amp;lt;Date: 3444309/2,0,2299161&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Keep in mind, this &lt;a href=&quot;http://stackoverflow.com/questions/9483563/differences-in-date-string-parsing-between-ruby-1-9-3-and-ruby-1-8-7&quot;&gt;changed again in 1.9&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;StringIO#each_byte&lt;/h2&gt;
+
+&lt;p&gt;The return value changed from nil to self.  This is what the document says and the same as each_line() does.&lt;/p&gt;
+
+&lt;h2&gt;tempfile&lt;/h2&gt;
+
+&lt;p&gt;The file name format has changed. No dots are included by default in temporary file names any more. This shouldn't be a problem, unless you are permanently keeping temporary files. Which is the exact opposite of what temp files should be used for. Seems like a bad coding practice to me.&lt;/p&gt;
+
+&lt;h2&gt;URI&lt;/h2&gt;
+
+&lt;p&gt;  Made changes to &lt;code&gt;FTP&lt;/code&gt; and &lt;code&gt;URI.merge&lt;/code&gt; to accommodate &lt;a href=&quot;http://www.ietf.org/rfc/rfc3986&quot;&gt;RFC3986&lt;/a&gt;. These are more bugs in 1.8.6 than anything else. But still search your code base to see if URI is used.&lt;/p&gt;
+
+&lt;h3&gt;FTP&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;  URI('ftp://example.com/foo').path #=&amp;gt; 'foo'      
+  URI('ftp://example.com/%2Ffoo').path #=&amp;gt; '/foo'
+  URI::FTP.build([nil, 'example.com', nil, '/foo', 'i').to_s #=&amp;gt; 'ftp://example.com/%2Ffoo;type=i'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;URI.merge&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;  URI('http://a/b/c/d;p?q').merge('?y') == URI('http://a/b/c/d;p?y')      
+  URI('http://a/b/c/d;p?q').merge('/./g') == URI('http://a/g')      
+  URI('http://a/b/c/d;p?q').merge('/../g') == URI('http://a/g')      
+  URI('http://a/b/c/d;p?q').merge('../../../g') == URI('http://a/g')      
+  URI('http://a/b/c/d;p?q').merge('../../../../g') == URI('http://a/g')
+&lt;/code&gt;&lt;/pre&gt;
+
+   </content>
+ </entry>
+ 
+ <entry>
+   <title>Playing Board Games Is Like Watching Sports</title>
+   <link href="http://bretthard.in/2013/05/playing-board-games-is-like-watching-sports/"/>
+   <updated>2013-05-30T00:00:00-07:00</updated>
+   <id>http://bretthard.in/2013/05/playing-board-games-is-like-watching-sports</id>
+   <content type="html">
+   	&lt;img src=&quot;http://farm6.staticflickr.com/5075/7233031304_7237232f98_b.jpg&quot; width="400px" /&gt;
+   	&lt;p&gt;While attending College there were two groups of people who I ran with. One group was incredibly nerdy. They would talk about comic books, play video games, build &lt;a href=&quot;/2012/12/the-struggle-of-lego/&quot;&gt;Lego structures&lt;/a&gt;, and play card and board games. The nerds all lived in one house, affectionately called &lt;em&gt;The Nerdery&lt;/em&gt; while the other group lived in another house.&lt;/p&gt;
+
+&lt;p&gt;Although I didn't live at the Nerdery, I spent much of my College life there. The Nerdery introduced me to strategic German Board games. Strategic German Board games, also called euros, mitigate the amount of luck involved in the game. By doing this, a more experienced player has an advantage over the neophyte. The more you play these games, the better you get at playing them.&lt;/p&gt;
+
+&lt;p&gt;As a kid my parents never played board games with me. So as soon as one of these games was pulled out, I was immediately drawn to it. I had a hole which needed filling.&lt;/p&gt;
+
+&lt;p&gt;Like many board gamers, Settlers of Catan and Axis and Allies were my gateway games. Although these games introduced me to the hobby, I have moved on from these inferior games to much better games.&lt;/p&gt;
+
+&lt;p&gt;I now own over 200 board games.&lt;/p&gt;
+
+&lt;h2&gt;Board games Connect You Like Sports&lt;/h2&gt;
+
+&lt;p&gt;The other house would bond over sports. They would watch baseball and football, but really bonded over car races. Rally racing in particular.&lt;/p&gt;
+
+&lt;p&gt;I don't find watching sports on television interesting. I find it is a huge time suck, incredibly uninteresting, and mindless. The only time I found watching sports interesting was the one year I participated in a fantasy sports league. In the same year I joined a fantasy soccer league and a fantasy football league.&lt;/p&gt;
+
+&lt;p&gt;This made watching sports enjoyable because I was attempting to solve a puzzle. I was attempting to maximize my winnings.&lt;/p&gt;
+
+&lt;p&gt;However, I don't find watching sports on television &lt;em&gt;enjoyable&lt;/em&gt;. When I'm done, I don't feel like I've learned or accomplished anything. I don't feel that I've grown in any way. There are other things I do, like watching movies, which don't allow me to grow as a person either. Both movies and sports give people a way to connect by having a framework for conversation.&lt;/p&gt;
+
+&lt;p&gt;But, watching movies doesn't bind me to people the way sports fans are bound. Board games do.&lt;/p&gt;
+
+&lt;p&gt;When I get together with other board gamers we have a language that is our own and talking to people about board games gives me a similar experience to the way sports fans talk to each other.&lt;/p&gt;
+
+&lt;h2&gt;Non-Computer Related Hobbies&lt;/h2&gt;
+
+&lt;p&gt;Since I was a kid &lt;a href=&quot;/2012/12/falling-in-love-with-computers/&quot;&gt;I knew I would work with computers&lt;/a&gt;. Upon graduating from College, I realized I had no hobbies which didn't involve computers or technology. It took me 25 years to realize however that if a computer wasn't involved I didn't care. Even the fiction I read involved computers.&lt;/p&gt;
+
+&lt;p&gt;I've always understood that &lt;a href=&quot;(/2012/12/extracurricular-activities-of-passionate-people/&quot;&gt;hobbies involving computers were important to employers&lt;/a&gt;, but I think hobbies not involving computers are fundamental to being a more rounded person. They allow you to decompress and relax your mind. However, I still want to do something intellectually stimulating. To me, board games are the perfect solution.&lt;/p&gt;
+
+   </content>
+ </entry>
+ 
+ <entry>
+   <title>Bandit Algorithms are Better than A/B Tests</title>
+   <link href="http://bretthard.in/2013/05/bandit-algorithms-are-better-than-a-b-tests/"/>
+   <updated>2013-05-23T00:00:00-07:00</updated>
+   <id>http://bretthard.in/2013/05/bandit-algorithms-are-better-than-a-b-tests</id>
+   <content type="html">
+   	&lt;img src=&quot;http://farm9.staticflickr.com/8299/8002616418_21eb1e12d8_b.jpg&quot; width="400px" /&gt;
+   	&lt;p&gt;I've been reading the amazing book &lt;a href=&quot;http://www.amazon.com/gp/product/1449341330/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1449341330&amp;amp;linkCode=as2&amp;amp;tag=breharsblo-20&quot;&gt;Bandit Algorithms for Website Optimization&lt;/a&gt; by John Myles White. The book gives a general overview of bandit algorithms and goes into depth on three bandit algorithms with python implementations. The three implementations which are covered are Epsilon-Greedy, Softmax, and Upper Confidence Bound.&lt;/p&gt;
+
+&lt;p&gt;The book does an excellent job of breaking down material previously only found in academic papers. He also explains how bandit algorithms are better than traditional &lt;a href=&quot;http://en.wikipedia.org/wiki/A/B_testing&quot;&gt;A/B testing&lt;/a&gt;. To benefit from bandit algorithms you need to be willing to run experiments for longer periods of time. If you are okay with losing some reward (this could be profit) because your experiment is short-term then A/B tests are acceptable.&lt;/p&gt;
+
+&lt;p&gt;However, if you want to continually be experimenting to determine how to maximize your rewards, bandit algorithms are a much better approach.&lt;/p&gt;
+
+&lt;h2&gt;The Problem Bandit Algorithms Solve&lt;/h2&gt;
+
+&lt;p&gt;A bandit algorithm solves the following problem:&lt;/p&gt;
+
+&lt;p&gt;Given n slot machines, how can we maximize our payouts by determining which machine has the best payouts.&lt;/p&gt;
+
+&lt;p&gt;The name comes from the slang term for a slot machine: one-armed bandit. These algorithms can be applied to systems (websites) where you want to test aspects of the system (colors, layouts, etc.) in order to maximize the reward (conversion, revenue).&lt;/p&gt;
+
+&lt;p&gt;One of the interesting aspects of bandit algorithms is the term &quot;test&quot;. Compared to traditional A/B testing, bandit algorithms don't ever need to be turned off. It is a much different way of thinking. Bandit's will always attempt to maximize profits. So one &quot;test&quot; may actually be the best, but the bandit continues to deliver the winner without the need for you to turn it off.&lt;/p&gt;
+
+&lt;p&gt;With A/B testing you would lose the potential reward every time you served the inferior test. This problem occur when testing bandit algorithms.&lt;/p&gt;
+
+&lt;h2&gt;Epsilon-Greedy&lt;/h2&gt;
+
+&lt;p&gt;Epsilon-Greedy (EG) is probably the easiest bandit algorithm to understand.&lt;/p&gt;
+
+&lt;p&gt;Before choosing the test to return (arm) the algorithm determines whether we should pull the arm we currently think is the best or if we should experiment by pulling one of the other arms. Epsilon is the percentage of the time we want to experiment.&lt;/p&gt;
+
+&lt;p&gt;With all bandit algorithms, after the arm is selected we wait to see if the reward is obtained. We then update our knowledge about each of the arms we are testing.&lt;/p&gt;
+
+&lt;p&gt;Epsilon-Greedy suffers from the same problem of traditional A/B testing, it always experiments even if it has confidence the arm being selected is a poor choice. This can be limited by annealing the algorithm.&lt;/p&gt;
+
+&lt;p&gt;Annealing is allowing epsilon to change over time. At the beginning of the experiment epsilon is large, but over time it becomes smaller and smaller until the algorithm never experiments.&lt;/p&gt;
+
+&lt;h2&gt;Softmax&lt;/h2&gt;
+
+&lt;p&gt;All bandit-algorithms attempt to return the best arm most of the time. With Epsilon-Greedy this percentage is determined by the value of epsilon (&lt;code&gt;1 - epsilon&lt;/code&gt;). Softmax doesn't use this approach.&lt;/p&gt;
+
+&lt;p&gt;To determine which arm should be pulled, Softmax randomly selects an arm proportional to the amount of reward it has received before.&lt;/p&gt;
+
+&lt;h3&gt;Softmax Example&lt;/h3&gt;
+
+&lt;p&gt;Say we have been running experiments on 3 arms. Through our previous tests, we've determined that arm1 converts 20% of the time, arm2 converts 30% of the time, and arm3 converts 12% of the time. A new visitor comes to our site and we need to determine which arm to return. We choose a random number in order to determine which arm to select.&lt;/p&gt;
+
+&lt;h4&gt;Naive Approach&lt;/h4&gt;
+
+&lt;p&gt;We would select arm1 32.3% of the time:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;arm1 / arm1 + arm2 + arm3 = 0.20 / (0.20 + 0.30 + 0.12) = .20 / 0.62 = 0.323
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We would select arm1 48.4% of the time:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;arm2 / arm1 + arm2 + arm3 = 0.30 / (0.20 + 0.30 + 0.12) = .30 / 0.62 = 0.484
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We would select arm1 19.3% of the time:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;arm3 / arm1 + arm2 + arm3 = 0.12 / (0.20 + 0.30 + 0.12) = .12 / 0.62 = 0.193
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4&gt;Better Approach&lt;/h4&gt;
+
+&lt;p&gt;What makes Softmax interesting is the ability to scale the amount of variation in the system. Initially the arms should have large fluctuations but over time slowly stabilize. Softmax algorithms deal with this by introducing temperature. In Mr. White's words:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;[The] temperature parameter [is] based on an analogy with [the Boltzmann distribution in] physics in which systems at high temperatures tend to behave randomly, while they take on more structure at low temperatures.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Arm1:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(arm1 / temperature) / ((arm1 / temperature) + (arm2 / temperature) + (arm3 / temperature))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Arm2:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(arm2 / temperature) / ((arm1 / temperature) + (arm2 / temperature) + (arm3 / temperature))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Arm3:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(arm3 / temperature) / ((arm1 / temperature) + (arm2 / temperature) + (arm3 / temperature))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With temperature parameter we can apply the annealing principle the same way we do with Epsilon-Greedy.&lt;/p&gt;
+
+&lt;h2&gt;Upper Confidence Bound&lt;/h2&gt;
+
+&lt;p&gt;The last of the algorithms presented is the Upper Confidence Bound (UCB1) algorithm. UCB makes an arm selection based on the &lt;a href=&quot;http://en.wikipedia.org/wiki/Confidence_interval&quot;&gt;amount of confidence&lt;/a&gt; we have in each arm.&lt;/p&gt;
+
+&lt;p&gt;The other two algorithms do not use confidence intervals to make arm selections. They experiment randomly. In contrast, UCB1 is completely deterministic. Given a set of data, you can guarantee what arm UCB1 will select.&lt;/p&gt;
+
+&lt;p&gt;One caveat about UCB1: UCB1 assumes the maximum reward is 1. If the reward can be higher there are other variants of UCB you can use.&lt;/p&gt;
+
+   </content>
+ </entry>
+ 
+ <entry>
+   <title>Successful Marketers are Creative</title>
+   <link href="http://bretthard.in/2013/05/successful-marketers-are-creative/"/>
+   <updated>2013-05-15T00:00:00-07:00</updated>
+   <id>http://bretthard.in/2013/05/successful-marketers-are-creative</id>
+   <content type="html">
+   	&lt;img src=&quot;http://farm2.staticflickr.com/1179/5123008967_039b27b061_b.jpg&quot; width="400px" /&gt;
+   	&lt;blockquote&gt;&lt;p&gt;If you can't be the leader in your category, create a new category you can be the leader in.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rule 2 in the The 22 Immutable Laws of Marketing&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Every successful person you know has differentiated themselves from others in their field. They are unique in their niche.&lt;/p&gt;
+
+&lt;p&gt;I stumbled upon this advertisement for Forever 21, a woman's clothing store, a while ago and realized that marketing and marketers fit this same mold. Great marketing is an invention game. Old methodologies can work, but new ways of marketing to users can be more affective.&lt;/p&gt;
+
+&lt;p&gt;Forever 21 wanted to have an advertisement in Times Square, the heaviest advertisement spaces in the United States. But, how do you differentiate yourself from every other advertisement being shown in Times Square? By being different. If Forever 21's advertisement wasn't unique they would be lost in the ocean of advertisements.&lt;/p&gt;
+
+&lt;p&gt;To be different Forever 21 chose to have an interactive billboard. The billboard was so distracting that the New York Police Department asked them to change the angle of the camera because drivers were creating traffic jams due to frequent stopping to view the ad.&lt;/p&gt;
+
+&lt;iframe src=&quot;http://player.vimeo.com/video/32114343&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt; &lt;p&gt;&lt;a href=&quot;http://vimeo.com/32114343&quot;&gt;Forever21 Times Square Billboard&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/space150&quot;&gt;space150&lt;/a&gt; on &lt;a href=&quot;http://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are in the physical space, anything interactive has a large chance of success. By visiting a science museum you will understand why interactive media is so effective. Humans love being able to &lt;em&gt;control&lt;/em&gt; something, even if it is only the perception of control.&lt;/p&gt;
+
+&lt;p&gt;Interactive advertisements also reach outside your target demographic. I'm not a woman between the ages of 18-30. But, I am writing about the billboard.&lt;/p&gt;
+
+&lt;p&gt;Forever 21 accomplished to receive a bunch of media attention from the ad. From a branding perspective it had a lot of people taking pictures of it, talking about it, and writing about it.&lt;/p&gt;
+
+&lt;p&gt;Super Bowl ads, arguably the hardest marketing investment to demonstrate return is incredibly expensive. But, if done well, unique advertisements have staying power - People will continue talking about it decades later. Do you remember the Budweiser frogs?&lt;/p&gt;
+
+&lt;p&gt;However, this billboard wasn't funny, It was new. New is cool. Humans love new things. We constantly want to be entertained by &lt;em&gt;fresh things&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Marketing does one thing: It informs. Every marketing play is a twist on delivering information to potential target users of a product or service.&lt;/p&gt;
+
+   </content>
+ </entry>
+ 
+ 
+</feed>
+
+
+

@@ -1,0 +1,816 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Understanding Cross-Site Scripting (XSS)</title>
+  
+
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>May 29, 2009</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p><a href="http://www.flickr.com/photos/34316967@N04/">jDevaun</a></p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm9.staticflickr.com/8316/8028733584_f1f2c265bb_b.jpg">
+		
+
+		<h1>Understanding Cross-Site Scripting (XSS)</h1>
+
+		<div class="content">
+		
+
+<div class="part-of-a-series">
+    <p>This article is <strong>Part 1</strong> in a <strong>11-Part</strong> series about the Owasp Top 10.</p>
+    <ul>
+    
+    
+    
+        
+        <li>Part 1 - 
+        
+            This Article
+        
+        </li>
+    
+    
+    
+        
+        <li>Part 2 - 
+        
+            <a href="/2009/07/injection-flaws/">Injection Flaws</a>
+        
+        </li>
+    
+    
+    
+        
+        <li>Part 3 - 
+        
+            <a href="/2009/07/malicious-file-execution/">Malicious File Execution</a>
+        
+        </li>
+    
+    
+    
+        
+        <li>Part 4 - 
+        
+            <a href="/2009/07/insecure-direct-object-reference/">Insecure Direct Object Reference</a>
+        
+        </li>
+    
+    
+    
+        
+        <li>Part 5 - 
+        
+            <a href="/2009/08/cross-site-request-forgery-csrf/">Cross Site Request Forgery (CSRF)</a>
+        
+        </li>
+    
+    
+    
+        
+        <li>Part 6 - 
+        
+            <a href="/2009/08/information-leakage-and-improper-error-handling/">Information Leakage and Improper Error Handling</a>
+        
+        </li>
+    
+    
+    
+        
+        <li>Part 7 - 
+        
+            <a href="/2009/08/broken-authentication-and-session-management/">Broken Authentication and Session Management</a>
+        
+        </li>
+    
+    
+    
+        
+        <li>Part 8 - 
+        
+            <a href="/2009/09/insecure-cryptographic-storage/">Insecure Cryptographic Storage</a>
+        
+        </li>
+    
+    
+    
+    
+    
+    
+    
+        
+        <li>Part 9 - 
+        
+            <a href="/2009/10/insecure-communications/">Insecure Communications</a>
+        
+        </li>
+    
+    
+    
+        
+        <li>Part 10 - 
+        
+            <a href="/2009/10/owasp-2007-top-10-presentation/">OWASP 2007 Top 10 Presentation</a>
+        
+        </li>
+    
+    
+    
+    
+    
+    
+    
+        
+        <li>Part 11 - 
+        
+            <a href="/2009/11/restricting-url-access/">Failure to Restrict URL Access</a>
+        
+        </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ul>
+</div>
+
+
+<p>If it hasn't already, Cross-Site Scripting (XSS) will soon be replacing SQL injection as the new buzzword in the security sector. XSS will continually be a topic on this blog as well as others <a href="http://holisticinfosec.blogspot.com">1</a>, <a href="http://blog.skeptikal.org/">2</a>, <a href="http://jeremiahgrossman.blogspot.com/">3</a>, <a href="http://ha.ckers.org/blog/">4</a>.</p>
+
+<p>Due to this fact, I think a primer would be a good idea for those who don't know or understand this problem.</p>
+
+<p>Many articles have been written about Cross-Site Scripting and if you want to have a better understanding of the problem, I suggest you read those documents (Links at the bottom of the post).</p>
+
+<p>Basically, There are 3 types of Cross-Site Scripting:</p>
+
+<ul>
+<li>Stored/Non-Reflective/Persistent Cross Site Scripting (User visits the XSS'ed page)</li>
+<li>Non-Stored/Reflective/Reflected Cross Sited Scripting (User clicks a link that embeds the script into the loaded page)</li>
+<li><a href="http://www.webappsec.org/projects/articles/071105.shtml">DOM Based Cross Site Scripting</a></li>
+</ul>
+
+
+<p>All of these names make it confusing for a first timer to understand XSS. There really should be a better web application security standards organization. Here is a breakdown of Persistent XSS and Reflective XSS. These are the big two that most people talk about when they are referring to Cross Site Scripting. If you understand these well, you will be able to participate in 90% of XSS conversations.</p>
+
+<h2>Persistent Cross-Site Scripting</h2>
+
+<p>Persistent XSS is arguably more dangerous than reflective XSS. This attack embeds the malicious script permanently into the web application. The script will then wait until people access the page it is located on.</p>
+
+<p>Here is an attack using Persistent Cross-Site Scripting:</p>
+
+<ol>
+<li>The victim visits a website they trust, amazon.com.</li>
+<li>A script has been inserted by an attacker on a page they happen to visit while on amazon.com.</li>
+<li>The script executes in the context of amazon.com.</li>
+<li>The victim is then compromised.</li>
+</ol>
+
+
+<p>Note: Obviously, someone can increase the chances of the victim visiting this page (step 2) through social engineering, phishing, etc.</p>
+
+<h2>Reflective Cross-Site Scripting</h2>
+
+<p>These are the ones the media usually reports on. <a href="http://www.spamfighter.com/News-12410-XSS-Vulnerability-Found-in-Recording-Industry-Association-of-America-Website.htm">1</a>,<a href="http://www.darkreading.com/security/application-security/217500479/index.html">2</a>,<a href="http://www.mxlogic.com/securitynews/viruses-worms/six-av-vendor-websites-open-to-xss-attacks095.cfm">3</a>. In this attack, some type of social engineering is involved for the attack to be successful.</p>
+
+<p>Here is an attack, using Reflective Cross-Site Scripting:</p>
+
+<ol>
+<li>The victim gets an email/Instant Message that contains a link.</li>
+<li>The victim clicks the link. (Requires User Intervention)</li>
+<li>A script has been inserted by an attacker on the page they then visit.</li>
+<li>The script executes in the context of that site.</li>
+<li>The victim is then compromised.</li>
+</ol>
+
+
+<p>Note: I want to reiterate that this attack requires some type of user intervention (step 2).</p>
+
+<h2>Why is Cross-Site Scripting Bad?</h2>
+
+<p>Cross-Site Scripting can lead to all sorts of different exploits, including system compromise. For an attacker to do this, they need to break out of the browser's context. We have seen examples that <a href="http://dvlabs.tippingpoint.com/blog/2009/03/21/pwn2own-wrap-up">breaking out of the browser</a> is not that hard to do.</p>
+
+<p>In addition, an attacker can also establish a bi-directional channel using iframes. This creates a man-in-the-middle attack. The attacker can then intercept key strokes, use the victim as an intranet port scanner, and even stealing credentials. The attacker is only limited by their knowledge of scripting.</p>
+
+<p>Hopefully, this gives you a better understanding of Cross-Site Scripting. Feel free to leave comments if you don't understand something and I will address it in the article.</p>
+
+<h2>Additional Resources</h2>
+
+<ul>
+<li><a href="http://www.cgisecurity.com/xss-faq.html">Cross-Site Scripting (XSS) FAQ</a></li>
+<li><a href="http://www.owasp.org/index.php/Cross_site_scripting">OWASP Guide to XSS</a></li>
+<li><a href="http://www.youtube.com/watch?v=_OhuqDCs2LA">XSS Video Tutorial (via youtube)</a></li>
+<li><a href="http://www.gnucitizen.org/blog/attackapi/">XSS Attack API</a></li>
+</ul>
+
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#vulnerabilities-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'vulnerabilities', 'Understanding Cross-Site Scripting (XSS)']);"><i class="icon-tags icon-white"></i> vulnerabilities <span>13</span></a></li>
+     
+    	<li><a href="/tags.html#owasp-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'owasp', 'Understanding Cross-Site Scripting (XSS)']);"><i class="icon-tags icon-white"></i> owasp <span>12</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2009/05/xss-cross-site-scripting/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2009/05/xss-cross-site-scripting/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=Understanding Cross-Site Scripting (XSS) - bretthard.in/2009/05/xss-cross-site-scripting/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2009/05/xss-cross-site-scripting/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Understanding Cross-Site Scripting (XSS)&amp;url=bretthard.in/2009/05/xss-cross-site-scripting/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2009/05/xss-cross-site-scripting/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From Understanding Cross-Site Scripting (XSS)']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From Understanding Cross-Site Scripting (XSS)']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From Understanding Cross-Site Scripting (XSS)']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From Understanding Cross-Site Scripting (XSS)']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

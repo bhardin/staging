@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Effectively Consuming Valuable Content</title>
+  
+
+	
+		<meta name="description" content="A method for staying informed to information you care about." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>January 31, 2013</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p><a href="http://www.flickr.com/photos/thelotuscarroll/">Lotus Carroll</a></p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm9.staticflickr.com/8466/8086793181_5b5acb2359_b.jpg">
+		
+
+		<h1>Effectively Consuming Valuable Content</h1>
+
+		<div class="content">
+		<p>Consuming information in a repeatable and sustainable way is hard. I've used different systems for consuming information and each system failed. I was too concerned I would miss something important.</p>
+
+<p>But then, I realized this: <strong>If something is important, it's impossible to miss it.</strong> There are too many news sources for you to miss important news. Friends and family will discuss important local and world events while colleagues will keep you informed to industry specific news. The only way to not stay informed is by <a href="http://thebillfold.com/2012/04/reach-enlightenment-by-living-in-a-cave-eating-trash/" title="Living in a cave">living in a cave</a> without an internet connection. If this is true for you, how are you reading this?</p>
+
+<h2>Workflow For Consumption</h2>
+
+<p>You have a voice in your head that loves consuming information. <a href="http://www.scilearn.com/blog/dopamine-learning-brains-reward-center-teach-educators.php" title="Dopamine released when we learn">We get a release of dopamine anytime we learn in a new way</a>. Quitting that dopamine addiction and concentration on a repeatable method for consuming valuable content isn't easy. Focusing on the signal and ignoring noise is a massive effort. But, it's rewarding.</p>
+
+<p>To be effective at consuming you need a sustainable and repeatable workflow. You need to <a href="/2012/11/building-a-successful-habit-successfully/" title="Building a Habit">build a habit</a> around consuming valuable information while disregarding poor quality content.</p>
+
+<p>For the past 3 months I've developed this method for consuming information in an effective way and thought you could benefit from it. If you find a way to improve the method, please let me know in the comments.</p>
+
+<p>It's important to outline the goals before explaining the method.</p>
+
+<h2>Standard Look and Feel</h2>
+
+<p>All content consumed should be visually similar. Looking at content formatted different ways is distracting. <strong>The content, not the design, should be the focus</strong>. The content should still look pretty and be easily read, but, it needs to normalized.</p>
+
+<p>If the content isn't visually the same, you waste brain cycles on looking at the design of the site. You only have a <a href="http://artofmanliness.com/2012/01/08/willpower-part-ii/" title="Only so much willpower per day">certain amount of willpower each day</a> and say saving it for valuable work is important. It's similar to why some people <a href="http://waxman.me/why-to-wear-the-same-clothes-every-day">wear the same clothes every day</a>. Don't waste brain cycles.</p>
+
+<h2>Focus on the Valuable and Ignore the Rest</h2>
+
+<p>Focus on reading quality content while ignoring poor content. To be an effective consumer you need to take curating seriously.</p>
+
+<p>Read the headline. If it sounds interesting save it for later reading. If it doesn't sound interesting move on. This curation shouldn't take longer than 2 seconds for each article. If you have 150 unread items, curation shouldn't take longer than 5 minutes.</p>
+
+<p>Choose how often you want to curate. I curate daily, but you could also curate weekly or monthly.</p>
+
+<p><em>Note: Quickly curating content takes willpower.</em></p>
+
+<h2>Delayed Consumption</h2>
+
+<p>Consuming the content should only happen once a day. <strong>Time allocated consumption allows you to completely focus on absorption without being distracted.</strong> The time you choose for consuming content can be any time you choose. I prefer the morning before anyone else gets up.</p>
+
+<p><em>Note: Delaying consumption takes willpower.</em></p>
+
+<h2>Research Isn't Consumption</h2>
+
+<p>Researching a solution to a current problem isn't considered consuming content. As long as you remain focused on solving the problem, and not getting bogged down, you can research solutions to problems outside this method.</p>
+
+<p>If you find yourself falling into a rabbit hole while researching, stop. You have stated to consume content not do research. It takes a few months before you become conscious of doing this. Keep this in mind when researching.</p>
+
+<h2>Only Consume Content Offline</h2>
+
+<p>You can blame Tim Berners Lee for creating distractions on the Internet. Although Reddit and 4Chan contributed, Tim thought <a href="http://www.hyperlinkevolved.com/" title="Wikipedia is the WWW of Tim Berner's Lee">links should go to other interesting content</a>.</p>
+
+<p>The same dopamine release from learning happens when you click a button linking to more potentially good content. Clicking the button releases a food pellet.</p>
+
+<p>If you're like me, you have a browser with 100 tabs open. These 100 items are never consumed, but, you don't want to close them because of the fear of loss.</p>
+
+<p>By consuming content offline there is no way to get the reward. You are forced to concentrate only on the content.</p>
+
+<h2>The Method and Tools</h2>
+
+<p>Google Reader, Feedly, and Pocket are tools to achieve these goals.</p>
+
+<h3>Google Reader</h3>
+
+<p>All news sources you think are important should be in Google Reader. When you come across a site with valuable content, add the content feed (RSS or Atom) to Google Reader. Don't bother categorizing the feed. You aren't going to use Google Reader to consume the content.</p>
+
+<p>Google Reader is going to be our repository of valuable content. You are creating a central firehose for consumption. If you don't have a site in Google Reader; you don't think it's important.</p>
+
+<p>Adding a feed to Google Reader doesn't mean it will always be important. Prune Google Reader. If you found someone's site helpful once, but now it isn't being valuable, remove it.</p>
+
+<h3>Feedly</h3>
+
+<p>You already chose how often you curate, whether that's daily, weekly, or monthly. I use Feedly for all my curation. I don't use Feedly to consume information.</p>
+
+<p>I prefer Feedly over the starring items in Google Reader because Feedly integrates with Pocket - the tool I use for consumption. Additionally, Feedly syncs with Google Reader. So, wether I use Google Reader or Feedly to curate the article is marked as read.</p>
+
+<p>Remember, with curation all you are doing is identifying valuable content. You aren't reading it. You aren't allowed to read content until you finish the curation step.</p>
+
+<h3>Pocket</h3>
+
+<p>The whole purpose of Feedly is to dump interesting content into Pocket for later consumption. Feedly integrates easily with Pocket.</p>
+
+<p>I've used other apps for reading later, including Instapaper and Evernote, however, Pocket solves three of my main goals. Pocket satisfies the "look and feel", "delayed consumption", and "reading offline" goals.</p>
+
+<p>Pocket also has a [chrome extension][9] so if I find myself going down a rabbit hole while researching I can mark the article and move on. This helps me get past the 100 tabs problem.</p>
+
+<p>With Pocket, I additionally get the benefit of being able to read articles on the Web, Phone, Tablet, or in a Native App.</p>
+
+<h2>Improvements</h2>
+
+<p>This is the most efficient way I've found to consume content. Let me know if you have any suggestions for improvement.</p>
+
+<p>Thanks to <a href="http://davidkuchar.com">David Kuchar</a> for introducing me to Pocket.</p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#learning-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'learning', 'Effectively Consuming Valuable Content']);"><i class="icon-tags icon-white"></i> learning <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#consumption-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'consumption', 'Effectively Consuming Valuable Content']);"><i class="icon-tags icon-white"></i> consumption <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#reading-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'reading', 'Effectively Consuming Valuable Content']);"><i class="icon-tags icon-white"></i> reading <span>2</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2013/01/effectively-consuming-valuable-content/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2013/01/effectively-consuming-valuable-content/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=Effectively Consuming Valuable Content - bretthard.in/2013/01/effectively-consuming-valuable-content/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2013/01/effectively-consuming-valuable-content/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Effectively Consuming Valuable Content&amp;url=bretthard.in/2013/01/effectively-consuming-valuable-content/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2013/01/effectively-consuming-valuable-content/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From Effectively Consuming Valuable Content']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From Effectively Consuming Valuable Content']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From Effectively Consuming Valuable Content']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From Effectively Consuming Valuable Content']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

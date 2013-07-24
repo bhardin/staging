@@ -1,0 +1,6391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Topics Brett Writes About</title>
+  
+
+	
+		<meta name="description" content="All of the different subjects Brett Hardin has written about." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<h1>Topics Brett Writes About</h1>
+
+
+
+<div class="row">
+	
+<div class="span3">
+	<h2>Tags</h2>
+	<ul class="tag_box">
+	    
+	  
+
+
+  
+     
+    	<li><a href="/tags.html#vulnerabilities-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'vulnerabilities', 'Tag Page']);"><i class="icon-tags icon-white"></i> vulnerabilities <span>13</span></a></li>
+     
+    	<li><a href="/tags.html#owasp-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'owasp', 'Tag Page']);"><i class="icon-tags icon-white"></i> owasp <span>12</span></a></li>
+     
+    	<li><a href="/tags.html#authentication-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'authentication', 'Tag Page']);"><i class="icon-tags icon-white"></i> authentication <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#encryption-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'encryption', 'Tag Page']);"><i class="icon-tags icon-white"></i> encryption <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#hashing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'hashing', 'Tag Page']);"><i class="icon-tags icon-white"></i> hashing <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#security basics-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'security basics', 'Tag Page']);"><i class="icon-tags icon-white"></i> security basics <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#communication-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'communication', 'Tag Page']);"><i class="icon-tags icon-white"></i> communication <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#presentation-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'presentation', 'Tag Page']);"><i class="icon-tags icon-white"></i> presentation <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#tools-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'tools', 'Tag Page']);"><i class="icon-tags icon-white"></i> tools <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#infosec-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'infosec', 'Tag Page']);"><i class="icon-tags icon-white"></i> infosec <span>21</span></a></li>
+     
+    	<li><a href="/tags.html#confidentiality-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'confidentiality', 'Tag Page']);"><i class="icon-tags icon-white"></i> confidentiality <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#integrity-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'integrity', 'Tag Page']);"><i class="icon-tags icon-white"></i> integrity <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#availability-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'availability', 'Tag Page']);"><i class="icon-tags icon-white"></i> availability <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#slides-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'slides', 'Tag Page']);"><i class="icon-tags icon-white"></i> slides <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#conference-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'conference', 'Tag Page']);"><i class="icon-tags icon-white"></i> conference <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#compliance-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'compliance', 'Tag Page']);"><i class="icon-tags icon-white"></i> compliance <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#change-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'change', 'Tag Page']);"><i class="icon-tags icon-white"></i> change <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#life-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'life', 'Tag Page']);"><i class="icon-tags icon-white"></i> life <span>9</span></a></li>
+     
+    	<li><a href="/tags.html#focus-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'focus', 'Tag Page']);"><i class="icon-tags icon-white"></i> focus <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#tech-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'tech', 'Tag Page']);"><i class="icon-tags icon-white"></i> tech <span>16</span></a></li>
+     
+    	<li><a href="/tags.html#jekyll-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'jekyll', 'Tag Page']);"><i class="icon-tags icon-white"></i> jekyll <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#startups-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'startups', 'Tag Page']);"><i class="icon-tags icon-white"></i> startups <span>38</span></a></li>
+     
+    	<li><a href="/tags.html#product review-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'product review', 'Tag Page']);"><i class="icon-tags icon-white"></i> product review <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#music-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'music', 'Tag Page']);"><i class="icon-tags icon-white"></i> music <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#problems-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'problems', 'Tag Page']);"><i class="icon-tags icon-white"></i> problems <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#advice-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'advice', 'Tag Page']);"><i class="icon-tags icon-white"></i> advice <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#financing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'financing', 'Tag Page']);"><i class="icon-tags icon-white"></i> financing <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#repost-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'repost', 'Tag Page']);"><i class="icon-tags icon-white"></i> repost <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#story-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'story', 'Tag Page']);"><i class="icon-tags icon-white"></i> story <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#people-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'people', 'Tag Page']);"><i class="icon-tags icon-white"></i> people <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#failure-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'failure', 'Tag Page']);"><i class="icon-tags icon-white"></i> failure <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#email-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'email', 'Tag Page']);"><i class="icon-tags icon-white"></i> email <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#lifestyle-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'lifestyle', 'Tag Page']);"><i class="icon-tags icon-white"></i> lifestyle <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#open source-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'open source', 'Tag Page']);"><i class="icon-tags icon-white"></i> open source <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#blogging-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'blogging', 'Tag Page']);"><i class="icon-tags icon-white"></i> blogging <span>11</span></a></li>
+     
+    	<li><a href="/tags.html#SEO-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'SEO', 'Tag Page']);"><i class="icon-tags icon-white"></i> SEO <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#learning-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'learning', 'Tag Page']);"><i class="icon-tags icon-white"></i> learning <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#struggle-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'struggle', 'Tag Page']);"><i class="icon-tags icon-white"></i> struggle <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#product management-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'product management', 'Tag Page']);"><i class="icon-tags icon-white"></i> product management <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#investor deck-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'investor deck', 'Tag Page']);"><i class="icon-tags icon-white"></i> investor deck <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#purpose-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'purpose', 'Tag Page']);"><i class="icon-tags icon-white"></i> purpose <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#investors-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'investors', 'Tag Page']);"><i class="icon-tags icon-white"></i> investors <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#incubators-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'incubators', 'Tag Page']);"><i class="icon-tags icon-white"></i> incubators <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#dreaming-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'dreaming', 'Tag Page']);"><i class="icon-tags icon-white"></i> dreaming <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#reading-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'reading', 'Tag Page']);"><i class="icon-tags icon-white"></i> reading <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#culture-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'culture', 'Tag Page']);"><i class="icon-tags icon-white"></i> culture <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#office space-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'office space', 'Tag Page']);"><i class="icon-tags icon-white"></i> office space <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#productivity-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'productivity', 'Tag Page']);"><i class="icon-tags icon-white"></i> productivity <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#large organizations-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'large organizations', 'Tag Page']);"><i class="icon-tags icon-white"></i> large organizations <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#good enough-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'good enough', 'Tag Page']);"><i class="icon-tags icon-white"></i> good enough <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#markets-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'markets', 'Tag Page']);"><i class="icon-tags icon-white"></i> markets <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#vision-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'vision', 'Tag Page']);"><i class="icon-tags icon-white"></i> vision <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#lean-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'lean', 'Tag Page']);"><i class="icon-tags icon-white"></i> lean <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#seclusion-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'seclusion', 'Tag Page']);"><i class="icon-tags icon-white"></i> seclusion <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#meetup-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'meetup', 'Tag Page']);"><i class="icon-tags icon-white"></i> meetup <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#community-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'community', 'Tag Page']);"><i class="icon-tags icon-white"></i> community <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#building-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'building', 'Tag Page']);"><i class="icon-tags icon-white"></i> building <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#growth-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'growth', 'Tag Page']);"><i class="icon-tags icon-white"></i> growth <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#happiness-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'happiness', 'Tag Page']);"><i class="icon-tags icon-white"></i> happiness <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#perception-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'perception', 'Tag Page']);"><i class="icon-tags icon-white"></i> perception <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#mindset-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'mindset', 'Tag Page']);"><i class="icon-tags icon-white"></i> mindset <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#sales-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'sales', 'Tag Page']);"><i class="icon-tags icon-white"></i> sales <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#revenue-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'revenue', 'Tag Page']);"><i class="icon-tags icon-white"></i> revenue <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#advertising-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'advertising', 'Tag Page']);"><i class="icon-tags icon-white"></i> advertising <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#marketing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'marketing', 'Tag Page']);"><i class="icon-tags icon-white"></i> marketing <span>12</span></a></li>
+     
+    	<li><a href="/tags.html#ROI-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'ROI', 'Tag Page']);"><i class="icon-tags icon-white"></i> ROI <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#developers-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'developers', 'Tag Page']);"><i class="icon-tags icon-white"></i> developers <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#facebook-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'facebook', 'Tag Page']);"><i class="icon-tags icon-white"></i> facebook <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#bugs-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'bugs', 'Tag Page']);"><i class="icon-tags icon-white"></i> bugs <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#writing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'writing', 'Tag Page']);"><i class="icon-tags icon-white"></i> writing <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#money-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'money', 'Tag Page']);"><i class="icon-tags icon-white"></i> money <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#negotiating-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'negotiating', 'Tag Page']);"><i class="icon-tags icon-white"></i> negotiating <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#equity-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'equity', 'Tag Page']);"><i class="icon-tags icon-white"></i> equity <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#design-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'design', 'Tag Page']);"><i class="icon-tags icon-white"></i> design <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#programming-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'programming', 'Tag Page']);"><i class="icon-tags icon-white"></i> programming <span>14</span></a></li>
+     
+    	<li><a href="/tags.html#b2b-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'b2b', 'Tag Page']);"><i class="icon-tags icon-white"></i> b2b <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#enterprise-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'enterprise', 'Tag Page']);"><i class="icon-tags icon-white"></i> enterprise <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#data mining-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'data mining', 'Tag Page']);"><i class="icon-tags icon-white"></i> data mining <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#polling-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'polling', 'Tag Page']);"><i class="icon-tags icon-white"></i> polling <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#success-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'success', 'Tag Page']);"><i class="icon-tags icon-white"></i> success <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#habit-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'habit', 'Tag Page']);"><i class="icon-tags icon-white"></i> habit <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#ritual-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'ritual', 'Tag Page']);"><i class="icon-tags icon-white"></i> ritual <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#buzzwords-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'buzzwords', 'Tag Page']);"><i class="icon-tags icon-white"></i> buzzwords <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#pricing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'pricing', 'Tag Page']);"><i class="icon-tags icon-white"></i> pricing <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#psychology-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'psychology', 'Tag Page']);"><i class="icon-tags icon-white"></i> psychology <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#cognitive bias-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'cognitive bias', 'Tag Page']);"><i class="icon-tags icon-white"></i> cognitive bias <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#education-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'education', 'Tag Page']);"><i class="icon-tags icon-white"></i> education <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#experience-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'experience', 'Tag Page']);"><i class="icon-tags icon-white"></i> experience <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#venture capital-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'venture capital', 'Tag Page']);"><i class="icon-tags icon-white"></i> venture capital <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#customer service-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'customer service', 'Tag Page']);"><i class="icon-tags icon-white"></i> customer service <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#virality-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'virality', 'Tag Page']);"><i class="icon-tags icon-white"></i> virality <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#subscriptions-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'subscriptions', 'Tag Page']);"><i class="icon-tags icon-white"></i> subscriptions <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#product experience-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'product experience', 'Tag Page']);"><i class="icon-tags icon-white"></i> product experience <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#challenges-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'challenges', 'Tag Page']);"><i class="icon-tags icon-white"></i> challenges <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#security controls-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'security controls', 'Tag Page']);"><i class="icon-tags icon-white"></i> security controls <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#hardware-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'hardware', 'Tag Page']);"><i class="icon-tags icon-white"></i> hardware <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#presenting-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'presenting', 'Tag Page']);"><i class="icon-tags icon-white"></i> presenting <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#children-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'children', 'Tag Page']);"><i class="icon-tags icon-white"></i> children <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#passion-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'passion', 'Tag Page']);"><i class="icon-tags icon-white"></i> passion <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#decisions-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'decisions', 'Tag Page']);"><i class="icon-tags icon-white"></i> decisions <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#penetration test-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'penetration test', 'Tag Page']);"><i class="icon-tags icon-white"></i> penetration test <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#public relations-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'public relations', 'Tag Page']);"><i class="icon-tags icon-white"></i> public relations <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#press-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'press', 'Tag Page']);"><i class="icon-tags icon-white"></i> press <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#differentiate-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'differentiate', 'Tag Page']);"><i class="icon-tags icon-white"></i> differentiate <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#off-time-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'off-time', 'Tag Page']);"><i class="icon-tags icon-white"></i> off-time <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#ideas-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'ideas', 'Tag Page']);"><i class="icon-tags icon-white"></i> ideas <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#imagination-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'imagination', 'Tag Page']);"><i class="icon-tags icon-white"></i> imagination <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#testing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'testing', 'Tag Page']);"><i class="icon-tags icon-white"></i> testing <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#retail-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'retail', 'Tag Page']);"><i class="icon-tags icon-white"></i> retail <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#prediction-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'prediction', 'Tag Page']);"><i class="icon-tags icon-white"></i> prediction <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#shopping-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'shopping', 'Tag Page']);"><i class="icon-tags icon-white"></i> shopping <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#gifts-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'gifts', 'Tag Page']);"><i class="icon-tags icon-white"></i> gifts <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#computers-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'computers', 'Tag Page']);"><i class="icon-tags icon-white"></i> computers <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#kids-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'kids', 'Tag Page']);"><i class="icon-tags icon-white"></i> kids <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#revenue models-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'revenue models', 'Tag Page']);"><i class="icon-tags icon-white"></i> revenue models <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#mobile-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'mobile', 'Tag Page']);"><i class="icon-tags icon-white"></i> mobile <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#web-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'web', 'Tag Page']);"><i class="icon-tags icon-white"></i> web <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#oauth-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'oauth', 'Tag Page']);"><i class="icon-tags icon-white"></i> oauth <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#authorization-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'authorization', 'Tag Page']);"><i class="icon-tags icon-white"></i> authorization <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#college-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'college', 'Tag Page']);"><i class="icon-tags icon-white"></i> college <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#university-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'university', 'Tag Page']);"><i class="icon-tags icon-white"></i> university <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#user acquisition-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'user acquisition', 'Tag Page']);"><i class="icon-tags icon-white"></i> user acquisition <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#pci-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'pci', 'Tag Page']);"><i class="icon-tags icon-white"></i> pci <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#github-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'github', 'Tag Page']);"><i class="icon-tags icon-white"></i> github <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#book review-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'book review', 'Tag Page']);"><i class="icon-tags icon-white"></i> book review <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#hiring-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'hiring', 'Tag Page']);"><i class="icon-tags icon-white"></i> hiring <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#death-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'death', 'Tag Page']);"><i class="icon-tags icon-white"></i> death <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#internet-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'internet', 'Tag Page']);"><i class="icon-tags icon-white"></i> internet <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#design pattern-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'design pattern', 'Tag Page']);"><i class="icon-tags icon-white"></i> design pattern <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#product-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'product', 'Tag Page']);"><i class="icon-tags icon-white"></i> product <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#version control-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'version control', 'Tag Page']);"><i class="icon-tags icon-white"></i> version control <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#software-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'software', 'Tag Page']);"><i class="icon-tags icon-white"></i> software <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#editing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'editing', 'Tag Page']);"><i class="icon-tags icon-white"></i> editing <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#rewriting-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'rewriting', 'Tag Page']);"><i class="icon-tags icon-white"></i> rewriting <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#consumption-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'consumption', 'Tag Page']);"><i class="icon-tags icon-white"></i> consumption <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#payments-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'payments', 'Tag Page']);"><i class="icon-tags icon-white"></i> payments <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#development-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'development', 'Tag Page']);"><i class="icon-tags icon-white"></i> development <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#unit tests-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'unit tests', 'Tag Page']);"><i class="icon-tags icon-white"></i> unit tests <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#products-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'products', 'Tag Page']);"><i class="icon-tags icon-white"></i> products <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#evaluation-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'evaluation', 'Tag Page']);"><i class="icon-tags icon-white"></i> evaluation <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#KPI-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'KPI', 'Tag Page']);"><i class="icon-tags icon-white"></i> KPI <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#metrics-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'metrics', 'Tag Page']);"><i class="icon-tags icon-white"></i> metrics <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#penetration testing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'penetration testing', 'Tag Page']);"><i class="icon-tags icon-white"></i> penetration testing <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#security-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'security', 'Tag Page']);"><i class="icon-tags icon-white"></i> security <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#adoption-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'adoption', 'Tag Page']);"><i class="icon-tags icon-white"></i> adoption <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#apple-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'apple', 'Tag Page']);"><i class="icon-tags icon-white"></i> apple <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#complaining-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'complaining', 'Tag Page']);"><i class="icon-tags icon-white"></i> complaining <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#code smell-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'code smell', 'Tag Page']);"><i class="icon-tags icon-white"></i> code smell <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#complexity-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'complexity', 'Tag Page']);"><i class="icon-tags icon-white"></i> complexity <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#law-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'law', 'Tag Page']);"><i class="icon-tags icon-white"></i> law <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#creative commons-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'creative commons', 'Tag Page']);"><i class="icon-tags icon-white"></i> creative commons <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#license-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'license', 'Tag Page']);"><i class="icon-tags icon-white"></i> license <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#renting-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'renting', 'Tag Page']);"><i class="icon-tags icon-white"></i> renting <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#owning-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'owning', 'Tag Page']);"><i class="icon-tags icon-white"></i> owning <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#boardgames-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'boardgames', 'Tag Page']);"><i class="icon-tags icon-white"></i> boardgames <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#growth hacking-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'growth hacking', 'Tag Page']);"><i class="icon-tags icon-white"></i> growth hacking <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#market demand-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'market demand', 'Tag Page']);"><i class="icon-tags icon-white"></i> market demand <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#software development-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'software development', 'Tag Page']);"><i class="icon-tags icon-white"></i> software development <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#engineering-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'engineering', 'Tag Page']);"><i class="icon-tags icon-white"></i> engineering <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#coding-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'coding', 'Tag Page']);"><i class="icon-tags icon-white"></i> coding <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#technology-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'technology', 'Tag Page']);"><i class="icon-tags icon-white"></i> technology <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#phones-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'phones', 'Tag Page']);"><i class="icon-tags icon-white"></i> phones <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#advertisements-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'advertisements', 'Tag Page']);"><i class="icon-tags icon-white"></i> advertisements <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#algorithms-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'algorithms', 'Tag Page']);"><i class="icon-tags icon-white"></i> algorithms <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#experimenting-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'experimenting', 'Tag Page']);"><i class="icon-tags icon-white"></i> experimenting <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#optimization-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'optimization', 'Tag Page']);"><i class="icon-tags icon-white"></i> optimization <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#hobbies-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'hobbies', 'Tag Page']);"><i class="icon-tags icon-white"></i> hobbies <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Ruby-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'Ruby', 'Tag Page']);"><i class="icon-tags icon-white"></i> Ruby <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Programming-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'Programming', 'Tag Page']);"><i class="icon-tags icon-white"></i> Programming <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#bug fixing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'bug fixing', 'Tag Page']);"><i class="icon-tags icon-white"></i> bug fixing <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#refactoring-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'refactoring', 'Tag Page']);"><i class="icon-tags icon-white"></i> refactoring <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#team-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'team', 'Tag Page']);"><i class="icon-tags icon-white"></i> team <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#programming language-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'programming language', 'Tag Page']);"><i class="icon-tags icon-white"></i> programming language <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#architecture-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'architecture', 'Tag Page']);"><i class="icon-tags icon-white"></i> architecture <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#code testing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'code testing', 'Tag Page']);"><i class="icon-tags icon-white"></i> code testing <span>1</span></a></li>
+    
+  
+
+
+
+	</ul>
+</div>
+
+<div class="span5">
+ 
+  <h2 id="vulnerabilities-ref">vulnerabilities</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-to-secure-any-application/">How to Secure Any Application</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/bug-bounty-programs/">Bug Bounty Programs</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2010/02/basecamp-xss/">Cross-Site Scripting in 37Signals Writeboard Application</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/11/restricting-url-access/">Failure to Restrict URL Access</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/10/insecure-communications/">Insecure Communications</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/09/insecure-cryptographic-storage/">Insecure Cryptographic Storage</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/08/broken-authentication-and-session-management/">Broken Authentication and Session Management</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/08/information-leakage-and-improper-error-handling/">Information Leakage and Improper Error Handling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/08/cross-site-request-forgery-csrf/">Cross Site Request Forgery (CSRF)</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/07/insecure-direct-object-reference/">Insecure Direct Object Reference</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/07/malicious-file-execution/">Malicious File Execution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/07/injection-flaws/">Injection Flaws</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/05/xss-cross-site-scripting/">Understanding Cross-Site Scripting (XSS)</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="owasp-ref">owasp</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/10/appsec-2012-builder-vs-breaker-presentation/">AppSec 2012: Builder vs. Breaker</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/11/restricting-url-access/">Failure to Restrict URL Access</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/10/owasp-2007-top-10-presentation/">OWASP 2007 Top 10 Presentation</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/10/insecure-communications/">Insecure Communications</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/09/insecure-cryptographic-storage/">Insecure Cryptographic Storage</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/08/broken-authentication-and-session-management/">Broken Authentication and Session Management</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/08/information-leakage-and-improper-error-handling/">Information Leakage and Improper Error Handling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/08/cross-site-request-forgery-csrf/">Cross Site Request Forgery (CSRF)</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/07/insecure-direct-object-reference/">Insecure Direct Object Reference</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/07/malicious-file-execution/">Malicious File Execution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/07/injection-flaws/">Injection Flaws</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/05/xss-cross-site-scripting/">Understanding Cross-Site Scripting (XSS)</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="authentication-ref">authentication</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/facebook-authentication-and-oauth/">Facebook Authentication and OAuth</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-oauth-works/">How OAuth Works</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/08/broken-authentication-and-session-management/">Broken Authentication and Session Management</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="encryption-ref">encryption</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2009/10/insecure-communications/">Insecure Communications</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/09/insecure-cryptographic-storage/">Insecure Cryptographic Storage</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="hashing-ref">hashing</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2009/09/insecure-cryptographic-storage/">Insecure Cryptographic Storage</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="security basics-ref">security basics</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-oauth-works/">How OAuth Works</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-to-secure-any-application/">How to Secure Any Application</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/penetration-testing-as-a-first-step/">Penetration Testing as a First Step</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/11/confidentiality-integrity-availability/">Confidentiality, Integrity, and Availability</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/09/writing-secure-code/">Writing Secure Code</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/09/understanding-http-cookies/">Understanding Cookies</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="communication-ref">communication</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/enable-comments-on-your-blog/">Enable Comments On Your Blog</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/dont-use-two-spaces-after-a-period/">Don't Use Two Spaces After A Period</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/The-4-personality-types/">The 4 Different Personality Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/10/insecure-communications/">Insecure Communications</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="presentation-ref">presentation</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/penetration-testing-is-stupid/">Penetration Testing is Stupid</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/building-your-house-on-sand/">Building Your House on Sand</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/appsec-2012-builder-vs-breaker-presentation/">AppSec 2012: Builder vs. Breaker</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/02/security-the-wrong-way/">Security the Wrong Way</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/02/youre-alone-enjoy-it/">You're Alone. Enjoy It.</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/02/being-sneaky-about-security-and-regulations/">Being Sneaky About Security Regulations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2010/03/no-one-cares-about-security/">Security? Who Cares!</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/10/owasp-2007-top-10-presentation/">OWASP 2007 Top 10 Presentation</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="tools-ref">tools</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/lets-kill-subversion/">Let's Kill Subversion</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/10/interrogating-dns-caches-cache-snoop/">Interrogating DNS Caches</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="infosec-ref">infosec</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/automatic-updates-from-the-app-store/">Automatic Updates from the App Store</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/cool-desktop-backgrounds/">Cool Desktop Backgrounds Will Blow Up Your Computer</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/the-pci-asv-process-sucks/">The PCI ASV Process Sucks</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-oauth-works/">How OAuth Works</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-to-secure-any-application/">How to Secure Any Application</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/penetration-testing-as-a-first-step/">Penetration Testing as a First Step</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/dont-give-developers-access-to-the-operating-system/">Don't Give Developers Access to The Operating System</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/building-your-house-on-sand/">Building Your House on Sand</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/bug-bounty-programs/">Bug Bounty Programs</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/automatic-updates-are-the-future/">Automatic Updates Are The Future</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/dedicated-security-team/">A Dedicated Security Team</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/the-facebook-like-button-is-a-web-bug/">The Facebook Like Button is a Web Bug</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/the-security-and-developer-passion-dilema/">The Security and Developer Passion Dilema</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/02/security-the-wrong-way/">Security the Wrong Way</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/02/security-the-wrong-way/">Security the Wrong Way</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/02/builders-breakers-and-fixers/">Builders, Breakers, and Fixers</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/02/youre-alone-enjoy-it/">You're Alone. Enjoy It.</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/02/being-sneaky-about-security-and-regulations/">Being Sneaky About Security Regulations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2010/03/bsidessf-2010/">BSidesSF 2010 - An Alternative Conference</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2010/03/no-one-cares-about-security/">Security? Who Cares!</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/11/confidentiality-integrity-availability/">Confidentiality, Integrity, and Availability</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="confidentiality-ref">confidentiality</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2009/11/confidentiality-integrity-availability/">Confidentiality, Integrity, and Availability</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="integrity-ref">integrity</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2009/11/confidentiality-integrity-availability/">Confidentiality, Integrity, and Availability</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="availability-ref">availability</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/retiring-domains/">Retiring Domains</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2009/11/confidentiality-integrity-availability/">Confidentiality, Integrity, and Availability</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="slides-ref">slides</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/penetration-testing-is-stupid/">Penetration Testing is Stupid</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/building-your-house-on-sand/">Building Your House on Sand</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/appsec-2012-builder-vs-breaker-presentation/">AppSec 2012: Builder vs. Breaker</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/02/security-the-wrong-way/">Security the Wrong Way</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/02/youre-alone-enjoy-it/">You're Alone. Enjoy It.</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/02/being-sneaky-about-security-and-regulations/">Being Sneaky About Security Regulations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2010/03/no-one-cares-about-security/">Security? Who Cares!</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="conference-ref">conference</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2010/03/bsidessf-2010/">BSidesSF 2010 - An Alternative Conference</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="compliance-ref">compliance</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/the-pci-asv-process-sucks/">The PCI ASV Process Sucks</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/02/being-sneaky-about-security-and-regulations/">Being Sneaky About Security Regulations</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="change-ref">change</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/stop-complaining-and-change-it/">Stop Complaining and Change It</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/traditional-education-is-changing/">Traditional Education Is Changing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/challenge-yourself-always-learn/">Challenge Yourself to Always Learn</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/02/builders-breakers-and-fixers/">Builders, Breakers, and Fixers</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="life-ref">life</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/personal-insecurities/">Personal Insecurities</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/retiring-domains/">Retiring Domains</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/youre-the-problem/">You're the Problem</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/be-passionate-like-a-kid/">Be Passionate Like a Kid</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/building-a-successful-habit-successfully/">Building a Successful Habit, Successfully</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/writing-about-what-i-learn/">Writing About What I Learn</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/challenge-yourself-always-learn/">Challenge Yourself to Always Learn</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/The-4-personality-types/">The 4 Different Personality Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/04/focusing-on-what-your-good-at/">Focusing On What Your Good At</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="focus-ref">focus</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/10/limiting-your-daily-distractions/">Limiting Your Daily Distractions</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/get-a-job-be-determined-and-focused/">Be Determined and Focused</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2011/04/focusing-on-what-your-good-at/">Focusing On What Your Good At</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="tech-ref">tech</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/automatic-updates-from-the-app-store/">Automatic Updates from the App Store</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/lets-kill-subversion/">Let's Kill Subversion</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/cool-desktop-backgrounds/">Cool Desktop Backgrounds Will Blow Up Your Computer</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/falling-in-love-with-computers/">Falling In Love With Computers</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/ia-writer-is-my-killer-app/">iA Writer Is My Killer App</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/the-future-is-in-the-past/">The Future is in the Past</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-setup-an-rss-feed-with-feedburner-the-right-way/">How To Setup an RSS Feed with Feedburner The Right Way</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/designers-and-data-scientists-oh-my/">Designers and Data Scientists. Oh My!</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/automatic-updates-are-the-future/">Automatic Updates Are The Future</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/thoughts-on-spotify/">Thoughts on Spotify</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/jekyll-vs-wordpress-blog-platform-comparison/">Jekyll Vs. WordPress: Blog Platform Comparison</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/jekyll-and-seo-optimization/">Jekyll and SEO Optimization</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/open-source-attribution/">Open Source Attribution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/03/getting-related_posts-lsi-and-gsl-to-work-in-jekyll/">Getting related_posts, lsi, and gsl to work in jekyll</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/01/foursquare/">How I Use FourSquare</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/01/jekyll-bootstrap/">Jekyll is Awesome!</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="jekyll-ref">jekyll</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/create-a-website-for-your-github-project/">Create a Site for Your Github Project</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/01/jekyll-bootstrap/">Jekyll is Awesome!</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="startups-ref">startups</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/04/startup-lessons-learned-from-an-auction/">Startup Lessons Learned From an Auction</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/02/order-of-magnitude-better/">Order of Magnitude Better</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/product-timing/">Product Timing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-to-hire-people-for-a-startup/">How to Hire People For A Startup</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/identify-hungry-people/">Identify Hungry People</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/its-good-enough-ship-it/">It's Good Enough. Ship It.</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/one-retailer-per-category/">A Single Retail Store</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/measure-interest-before-building-products/">Measure Interest Before Building Products</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/the-problem-you-solve/">The Problem You Solve</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/the-struggle-of-lego/">The Struggle of Lego</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/get-to-profitability-as-fast-as-possible/">Get to Profitability as Fast as Possible</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/designers-and-data-scientists-oh-my/">Designers and Data Scientists. Oh My!</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/value-proposition/">Value Proposition</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/the-structure-of-an-investor-update/">The Structure of an Investor Update</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/negotiate-a-better-startup-equity-package/">Negotiate a Better Startup Equity Package</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/a-blog-is-a-startup/">A Blog is a Startup</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/increasing-revenues-beyond-initial-sales/">Increasing Revenues Beyond Initial Sales</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/investor-deck-market-size/">Market Size</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/08/first-floor-labs-free-palo-alto-office-space-for-6-months/">First Floor Labs: Free Palo Alto Office Space For 6 Months</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/08/raising-a-seed-round-a-step-by-step-guide/">Raising a Seed Round: A Step-by-Step Guide</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/08/company-culture-is-defined-by-you-and-your-actions/">Company Culture is Defined By You and Your Actions</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/08/examples-of-liquidation-preferences/">Examples of Liquidation Preferences</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/08/advice-and-advisors/">Advice and Advisors</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/dream-big/">Dream Big</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/choosing-a-startups-initial-evaluation/">Choosing A Startups Initial Evaluation</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/huge-lifestyle-businesses/">Huge Lifestyle Businesses</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/startup/2012/07/angelpad-experience/">My AngelPad Experience</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/a-minimum-viable-product/">A Minimum Viable Product</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/value-hypothesis-and-growth-hypothesis/">Value Hypothesis and Growth Hypothesis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/investor-deck-company-purpose/">Company Purpose</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/purposely-delaying-features/">Purposely Delaying Features</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/keep-developing-while-you-fundraise-and-put-together-your-round/">Have Fun While Raising Venture Capital</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/failure-is-an-opportunity/">Failure Is An Opportunity</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/04/equity-valuation-and-getting-rich/">Equity, Valuation, and Getting Rich</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/03/avoid-distractions-and-remain-focused/">Avoid Distractions and Remain Focused</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/02/solving-hard-problems/">Do They Solve Hard Problems?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/02/hip-hop-wisdom/">Hip Hop Entrepreneurship</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/01/trollblock/">TrollBlock.com</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="product review-ref">product review</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/sightglass-coffee-and-square-wallet/">Sightglass Coffee and Square Wallet</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/ia-writer-is-my-killer-app/">iA Writer Is My Killer App</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/thoughts-on-spotify/">Thoughts on Spotify</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/01/foursquare/">How I Use FourSquare</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="music-ref">music</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/02/hip-hop-wisdom/">Hip Hop Entrepreneurship</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="problems-ref">problems</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/youre-the-problem/">You're the Problem</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/the-problem-you-solve/">The Problem You Solve</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/02/solving-hard-problems/">Do They Solve Hard Problems?</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="advice-ref">advice</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/08/advice-and-advisors/">Advice and Advisors</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/03/avoid-distractions-and-remain-focused/">Avoid Distractions and Remain Focused</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="financing-ref">financing</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/the-worst-time-to-fundraise/">The Worst Time to Raise Financing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/the-structure-of-an-investor-update/">The Structure of an Investor Update</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/negotiate-a-better-startup-equity-package/">Negotiate a Better Startup Equity Package</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/08/raising-a-seed-round-a-step-by-step-guide/">Raising a Seed Round: A Step-by-Step Guide</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/08/examples-of-liquidation-preferences/">Examples of Liquidation Preferences</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/choosing-a-startups-initial-evaluation/">Choosing A Startups Initial Evaluation</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/keep-developing-while-you-fundraise-and-put-together-your-round/">Have Fun While Raising Venture Capital</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/04/equity-valuation-and-getting-rich/">Equity, Valuation, and Getting Rich</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="repost-ref">repost</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/dizzying-but-invisible-depth/">Dizzying But Invisible Depth</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/web-and-mobile-revenue-models/">Web and Mobile Revenue Models</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/08/overcome-the-fear-of-rejection/">Overcome The Fear of Rejection</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/05/steve-jobs-and-the-next-logo/">Steve and the NeXT logo</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="story-ref">story</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/falling-in-love-with-computers/">Falling In Love With Computers</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/get-a-job-be-determined-and-focused/">Be Determined and Focused</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/05/steve-jobs-and-the-next-logo/">Steve and the NeXT logo</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="people-ref">people</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/be-passionate-like-a-kid/">Be Passionate Like a Kid</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/be-nice-and-be-helpful/">Be Nice and Be Helpful</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/The-4-personality-types/">The 4 Different Personality Types</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="failure-ref">failure</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/09/believing-in-a-crazy-vision/">Believing in A Crazy Vision</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/failure-is-an-opportunity/">Failure Is An Opportunity</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="email-ref">email</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/dont-make-unsubscribing-from-email-hard/">Don't Make Unsubscribing From Email Hard</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/limiting-your-daily-distractions/">Limiting Your Daily Distractions</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/a-better-email-inbox/">A Better Email Inbox</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="lifestyle-ref">lifestyle</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/investment-thesis-for-life/">Investment Thesis for Life</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/the-dip-book-review-seth-godin/">Seth Godin's The Dip</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/be-nice-and-be-helpful/">Be Nice and Be Helpful</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/building-a-successful-habit-successfully/">Building a Successful Habit, Successfully</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/im-cheap-products-i-pay-for-have-to-be-awesome/">I'm Cheap: Products I Pay For Have to Be Awesome</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/a-better-email-inbox/">A Better Email Inbox</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="open source-ref">open source</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/create-a-website-for-your-github-project/">Create a Site for Your Github Project</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/building-your-house-on-sand/">Building Your House on Sand</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/programming-makes-you-high/">Programming Makes You High</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/open-source-attribution/">Open Source Attribution</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="blogging-ref">blogging</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/a-better-writing-process-in-5-steps/">A Better Writing Process in 5 Steps</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/ia-writer-is-my-killer-app/">iA Writer Is My Killer App</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/write-for-yourself-not-others/">Write For Yourself, Not Others</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/the-future-is-in-the-past/">The Future is in the Past</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/enable-comments-on-your-blog/">Enable Comments On Your Blog</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/please-get-to-the-point/">Please, Get To The Point</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-setup-an-rss-feed-with-feedburner-the-right-way/">How To Setup an RSS Feed with Feedburner The Right Way</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/writing-about-what-i-learn/">Writing About What I Learn</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/a-blog-is-a-startup/">A Blog is a Startup</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/jekyll-vs-wordpress-blog-platform-comparison/">Jekyll Vs. WordPress: Blog Platform Comparison</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/jekyll-and-seo-optimization/">Jekyll and SEO Optimization</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="SEO-ref">SEO</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/10/seo-layout-and-site-tips/">SEO: Layout and Site Tips</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/find-long-tail-keywords-using-google-analytics/">Find Long Tail Keywords Using Google Analytics</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/jekyll-vs-wordpress-blog-platform-comparison/">Jekyll Vs. WordPress: Blog Platform Comparison</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/jekyll-and-seo-optimization/">Jekyll and SEO Optimization</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="learning-ref">learning</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/effectively-consuming-valuable-content/">Effectively Consuming Valuable Content</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/college-doesnt-teach-you-software-development/">College Doesn't Teach You Software Development</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/traditional-education-is-changing/">Traditional Education Is Changing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/learn-by-doing-it/">Learn By Doing It</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/building-a-successful-habit-successfully/">Building a Successful Habit, Successfully</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/writing-about-what-i-learn/">Writing About What I Learn</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/challenge-yourself-always-learn/">Challenge Yourself to Always Learn</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="struggle-ref">struggle</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/the-dip-book-review-seth-godin/">Seth Godin's The Dip</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/the-struggle-of-lego/">The Struggle of Lego</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/06/challenge-yourself-always-learn/">Challenge Yourself to Always Learn</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="product management-ref">product management</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/07/purposely-delaying-features/">Purposely Delaying Features</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="investor deck-ref">investor deck</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/product-timing/">Product Timing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/the-problem-you-solve/">The Problem You Solve</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/investor-deck-market-size/">Market Size</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/investor-deck-company-purpose/">Company Purpose</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="purpose-ref">purpose</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/please-get-to-the-point/">Please, Get To The Point</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/programming-makes-you-high/">Programming Makes You High</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/investor-deck-company-purpose/">Company Purpose</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="investors-ref">investors</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/product-timing/">Product Timing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/the-structure-of-an-investor-update/">The Structure of an Investor Update</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/investor-deck-market-size/">Market Size</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/07/investor-deck-company-purpose/">Company Purpose</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="incubators-ref">incubators</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/08/first-floor-labs-free-palo-alto-office-space-for-6-months/">First Floor Labs: Free Palo Alto Office Space For 6 Months</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/startup/2012/07/angelpad-experience/">My AngelPad Experience</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="dreaming-ref">dreaming</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/07/dream-big/">Dream Big</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="reading-ref">reading</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/effectively-consuming-valuable-content/">Effectively Consuming Valuable Content</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/08/reading-is-critical/">Reading is Critical</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="culture-ref">culture</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-to-hire-people-for-a-startup/">How to Hire People For A Startup</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/retiring-domains/">Retiring Domains</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/be-nice-and-be-helpful/">Be Nice and Be Helpful</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/dedicated-security-team/">A Dedicated Security Team</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/08/company-culture-is-defined-by-you-and-your-actions/">Company Culture is Defined By You and Your Actions</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="office space-ref">office space</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/08/first-floor-labs-free-palo-alto-office-space-for-6-months/">First Floor Labs: Free Palo Alto Office Space For 6 Months</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="productivity-ref">productivity</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/its-good-enough-ship-it/">It's Good Enough. Ship It.</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/building-a-successful-habit-successfully/">Building a Successful Habit, Successfully</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/limiting-your-daily-distractions/">Limiting Your Daily Distractions</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/use-seclusion-to-optimize-creativity-and-productivity/">Use Seclusion To Optimize Creativity and Productivity</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/be-productive-not-busy/">Be Productive. Not Busy.</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="large organizations-ref">large organizations</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/customer-service-and-customer-satisfaction/">Customer Service and Customer Satisfaction</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/dedicated-security-team/">A Dedicated Security Team</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/be-productive-not-busy/">Be Productive. Not Busy.</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="good enough-ref">good enough</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/its-good-enough-ship-it/">It's Good Enough. Ship It.</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/seo-layout-and-site-tips/">SEO: Layout and Site Tips</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/be-productive-not-busy/">Be Productive. Not Busy.</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="markets-ref">markets</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/09/investor-deck-market-size/">Market Size</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="vision-ref">vision</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/dont-let-them-kill-your-ideas/">Don't Let Them Kill Your Ideas</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/believing-in-a-crazy-vision/">Believing in A Crazy Vision</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="lean-ref">lean</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/measure-interest-before-building-products/">Measure Interest Before Building Products</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/value-proposition/">Value Proposition</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/use-seclusion-to-optimize-creativity-and-productivity/">Use Seclusion To Optimize Creativity and Productivity</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="seclusion-ref">seclusion</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/09/use-seclusion-to-optimize-creativity-and-productivity/">Use Seclusion To Optimize Creativity and Productivity</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="meetup-ref">meetup</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/09/building-and-growing-a-meetup-community/">Building and Growing a Meetup Group</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="community-ref">community</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/enable-comments-on-your-blog/">Enable Comments On Your Blog</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/building-and-growing-a-meetup-community/">Building and Growing a Meetup Group</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="building-ref">building</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/09/building-and-growing-a-meetup-community/">Building and Growing a Meetup Group</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="growth-ref">growth</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/identify-hungry-people/">Identify Hungry People</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/increasing-revenues-beyond-initial-sales/">Increasing Revenues Beyond Initial Sales</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/building-and-growing-a-meetup-community/">Building and Growing a Meetup Group</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="happiness-ref">happiness</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/youre-the-problem/">You're the Problem</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/dedicated-security-team/">A Dedicated Security Team</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/happiness-is-perception/">Happiness is Perception</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="perception-ref">perception</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/youre-the-problem/">You're the Problem</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/happiness-is-perception/">Happiness is Perception</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="mindset-ref">mindset</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/youre-the-problem/">You're the Problem</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/be-nice-and-be-helpful/">Be Nice and Be Helpful</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/building-a-successful-habit-successfully/">Building a Successful Habit, Successfully</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/happiness-is-perception/">Happiness is Perception</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="sales-ref">sales</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/how-to-present-without-sounding-like-a-vendor/">How to Present Without Sounding Like a Vendor</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-create-decoy-pricing-options/">How To Create Decoy Pricing Options</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-use-anchor-pricing/">How to Use Anchor Pricing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/consumerization-of-enterprise-sales/">Consumerization of Enterprise Sales</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/increasing-revenues-beyond-initial-sales/">Increasing Revenues Beyond Initial Sales</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="revenue-ref">revenue</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/web-and-mobile-revenue-models/">Web and Mobile Revenue Models</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/get-to-profitability-as-fast-as-possible/">Get to Profitability as Fast as Possible</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/09/increasing-revenues-beyond-initial-sales/">Increasing Revenues Beyond Initial Sales</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="advertising-ref">advertising</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/10/the-price-is-right-and-advertising/">The Price is Right and Advertising</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="marketing-ref">marketing</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/successful-marketers-are-creative/">Successful Marketers are Creative</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/acquiring-users-with-a-drip/">Acquiring Users With a Drip</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/measure-interest-before-building-products/">Measure Interest Before Building Products</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/its-the-end-of-the-world-again/">It's the End of the World, Again</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/why-we-buy-things-purchase-psychology/">Why We Buy Things</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/how-to-present-without-sounding-like-a-vendor/">How to Present Without Sounding Like a Vendor</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-create-decoy-pricing-options/">How To Create Decoy Pricing Options</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-use-anchor-pricing/">How to Use Anchor Pricing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/value-proposition/">Value Proposition</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/consumerization-of-enterprise-sales/">Consumerization of Enterprise Sales</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/find-long-tail-keywords-using-google-analytics/">Find Long Tail Keywords Using Google Analytics</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/the-price-is-right-and-advertising/">The Price is Right and Advertising</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="ROI-ref">ROI</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/10/find-long-tail-keywords-using-google-analytics/">Find Long Tail Keywords Using Google Analytics</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/the-price-is-right-and-advertising/">The Price is Right and Advertising</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="developers-ref">developers</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/the-life-of-source-code/">The Life of Source Code</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/02/live-longer-by-writing-unit-tests/">Live Longer By Writing Unit Tests</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/extracurricular-activities-of-passionate-people/">Extracurricular Activities of Passionate People</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/dont-give-developers-access-to-the-operating-system/">Don't Give Developers Access to The Operating System</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/dedicated-security-team/">A Dedicated Security Team</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/the-security-and-developer-passion-dilema/">The Security and Developer Passion Dilema</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="facebook-ref">facebook</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/facebook-authentication-and-oauth/">Facebook Authentication and OAuth</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/the-facebook-like-button-is-a-web-bug/">The Facebook Like Button is a Web Bug</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="bugs-ref">bugs</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/bug-bounty-programs/">Bug Bounty Programs</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/the-facebook-like-button-is-a-web-bug/">The Facebook Like Button is a Web Bug</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="writing-ref">writing</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/a-better-writing-process-in-5-steps/">A Better Writing Process in 5 Steps</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/ia-writer-is-my-killer-app/">iA Writer Is My Killer App</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/write-for-yourself-not-others/">Write For Yourself, Not Others</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/please-get-to-the-point/">Please, Get To The Point</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/dont-use-two-spaces-after-a-period/">Don't Use Two Spaces After A Period</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/writing-about-what-i-learn/">Writing About What I Learn</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="money-ref">money</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/10/im-cheap-products-i-pay-for-have-to-be-awesome/">I'm Cheap: Products I Pay For Have to Be Awesome</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="negotiating-ref">negotiating</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/10/negotiate-a-better-startup-equity-package/">Negotiate a Better Startup Equity Package</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="equity-ref">equity</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/10/negotiate-a-better-startup-equity-package/">Negotiate a Better Startup Equity Package</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="design-ref">design</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/sometimes-you-cant-design-simply/">Sometimes You Can't Design Simply</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/designers-and-data-scientists-oh-my/">Designers and Data Scientists. Oh My!</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/dont-use-two-spaces-after-a-period/">Don't Use Two Spaces After A Period</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/10/seo-layout-and-site-tips/">SEO: Layout and Site Tips</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="programming-ref">programming</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/07/foundational-rules-of-code-testing/">Foundational Rules of Code Testing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/07/team-language-replication/">Team Language Replication</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/07/refactoring-code-improves-the-customer-experience/">Refactoring Code Improves The Customer Experience</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/07/your-code-smells/">Your Code Smells</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/05/limiting-code-damage/">Limiting Code Damage</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/03/the-life-of-source-code/">The Life of Source Code</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/02/programming-language-adoption/">Programming Language Adoption</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/02/tests-should-not-begin-with-should/">Tests 'Should Not Begin With Should'</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/02/live-longer-by-writing-unit-tests/">Live Longer By Writing Unit Tests</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/college-doesnt-teach-you-software-development/">College Doesn't Teach You Software Development</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-to-secure-any-application/">How to Secure Any Application</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/falling-in-love-with-computers/">Falling In Love With Computers</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/measure-interest-before-building-products/">Measure Interest Before Building Products</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/programming-makes-you-high/">Programming Makes You High</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="b2b-ref">b2b</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/consumerization-of-enterprise-sales/">Consumerization of Enterprise Sales</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="enterprise-ref">enterprise</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/consumerization-of-enterprise-sales/">Consumerization of Enterprise Sales</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="data mining-ref">data mining</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/the-tipping-point-state/">The Tipping Point State</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="polling-ref">polling</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/the-tipping-point-state/">The Tipping Point State</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="success-ref">success</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/building-a-successful-habit-successfully/">Building a Successful Habit, Successfully</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="habit-ref">habit</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/building-a-successful-habit-successfully/">Building a Successful Habit, Successfully</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="ritual-ref">ritual</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/building-a-successful-habit-successfully/">Building a Successful Habit, Successfully</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="buzzwords-ref">buzzwords</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/designers-and-data-scientists-oh-my/">Designers and Data Scientists. Oh My!</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="pricing-ref">pricing</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-create-decoy-pricing-options/">How To Create Decoy Pricing Options</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-use-anchor-pricing/">How to Use Anchor Pricing</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="psychology-ref">psychology</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/personal-insecurities/">Personal Insecurities</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/the-dunning-kruger-effect/">The Dunning Kruger Effect</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/why-we-buy-things-purchase-psychology/">Why We Buy Things</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-create-decoy-pricing-options/">How To Create Decoy Pricing Options</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-use-anchor-pricing/">How to Use Anchor Pricing</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="cognitive bias-ref">cognitive bias</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/the-dunning-kruger-effect/">The Dunning Kruger Effect</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-create-decoy-pricing-options/">How To Create Decoy Pricing Options</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/how-to-use-anchor-pricing/">How to Use Anchor Pricing</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="education-ref">education</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/traditional-education-is-changing/">Traditional Education Is Changing</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/11/learn-by-doing-it/">Learn By Doing It</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="experience-ref">experience</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/learn-by-doing-it/">Learn By Doing It</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="venture capital-ref">venture capital</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/11/the-worst-time-to-fundraise/">The Worst Time to Raise Financing</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="customer service-ref">customer service</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/customer-service-and-customer-satisfaction/">Customer Service and Customer Satisfaction</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="virality-ref">virality</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/customer-service-and-customer-satisfaction/">Customer Service and Customer Satisfaction</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="subscriptions-ref">subscriptions</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/dont-make-unsubscribing-from-email-hard/">Don't Make Unsubscribing From Email Hard</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="product experience-ref">product experience</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/sightglass-coffee-and-square-wallet/">Sightglass Coffee and Square Wallet</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/enable-comments-on-your-blog/">Enable Comments On Your Blog</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/dont-make-unsubscribing-from-email-hard/">Don't Make Unsubscribing From Email Hard</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="challenges-ref">challenges</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/the-struggle-of-lego/">The Struggle of Lego</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="security controls-ref">security controls</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/dont-give-developers-access-to-the-operating-system/">Don't Give Developers Access to The Operating System</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="hardware-ref">hardware</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/the-future-is-in-the-past/">The Future is in the Past</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="presenting-ref">presenting</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/how-to-present-without-sounding-like-a-vendor/">How to Present Without Sounding Like a Vendor</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="children-ref">children</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/be-passionate-like-a-kid/">Be Passionate Like a Kid</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="passion-ref">passion</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/extracurricular-activities-of-passionate-people/">Extracurricular Activities of Passionate People</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/be-passionate-like-a-kid/">Be Passionate Like a Kid</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="decisions-ref">decisions</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/why-we-buy-things-purchase-psychology/">Why We Buy Things</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="penetration test-ref">penetration test</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/penetration-testing-as-a-first-step/">Penetration Testing as a First Step</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="public relations-ref">public relations</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/its-the-end-of-the-world-again/">It's the End of the World, Again</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="press-ref">press</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/its-the-end-of-the-world-again/">It's the End of the World, Again</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="differentiate-ref">differentiate</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/extracurricular-activities-of-passionate-people/">Extracurricular Activities of Passionate People</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="off-time-ref">off-time</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/extracurricular-activities-of-passionate-people/">Extracurricular Activities of Passionate People</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="ideas-ref">ideas</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/i-have-a-great-idea/">I have a great idea...</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/02/order-of-magnitude-better/">Order of Magnitude Better</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/dont-let-them-kill-your-ideas/">Don't Let Them Kill Your Ideas</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="imagination-ref">imagination</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/dont-let-them-kill-your-ideas/">Don't Let Them Kill Your Ideas</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="testing-ref">testing</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/live-longer-by-writing-unit-tests/">Live Longer By Writing Unit Tests</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/the-pci-asv-process-sucks/">The PCI ASV Process Sucks</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2012/12/measure-interest-before-building-products/">Measure Interest Before Building Products</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="retail-ref">retail</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/one-retailer-per-category/">A Single Retail Store</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="prediction-ref">prediction</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/one-retailer-per-category/">A Single Retail Store</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="shopping-ref">shopping</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/gift-cards-are-impersonal/">Gift Cards Are Impersonal</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="gifts-ref">gifts</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/gift-cards-are-impersonal/">Gift Cards Are Impersonal</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="computers-ref">computers</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/falling-in-love-with-computers/">Falling In Love With Computers</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="kids-ref">kids</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2012/12/falling-in-love-with-computers/">Falling In Love With Computers</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="revenue models-ref">revenue models</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/web-and-mobile-revenue-models/">Web and Mobile Revenue Models</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="mobile-ref">mobile</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/mobile-devices-arent-phones/">Mobile Devices Aren't Phones</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/web-and-mobile-revenue-models/">Web and Mobile Revenue Models</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="web-ref">web</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/web-and-mobile-revenue-models/">Web and Mobile Revenue Models</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="oauth-ref">oauth</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/facebook-authentication-and-oauth/">Facebook Authentication and OAuth</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-oauth-works/">How OAuth Works</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="authorization-ref">authorization</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-oauth-works/">How OAuth Works</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="college-ref">college</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/college-doesnt-teach-you-software-development/">College Doesn't Teach You Software Development</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="university-ref">university</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/college-doesnt-teach-you-software-development/">College Doesn't Teach You Software Development</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="user acquisition-ref">user acquisition</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/acquiring-users-with-a-drip/">Acquiring Users With a Drip</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="pci-ref">pci</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/the-pci-asv-process-sucks/">The PCI ASV Process Sucks</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="github-ref">github</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/create-a-website-for-your-github-project/">Create a Site for Your Github Project</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/cool-desktop-backgrounds/">Cool Desktop Backgrounds Will Blow Up Your Computer</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="book review-ref">book review</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/the-dip-book-review-seth-godin/">Seth Godin's The Dip</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="hiring-ref">hiring</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/how-to-hire-people-for-a-startup/">How to Hire People For A Startup</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/identify-hungry-people/">Identify Hungry People</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="death-ref">death</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/retiring-domains/">Retiring Domains</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="internet-ref">internet</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/retiring-domains/">Retiring Domains</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="design pattern-ref">design pattern</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/facebook-authentication-and-oauth/">Facebook Authentication and OAuth</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="product-ref">product</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/product-timing/">Product Timing</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="version control-ref">version control</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/lets-kill-subversion/">Let's Kill Subversion</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="software-ref">software</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/dizzying-but-invisible-depth/">Dizzying But Invisible Depth</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/02/live-longer-by-writing-unit-tests/">Live Longer By Writing Unit Tests</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/01/lets-kill-subversion/">Let's Kill Subversion</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="editing-ref">editing</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/a-better-writing-process-in-5-steps/">A Better Writing Process in 5 Steps</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="rewriting-ref">rewriting</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/a-better-writing-process-in-5-steps/">A Better Writing Process in 5 Steps</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="consumption-ref">consumption</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/01/effectively-consuming-valuable-content/">Effectively Consuming Valuable Content</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="payments-ref">payments</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/sightglass-coffee-and-square-wallet/">Sightglass Coffee and Square Wallet</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="development-ref">development</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/tests-should-not-begin-with-should/">Tests 'Should Not Begin With Should'</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="unit tests-ref">unit tests</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/tests-should-not-begin-with-should/">Tests 'Should Not Begin With Should'</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="products-ref">products</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/i-have-a-great-idea/">I have a great idea...</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="evaluation-ref">evaluation</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/dont-evaluate-yourself-with-bad-metrics/">Don't Evaluate Yourself With Bad Metrics</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="KPI-ref">KPI</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/dont-evaluate-yourself-with-bad-metrics/">Don't Evaluate Yourself With Bad Metrics</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="metrics-ref">metrics</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/dont-evaluate-yourself-with-bad-metrics/">Don't Evaluate Yourself With Bad Metrics</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="penetration testing-ref">penetration testing</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/penetration-testing-is-stupid/">Penetration Testing is Stupid</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="security-ref">security</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/penetration-testing-is-stupid/">Penetration Testing is Stupid</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="adoption-ref">adoption</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/02/programming-language-adoption/">Programming Language Adoption</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="apple-ref">apple</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/automatic-updates-from-the-app-store/">Automatic Updates from the App Store</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/03/sometimes-you-cant-design-simply/">Sometimes You Can't Design Simply</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="complaining-ref">complaining</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/stop-complaining-and-change-it/">Stop Complaining and Change It</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="code smell-ref">code smell</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/the-life-of-source-code/">The Life of Source Code</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="complexity-ref">complexity</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/03/dizzying-but-invisible-depth/">Dizzying But Invisible Depth</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="law-ref">law</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/04/lawyers-and-interpretation-rule-the-world/">Lawyers and Interpretation Rule the World</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="creative commons-ref">creative commons</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/04/lawyers-and-interpretation-rule-the-world/">Lawyers and Interpretation Rule the World</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="license-ref">license</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/04/lawyers-and-interpretation-rule-the-world/">Lawyers and Interpretation Rule the World</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="renting-ref">renting</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/04/rentership-and-usership/">Rentership and Usership</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="owning-ref">owning</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/04/rentership-and-usership/">Rentership and Usership</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="boardgames-ref">boardgames</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/playing-board-games-is-like-watching-sports/">Playing Board Games Is Like Watching Sports</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/04/startup-lessons-learned-from-an-auction/">Startup Lessons Learned From an Auction</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="growth hacking-ref">growth hacking</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/04/startup-lessons-learned-from-an-auction/">Startup Lessons Learned From an Auction</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="market demand-ref">market demand</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/04/startup-lessons-learned-from-an-auction/">Startup Lessons Learned From an Auction</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="software development-ref">software development</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/06/developers-spend-half-their-time-fixing-bugs/">Developers Spend Half Their Time Fixing Bugs</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/2013/05/limiting-code-damage/">Limiting Code Damage</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="engineering-ref">engineering</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/limiting-code-damage/">Limiting Code Damage</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="coding-ref">coding</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/limiting-code-damage/">Limiting Code Damage</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="technology-ref">technology</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/mobile-devices-arent-phones/">Mobile Devices Aren't Phones</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="phones-ref">phones</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/mobile-devices-arent-phones/">Mobile Devices Aren't Phones</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="advertisements-ref">advertisements</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/successful-marketers-are-creative/">Successful Marketers are Creative</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="algorithms-ref">algorithms</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/bandit-algorithms-are-better-than-a-b-tests/">Bandit Algorithms are Better than A/B Tests</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="experimenting-ref">experimenting</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/bandit-algorithms-are-better-than-a-b-tests/">Bandit Algorithms are Better than A/B Tests</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="optimization-ref">optimization</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/bandit-algorithms-are-better-than-a-b-tests/">Bandit Algorithms are Better than A/B Tests</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="hobbies-ref">hobbies</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/05/playing-board-games-is-like-watching-sports/">Playing Board Games Is Like Watching Sports</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="Ruby-ref">Ruby</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/06/upgrading-ruby-186-to-187/">Upgrading Ruby 1.8.6 to 1.8.7</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="Programming-ref">Programming</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/06/upgrading-ruby-186-to-187/">Upgrading Ruby 1.8.6 to 1.8.7</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="bug fixing-ref">bug fixing</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/06/developers-spend-half-their-time-fixing-bugs/">Developers Spend Half Their Time Fixing Bugs</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="refactoring-ref">refactoring</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/07/refactoring-code-improves-the-customer-experience/">Refactoring Code Improves The Customer Experience</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="team-ref">team</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/07/team-language-replication/">Team Language Replication</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="programming language-ref">programming language</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/07/team-language-replication/">Team Language Replication</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="architecture-ref">architecture</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/07/team-language-replication/">Team Language Replication</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="code testing-ref">code testing</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/07/foundational-rules-of-code-testing/">Foundational Rules of Code Testing</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+
+</div>
+
+</div>
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

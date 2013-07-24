@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+	<title>Constantly Learning</title>
+  
+
+	
+		<meta name="description" content="Programming, Information Security, Startups, and Learnings." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="posts">
+	<ul class="thumbnails">
+	
+		<div class="row" style="padding-top: 30px;">
+		<li class="span4">
+			<a href="/2013/01/how-oauth-works/" class="thumbnail">
+    	<img src="http://farm1.staticflickr.com/128/321378809_1df33867ba_b.jpg" alt="How OAuth Works">
+  		<h3 class="title">How OAuth Works</h3>
+  		<h5 class="date">January 07, 2013</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2013/01/web-and-mobile-revenue-models/" class="thumbnail">
+    	<img src="http://farm3.staticflickr.com/2240/2210857064_f471474b40_b.jpg" alt="Web and Mobile Revenue Models">
+  		<h3 class="title">Web and Mobile Revenue Models</h3>
+  		<h5 class="date">January 06, 2013</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2013/01/traditional-education-is-changing/" class="thumbnail">
+    	<img src="http://farm8.staticflickr.com/7204/6966883093_5fa64ed49e_b.jpg" alt="Traditional Education Is Changing">
+  		<h3 class="title">Traditional Education Is Changing</h3>
+  		<h5 class="date">January 04, 2013</h5>
+  		</a>
+    </li>
+    </div>
+	
+		<div class="row" style="padding-top: 30px;">
+		<li class="span4">
+			<a href="/2013/01/how-to-secure-any-application/" class="thumbnail">
+    	<img src="http://farm3.staticflickr.com/2562/3813295674_6eee1b32e5_b.jpg" alt="How to Secure Any Application">
+  		<h3 class="title">How to Secure Any Application</h3>
+  		<h5 class="date">January 03, 2013</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2013/01/youre-the-problem/" class="thumbnail">
+    	<img src="http://farm8.staticflickr.com/7078/7010124953_9df03d4763_b.jpg" alt="You're the Problem">
+  		<h3 class="title">You're the Problem</h3>
+  		<h5 class="date">January 02, 2013</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2013/01/its-good-enough-ship-it/" class="thumbnail">
+    	<img src="http://farm3.staticflickr.com/2195/1582198827_ca490660a9_b.jpg" alt="It's Good Enough. Ship It.">
+  		<h3 class="title">It's Good Enough. Ship It.</h3>
+  		<h5 class="date">January 01, 2013</h5>
+  		</a>
+    </li>
+    </div>
+	
+		<div class="row" style="padding-top: 30px;">
+		<li class="span4">
+			<a href="/2012/12/falling-in-love-with-computers/" class="thumbnail">
+    	<img src="http://farm5.staticflickr.com/4140/4906802490_0997fabd5c_b.jpg" alt="Falling In Love With Computers">
+  		<h3 class="title">Falling In Love With Computers</h3>
+  		<h5 class="date">December 31, 2012</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2012/12/gift-cards-are-impersonal/" class="thumbnail">
+    	<img src="http://farm4.staticflickr.com/3053/3111558481_19f521b9a0_b.jpg" alt="Gift Cards Are Impersonal">
+  		<h3 class="title">Gift Cards Are Impersonal</h3>
+  		<h5 class="date">December 29, 2012</h5>
+  		</a>
+    </li>
+    
+	
+		
+		<li class="span4">
+			<a href="/2012/12/one-retailer-per-category/" class="thumbnail">
+    	<img src="http://farm3.staticflickr.com/2741/4444576795_108f15ae9e_b.jpg" alt="A Single Retail Store">
+  		<h3 class="title">A Single Retail Store</h3>
+  		<h5 class="date">December 28, 2012</h5>
+  		</a>
+    </li>
+    </div>
+	
+	</ul>
+</div>
+
+<!-- Pagination links -->
+<div class="pagination pagination-centered">
+	<ul>
+		
+	    <li class="next"> 
+			<a href="/page7" title="Next Page" class="next" rel="next">&larr; Older Posts</a>
+			</li>
+		
+	
+	  
+	    <li class="prev">
+				
+					<a href="/page5" title="Previous Page" class="prev" rel="prev">Newer Posts &rarr;</a>
+				
+			</li>
+		
+	</ul>
+</div>
+
+<!-- Test Code -->
+<!-- e4e47ef058431a08d714506a09d155a58279e4ee -->
+<div style="display:none;">53c7353d8e45d80a2519b9ecceb048f166a6bd48</div>
+<!-- End test Code -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: I'm Cheap: Products I Pay For Have to Be Awesome</title>
+  
+
+	
+		<meta name="description" content="An outline of products I pay and don't pay for that I couldn't live without." />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>October 24, 2012</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p>Curtis Gregory Perry</p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm9.staticflickr.com/8430/7835907400_a602167689_b.jpg">
+		
+
+		<h1>I'm Cheap: Products I Pay For Have to Be Awesome</h1>
+
+		<div class="content">
+		<p>I don't like to spend money frivolously. I am a minimalist and am very frugal with my money. Due to my frugality a service has to be pretty incredible for me to pay for it. I find myself being a hard conversion use case. There are even services that I find mind-blowing and can't live without, but I don't pay for.</p>
+
+<p>With the movement towards subscription SaaS products I'm surprised I don't pay for more services. When software still had the concept of ownership I used to pay ownership fees. This comes from when I used to trade warez on BBS sites.</p>
+
+<p>If your old enough to remember the BBS scene, you had probably encountered <a href="http://en.wikipedia.org/wiki/Warez">warez</a> at some point. The warez scene used to say <em>pirate everything except software you use and appreciate</em>. You want to support the developers which build things that are incredible. I remember many warez distributors paying for everything id released. They wanted to give back to the developers of the software they loved. With the introduction of subscription SaaS models, the <em>support the developer</em> concept still applies, they just have to hook you faster with their 30-day trials.</p>
+
+<h2>Products I Pay For</h2>
+
+<p>Since the rules (and models) have changed I try to support developers when I can. Developers who are building awesome software I always support. If I don't, they may not be around for me to use their product. Supporting one-and-two man shops are always preferable over <em>the man</em> with once exception. If open source software is released doing the same thing the one-and-two man shop is doing, I support the one-and-two man shop.</p>
+
+<p>Here is the list of products I pay for:</p>
+
+<ul>
+<li><p><a href="http://www.amazon.com/gp/prime/?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;linkCode=ur2&amp;tag=breharsblo-20">Amazon Prime</a> - Upon noticing I was ordering more than 5 items from Amazon a year, I decided to get prime. Once I had prime it has made ordering things from Amazon even easier. Just having prime saves me time by not having to drive to the store. I also get the excited feeling when I get something in the mail.</p></li>
+<li><p><a href="http://idonethis.com">iDoneThis</a> - An amazing productivity app. You send an email to the service of what you've gotten done and they store the information indefinitely. iDoneThis is powerful when working at an organization which requires status reports. Using iDoneThis regularly you just look back at what you put into the system and copy and past.</p></li>
+<li><p><a href="http://bufferapp.com">Buffer</a> - Buffer is a service which delays your tweets. I do most of my reading and research on Sunday. Buffer allows me to get all my tweets lined up for the week while I'm doing my research. The tweets then get posted at their scheduled times. I still tweet thoughts that I have through out the week, but buffer has kept me to a <a href="http://www.codinghorror.com/blog/2007/10/how-to-achieve-ultimate-blog-success-in-one-easy-step.html">schedule</a> and I love that.</p></li>
+<li><p><a href="http://netflix.com">Netflix</a> - I originally signed up for Netflix in 2000. I remember how incredible the service sounded at the time. I couldn't understand how Netflix made money if they didn't charge late fees. I now only receive one DVD, which is reserved for my daughter to get movies, and my wife and I use their instant service like no tomorrow.</p></li>
+<li><p><a href="https://agilebits.com/onepassword">1password</a> - 1password saves and generates passwords for applications and websites. Coming from the security space, this is invaluable and I recommend everyone purchase it. They integrate into browsers so logging in is one click away. Their licenses are user licenses. So if you want your passwords synced across 3 different Mac Book Pros you only have to pay for one license. Hook it up to Dropbox and all your passwords are synced across machines.</p></li>
+</ul>
+
+
+<h2>Products I Don't Pay For</h2>
+
+<p>I use many products I couldn't live without and I don't pay for them. I think the company hasn't yet found the right balance of pain in the freemium model. All of these services I would be willing to pay for, but their freemium products are good enough I don't see value in converting at this time.</p>
+
+<ul>
+<li><p><a href="http://evernote.com">Evernote</a> - I found out how awesome Evernote was, once I discovered the web clipper extension for Chrome. I used to use delicious to store bookmarks, but found I couldn't always find what I previously saved. The Evernote web clipper takes the whole page and indexes it. Super simple to find things I have previously read.</p></li>
+<li><p><a href="http://db.tt/bhIK3HUa">Dropbox</a> - I already mentioned I use Dropbox with 1password, but I don't pay for it. I think the service is incredibly valuable, but haven't had the need to go over my current 2.4G of bandwidth.</p></li>
+<li><p><a href="http://www.spotify.com">Spotify</a> - I have already <a href="/2012/10/thoughts-on-spotify/">talked</a> about why I find Spotify so great, but haven't had the need yet to convert to a paying user.</p></li>
+<li><p><a href="http://foursquare.com">FourSquare</a> - Although FourSquare doesn't have a way to convert I love using the product. My <a href="/2012/01/foursquare/">use case</a> though is a little different than most people.</p></li>
+</ul>
+
+
+<p>Hopefully this demonstrate how cheap I am. I love finding new services and products I previously didn't know about. What services could you not live without but aren't currently paying for?</p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#lifestyle-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'lifestyle', 'I'm Cheap: Products I Pay For Have to Be Awesome']);"><i class="icon-tags icon-white"></i> lifestyle <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#money-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'money', 'I'm Cheap: Products I Pay For Have to Be Awesome']);"><i class="icon-tags icon-white"></i> money <span>1</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2012/10/im-cheap-products-i-pay-for-have-to-be-awesome/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/10/im-cheap-products-i-pay-for-have-to-be-awesome/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=I'm Cheap: Products I Pay For Have to Be Awesome - bretthard.in/2012/10/im-cheap-products-i-pay-for-have-to-be-awesome/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2012/10/im-cheap-products-i-pay-for-have-to-be-awesome/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=I'm Cheap: Products I Pay For Have to Be Awesome&amp;url=bretthard.in/2012/10/im-cheap-products-i-pay-for-have-to-be-awesome/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2012/10/im-cheap-products-i-pay-for-have-to-be-awesome/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From I'm Cheap: Products I Pay For Have to Be Awesome']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From I'm Cheap: Products I Pay For Have to Be Awesome']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From I'm Cheap: Products I Pay For Have to Be Awesome']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From I'm Cheap: Products I Pay For Have to Be Awesome']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

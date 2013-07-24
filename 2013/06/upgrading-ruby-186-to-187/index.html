@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Upgrading Ruby 1.8.6 to 1.8.7</title>
+  
+
+	
+		<meta name="description" content="Steps to check when upgrading from Ruby 1.8.6 to Ruby 1.8.7" />
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>June 05, 2013</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p><a href="http://www.flickr.com/photos/thisisbossi/">Bossi</a></p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm4.staticflickr.com/3352/3526698689_1ed4764119_b.jpg">
+		
+
+		<h1>Upgrading Ruby 1.8.6 to 1.8.7</h1>
+
+		<div class="content">
+		<p>Although this post is a little over due I thought it could potentially help other people attempting to do the update. I wanted a guide which could help people do the update and understand what needs to go into doing it.</p>
+
+<h2>OSX Install</h2>
+
+<p>For some reason tcl-tk is borked with the Ruby 1.8.7. You can install 1.8.7 by doing the following.</p>
+
+<pre><code>rvm install 1.8.7 --without-tcl --without-tk
+brew install tcl-tk
+rvm reinstall 1.8.7
+</code></pre>
+
+<h2>Searching Your Code Base</h2>
+
+<p>Ruby 1.8.7 mainly added additional methods to classes. This means that it is pretty much backwards compatible. There are a few exceptions <a href="http://svn.ruby-lang.org/repos/ruby/tags/v1_8_7/NEWS">regarding incompatibility</a>. These exceptions are documented here.</p>
+
+<h3>String#slice!</h3>
+
+<p><code>String#slice!</code> had some unintentional bugs and they have been fixed  because either they disagreed with documentation or their respective  behavior of <code>#slice</code>.  Unfortunately, this causes some  incompatibilities in the following (somewhat rare) cases.</p>
+
+<ul>
+<li>`#slice!` no longer expands the array when an out-of-boundary value is given.</li>
+</ul>
+
+
+<p><strong>Ruby 1.8.6</strong></p>
+
+<pre><code>a = [1,2]
+a.slice!(4,0)   #=&gt; nil
+a               #=&gt; [1,2,nil,nil]
+</code></pre>
+
+<p><strong>Ruby 1.8.7</strong></p>
+
+<pre><code>a = [1,2]      
+a.slice!(4,0)   #=&gt; nil      
+a               #=&gt; [1,2]  
+</code></pre>
+
+<ul>
+<li>`#slice!` no longer raises an exception but returns nil when a negative length or out-of-boundary negative position is given.</li>
+</ul>
+
+
+<p><strong>Ruby 1.8.6</strong></p>
+
+<pre><code>a = [1,2]      
+a.slice!(1,-1)  #=&gt; (raises IndexError)      
+a.slice!(-5,1)  #=&gt; (raises IndexError)      
+</code></pre>
+
+<p><strong>Ruby 1.8.7</strong></p>
+
+<pre><code>a = [1,2]      
+a.slice!(1,-1)  #=&gt; nil      
+a.slice!(-5,1)  #=&gt; nil
+</code></pre>
+
+<h3>String#to_i</h3>
+
+<p>The behavior in Ruby 1.8.6 was inconsistent with Ruby syntax and considered as  a bug. <code>String#to_i</code>, <code>String#hex</code> and <code>String#oct</code> no longer accept a sequence  of underscores (`__') as part of a number.</p>
+
+<p><strong>Ruby 1.8.6</strong></p>
+
+<pre><code>'1__0'.to_i     #=&gt; 10    
+'1__0'.to_i(2)  #=&gt; 2  # 0b10    
+'1__0'.oct      #=&gt; 8  # 010    
+'1__0'.hex      #=&gt; 16 # 0x10    
+</code></pre>
+
+<p><strong>Ruby 1.8.7</strong></p>
+
+<pre><code>'1__0'.to_i     #=&gt; 1    
+'1__0'.to_i(2)  #=&gt; 1    
+'1__0'.oct      #=&gt; 1    
+'1__0'.hex      #=&gt; 1  
+</code></pre>
+
+<h2>Date.parse</h2>
+
+<p>'##.##.##' (where each '#' is a digit) is now taken as 'YY.MM.DD' instead of 'MM.DD.YY'. While the change may confuse you, you can use <code>.strptime</code> to replicate the old way it was done.</p>
+
+<pre><code>Date.strptime("01.02.03", "%m.%d.%Y")
+</code></pre>
+
+<p>I could not actually replicate this functionality personally. Let me know if you have any success.</p>
+
+<pre><code>1.8.7 :001 &gt; a = Date.parse("01.02.03")
+=&gt; #&lt;Date: 3442913/2,0,2299161&gt;
+
+1.8.6 :001 &gt; a = Date.parse("01.02.03")
+=&gt; #&lt;Date: 3444309/2,0,2299161&gt;
+</code></pre>
+
+<p>Keep in mind, this <a href="http://stackoverflow.com/questions/9483563/differences-in-date-string-parsing-between-ruby-1-9-3-and-ruby-1-8-7">changed again in 1.9</a>.</p>
+
+<h2>StringIO#each_byte</h2>
+
+<p>The return value changed from nil to self.  This is what the document says and the same as each_line() does.</p>
+
+<h2>tempfile</h2>
+
+<p>The file name format has changed. No dots are included by default in temporary file names any more. This shouldn't be a problem, unless you are permanently keeping temporary files. Which is the exact opposite of what temp files should be used for. Seems like a bad coding practice to me.</p>
+
+<h2>URI</h2>
+
+<p>  Made changes to <code>FTP</code> and <code>URI.merge</code> to accommodate <a href="http://www.ietf.org/rfc/rfc3986">RFC3986</a>. These are more bugs in 1.8.6 than anything else. But still search your code base to see if URI is used.</p>
+
+<h3>FTP</h3>
+
+<pre><code>  URI('ftp://example.com/foo').path #=&gt; 'foo'      
+  URI('ftp://example.com/%2Ffoo').path #=&gt; '/foo'
+  URI::FTP.build([nil, 'example.com', nil, '/foo', 'i').to_s #=&gt; 'ftp://example.com/%2Ffoo;type=i'
+</code></pre>
+
+<h3>URI.merge</h3>
+
+<pre><code>  URI('http://a/b/c/d;p?q').merge('?y') == URI('http://a/b/c/d;p?y')      
+  URI('http://a/b/c/d;p?q').merge('/./g') == URI('http://a/g')      
+  URI('http://a/b/c/d;p?q').merge('/../g') == URI('http://a/g')      
+  URI('http://a/b/c/d;p?q').merge('../../../g') == URI('http://a/g')      
+  URI('http://a/b/c/d;p?q').merge('../../../../g') == URI('http://a/g')
+</code></pre>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#Ruby-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'Ruby', 'Upgrading Ruby 1.8.6 to 1.8.7']);"><i class="icon-tags icon-white"></i> Ruby <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Programming-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'Programming', 'Upgrading Ruby 1.8.6 to 1.8.7']);"><i class="icon-tags icon-white"></i> Programming <span>1</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2013/06/upgrading-ruby-186-to-187/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2013/06/upgrading-ruby-186-to-187/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=Upgrading Ruby 1.8.6 to 1.8.7 - bretthard.in/2013/06/upgrading-ruby-186-to-187/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2013/06/upgrading-ruby-186-to-187/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Upgrading Ruby 1.8.6 to 1.8.7&amp;url=bretthard.in/2013/06/upgrading-ruby-186-to-187/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2013/06/upgrading-ruby-186-to-187/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From Upgrading Ruby 1.8.6 to 1.8.7']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From Upgrading Ruby 1.8.6 to 1.8.7']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From Upgrading Ruby 1.8.6 to 1.8.7']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From Upgrading Ruby 1.8.6 to 1.8.7']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

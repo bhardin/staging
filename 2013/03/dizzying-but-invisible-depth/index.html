@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: Dizzying But Invisible Depth</title>
+  
+
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>March 20, 2013</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p><a href="http://www.flickr.com/photos/mdconnell/">Michael Connell</a></p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm6.staticflickr.com/5228/5562467995_2828e7312e_b.jpg">
+		
+
+		<h1>Dizzying But Invisible Depth</h1>
+
+		<div class="content">
+		<hr/>
+
+
+<p><em>Note: I loved this post. It's originally written by Jean-Baptiste Queru. A link to the original post is at the bottom of this article.</em></p>
+
+<hr/>
+
+
+<p>You just went to the Google home page.</p>
+
+<p>Simple, isn't it?</p>
+
+<p>What just actually happened?</p>
+
+<p>Well, when you know a bit of about how browsers work, it's not quite that simple. You've just put into play HTTP, HTML, CSS, ECMAscript, and more. Those are actually such incredibly complex technologies that they'll make any engineer dizzy if they think about them too much, and such that no single company can deal with that entire complexity.</p>
+
+<p>Let's simplify.</p>
+
+<p>You just connected your computer to www.google.com.</p>
+
+<p>Simple, isn't it?</p>
+
+<p>What just actually happened?</p>
+
+<p>Well, when you know a bit about how networks work, it's not quite that simple. You've just put into play DNS, TCP, UDP, IP, Wifi, Ethernet, DOCSIS, OC, SONET, and more. Those are actually such incredibly complex technologies that they'll make any engineer dizzy if they think about them too much, and such that no single company can deal with that entire complexity.</p>
+
+<p>Let's simplify.</p>
+
+<p>You just typed www.google.com in the location bar of your browser.</p>
+
+<p>Simple, isn't it?</p>
+
+<p>What just actually happened?</p>
+
+<p>Well, when you know a bit about how operating systems work, it's not quite that simple. You've just put into play a kernel, a USB host stack, an input dispatcher, an event handler, a font hinter, a sub-pixel rasterizer, a windowing system, a graphics driver, and more, all of those written in high-level languages that get processed by compilers, linkers, optimizers, interpreters, and more. Those are actually such incredibly complex technologies that they'll make any engineer dizzy if they think about them too much, and such that no single company can deal with that entire complexity.</p>
+
+<p>Let's simplify.</p>
+
+<p>You just pressed a key on your keyboard.</p>
+
+<p>Simple, isn't it?</p>
+
+<p>What just actually happened?</p>
+
+<p>Well, when you know a bit about how input peripherals work, it's not quite that simple. You've just put into play a power regulator, a debouncer, an input multiplexer, a USB device stack, a USB hub stack, all of that implemented in a single chip. That chip is built around thinly sliced wafers of highly purified single-crystal silicon ingot, doped with minute quantities of other atoms that are blasted into the crystal structure, interconnected with multiple layers of aluminum or copper, that are deposited according to patterns of high-energy ultraviolet light that are focused to a precision of a fraction of a micron, connected to the outside world via thin gold wires, all inside a packaging made of a dimensionally and thermally stable resin. The doping patterns and the interconnects implement transistors, which are grouped together to create logic gates. In some parts of the chip, logic gates are combined to create arithmetic and bitwise functions, which are combined to create an ALU. In another part of the chip, logic gates are combined into bistable loops, which are lined up into rows, which are combined with selectors to create a register bank. In another part of the chip, logic gates are combined into bus controllers and instruction decoders and microcode to create an execution scheduler. In another part of the chip, they're combined into address and data multiplexers and timing circuitry to create a memory controller. There's even more. Those are actually such incredibly complex technologies that they'll make any engineer dizzy if they think about them too much, and such that no single company can deal with that entire complexity.</p>
+
+<p>Can we simplify further?</p>
+
+<p>In fact, very scarily, no, we can't. We can barely comprehend the complexity of a single chip in a computer keyboard, and yet there's no simpler level. The next step takes us to the software that is used to design the chip's logic, and that software itself has a level of complexity that requires to go back to the top of the loop.</p>
+
+<p>Today's computers are so complex that they can only be designed and manufactured with slightly less complex computers. In turn the computers used for the design and manufacture are so complex that they themselves can only be designed and manufactured with slightly less complex computers. You'd have to go through many such loops to get back to a level that could possibly be re-built from scratch.</p>
+
+<p>Once you start to understand how our modern devices work and how they're created, it's impossible to not be dizzy about the depth of everything that's involved, and to not be in awe about the fact that they work at all, when Murphy's law says that they simply shouldn't possibly work.</p>
+
+<p>For non-technologists, this is all a black box. That is a great success of technology: all those layers of complexity are entirely hidden and people can use them without even knowing that they exist at all. That is the reason why many people can find computers so frustrating to use: there are so many things that can possibly go wrong that some of them inevitably will, but the complexity goes so deep that it's impossible for most users to be able to do anything about any error.</p>
+
+<p>That is also why it's so hard for technologists and non-technologists to communicate together: technologists know too much about too many layers and non-technologists know too little about too few layers to be able to establish effective direct communication. The gap is so large that it's not even possible any more to have a single person be an intermediate between those two groups, and that's why e.g. we end up with those convoluted technical support call centers and their multiple tiers. Without such deep support structures, you end up with the frustrating situation that we see when end users have access to a bug database that is directly used by engineers: neither the end users nor the engineers get the information that they need to accomplish their goals.</p>
+
+<p>That is why the mainstream press and the general population has talked so much about Steve Jobs' death and comparatively so little about Dennis Ritchie's: Steve's influence was at a layer that most people could see, while Dennis' was much deeper. On the one hand, I can imagine where the computing world would be without the work that Jobs did and the people he inspired: probably a bit less shiny, a bit more beige, a bit more square. Deep inside, though, our devices would still work the same way and do the same things. On the other hand, I literally can't imagine where the computing world would be without the work that Ritchie did and the people he inspired. By the mid 80s, Ritchie's influence had taken over, and even back then very little remained of the pre-Ritchie world.</p>
+
+<p>Finally, last but not least, that is why our patent system is broken: technology has done such an amazing job at hiding its complexity that the people regulating and running the patent system are barely even aware of the complexity of what they're regulating and running. That's the ultimate bikeshedding: just like the proverbial discussions in the town hall about a nuclear power plant end up being about the paint color for the plant's bike shed, the patent discussions about modern computing systems end up being about screen sizes and icon ordering, because in both cases those are the only aspect that the people involved in the discussion are capable of discussing, even though they are irrelevant to the actual function of the overall system being discussed.</p>
+
+<p>This is published under <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons 3.0</a> and was <a href="https://plus.google.com/112218872649456413744/posts/dfydM2Cnepe">originally written by Jean-Baptiste Queru.</a></p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#repost-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'repost', 'Dizzying But Invisible Depth']);"><i class="icon-tags icon-white"></i> repost <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#software-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'software', 'Dizzying But Invisible Depth']);"><i class="icon-tags icon-white"></i> software <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#complexity-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'complexity', 'Dizzying But Invisible Depth']);"><i class="icon-tags icon-white"></i> complexity <span>1</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2013/03/dizzying-but-invisible-depth/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2013/03/dizzying-but-invisible-depth/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=Dizzying But Invisible Depth - bretthard.in/2013/03/dizzying-but-invisible-depth/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2013/03/dizzying-but-invisible-depth/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Dizzying But Invisible Depth&amp;url=bretthard.in/2013/03/dizzying-but-invisible-depth/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2013/03/dizzying-but-invisible-depth/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From Dizzying But Invisible Depth']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From Dizzying But Invisible Depth']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From Dizzying But Invisible Depth']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From Dizzying But Invisible Depth']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>

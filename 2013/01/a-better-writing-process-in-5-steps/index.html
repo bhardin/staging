@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  
+  	<title>Constantly Learning: A Better Writing Process in 5 Steps</title>
+  
+
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	
+  <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-affix.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-alert.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-button.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-carousel.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-collapse.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-dropdown.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-modal.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-popover.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-scrollspy.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tab.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-tooltip.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-transition.min.js"></script>
+  
+  <script type="text/javascript" src="/bootstrap/js/bootstrap-typeahead.min.js"></script>
+  
+  
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 	$(document).ready(function() {
+ 
+  // Facebook
+	$( ".badge.facebook" ).children().each(function(index,value) {
+		var facebook_button = $(this);
+		var url = facebook_button.attr("data");
+
+	  jQuery.getJSON("http://graph.facebook.com/?id="+url, function(data) {
+	  if (typeof data.shares != 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.shares);
+	  else if(typeof data.shares == 'undefined')
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> 0");
+	  else
+	  	facebook_button.html("<i class=\"icon-facebook-sign\"></i> " + data.likes);
+	  });
+  });
+ 
+ 	// Twitter
+	$( ".badge.twitter" ).children().each(function(index,value) {
+		var twitter_button = $(this);
+		var url = twitter_button.attr("data");
+
+	  jQuery.getJSON("http://urls.api.twitter.com/1/urls/count.json?url="+url+"&callback=?", function(data) {
+	  	twitter_button.html("<i class=\"icon-twitter-sign\"></i> " + data.count);
+	  });
+  });
+  
+  // LinkedIn
+	$( ".badge.linkedin" ).children().each(function(index,value) {
+		var linkedin_button = $(this);
+		var url = linkedin_button.attr("data");
+
+	  jQuery.getJSON("http://www.linkedin.com/countserv/count/share?url="+url+"&format=jsonp&callback=?", function(data) {
+	  	linkedin_button.html("<i class=\"icon-linkedin-sign\"></i> " + data.count);
+	  });
+  });
+  
+});
+</script>
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- RSS FEED -->
+  <link href="http://feeds.bretthard.in/bretthardin" rel="alternate" type="application/atom+xml" title="Brett Hardin" />
+
+	
+
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28805964-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+    
+<body>
+	<div class="header-bar">
+		<div class="container">	
+			<div class="header">
+				<a href="/">constantly learning</a>
+			</div>
+			<ul class="nav nav-pills center">
+			  <li><a href="/books.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'read']);">Read</a></li>
+				<li><a href="/tags.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'write']);">Write</a></li>
+				<li><a href="/talks.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'talk']);">Talk</a></li>
+				<li><a href="/about.html" onClick="_gaq.push(['_trackEvent', 'Clicked Link', 'About Me']);">About Me</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="below-header">
+		<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+	</div>
+
+	<div class="container main-content">	
+		<div class="post" style="padding-top: 30px">
+	<div class="span2 offset1">
+		<div class="sidebar">
+			<div class="about_me">
+	<img class="avatar img-circle" alt="Brett Hardin" src="https://en.gravatar.com/userimage/8781599/408ff2d80d284339d894c762915fde94.jpg" />
+
+	<h4><a href="/about">Brett Hardin</a></h4>
+
+	<p>I write code at <a href="http://www.kissmetrics.com/">KISSmetrics</a> and love <a onclick="_gaq.push(['_trackEvent', 'Clicked Link', 'love learning', 'side bar']);" href="/2012/10/writing-about-what-i-learn/">writing about what I learn</a>.
+</div>
+
+
+			<hr/>
+			<strong>Published</strong>
+			<p>January 28, 2013</p>
+
+			<!-- Photo Credit -->
+			
+				<hr/>
+				<div class="image_credit">
+					
+						<strong>Image Credit</strong>
+						<p><a href="http://www.flickr.com/photos/marcoarment/">Marco Arment</a></p>
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="span8">
+		
+			<img src="http://farm3.staticflickr.com/2306/1969185955_8add08fc7d_b.jpg">
+		
+
+		<h1>A Better Writing Process in 5 Steps</h1>
+
+		<div class="content">
+		<blockquote><p>Writing is a way to end up thinking something you couldn't have started out thinking.</p>
+
+<ul>
+<li><a href="http://amzn.to/14nnEbX" title="Writing without Teachers">Peter Elbow</a></li>
+</ul>
+</blockquote>
+
+<p>Writing is a combination of research, drafting, and rewriting. I won't lie to you. Writing is painful. Incredibly painful. Your first twenty articles - blog posts, research papers, news columns - will challenge you. Those first articles are <a href="/2013/01/the-dip-book-review-seth-godin/" title="The Dip">the dip</a> when it comes to being a better writer.</p>
+
+<p>But, consistency and ritual are key. Make sure you write at the same time every day, at least for those first twenty articles. This will help you <a href="/2012/11/building-a-successful-habit-successfully/" title="Building a Habit">build a habit</a>. Once you've built the habit the writing process becomes easier. You can then write at any time you choose.</p>
+
+<h2>The Writing Process</h2>
+
+<p>You learned how to write drafts in school to keep you from becoming a derelict. To become a better writer you need to use those unused skills. Tap into what your teachers taught you. Remember all the red comments Ms. Wilson - your second grade teacher - wrote on your rough drafts.</p>
+
+<p>You shouldn't hate drafting. The reason you don't like it is because you weren't taught the purpose of drafting. <strong>Drafting is a technique to develop more cohesive thoughts.</strong></p>
+
+<p>Drafting helps you organize thoughts to communicate them more effectively.</p>
+
+<h2>Writing a Rough Draft</h2>
+
+<blockquote><p>How you climb a mountain is more important than reaching the top.</p>
+
+<ul>
+<li><a href="http://amzn.to/TLIuzJ" title="Let My People Go Surfing">Yvon Chouinard</a></li>
+</ul>
+</blockquote>
+
+<p>The rough draft is your first attempt at explaining what you are trying to say. Write without thinking. Write like you talk. Don't edit. If you start making a mistake or have another idea, write it down.</p>
+
+<p>The point of the rough draft is to get your thoughts on paper. Although I use the word <em>paper</em>, it doesn't matter if your medium is a paper, a type writer, or computer screen. Get the thoughts out of your head and onto some other medium.</p>
+
+<p>It may help to listen to white noise. I personally like Ambient music. It shuts my mind off to the rest of the world, leaving me with my thoughts.</p>
+
+<p>You are the only person who will read this version. In its current form, you are also the only one who can make sense of the babble. Once you are done writing, don't go back and read it. Not yet.</p>
+
+<h2>Researching Thoughts and Ideas</h2>
+
+<blockquote><p>Science is the process that takes us from confusion to understanding...</p>
+
+<ul>
+<li><a href="http://www.nytimes.com/2008/06/01/opinion/01greene.html">Brian Greene</a></li>
+</ul>
+</blockquote>
+
+<p>As you write your rough draft, you will write facts you've overheard, statistics that aren't true, and quotes you can't remember. <strong>Do not stop writing your rough draft to look them up.</strong> Looking up things will hinder you from finishing your thoughts.</p>
+
+<p>Once you've finished the rough draft, you can fill in the blanks. Go research those thoughts and ideas now. Use facts to support your thoughts.</p>
+
+<p>When researching you may discover an idea or thought is totally wrong. That's great! No one has read it but you. Finding new information while researching thoughts and ideas is a great way to learn.</p>
+
+<p>The new facts may change the shape of your original idea or it may completely change the purpose of your original article. Respond to the new data and adapt your article as you need. Use the new information to write a better essay.</p>
+
+<h2>Rewriting: The First Draft</h2>
+
+<p>You now have a rough draft with facts that support your ideas. But, as I mentioned, no one but you can currently read it. You now need to convert your thoughts into a consumable format.</p>
+
+<p>Start at the beginning and read your article out loud. You will notice things that don't make sense: Thoughts that go nowhere, one idea smashing into another, or unordered ideas.</p>
+
+<p>Edit as you go. Make the article read better. Pay attention to the transitions. One thought should lead to the next. Move sentences, paragraphs, and sections around. Elaborate on key ideas. Fill in blanks.</p>
+
+<p>This is all about rewriting the article. Continue adding, removing, and editing until the flow makes sense and the ideas are easily understood.</p>
+
+<h2>Editing: The Second Draft</h2>
+
+<p>The article now has a strong outline, great transitions, and facts which support your ideas.</p>
+
+<p>You now want to channel Ms. Wilson - your incredibly picky English teacher. This part will be painful. Prepare yourself. You are not as good of a writer as you think you are.</p>
+
+<p>But, chaneling Ms. Wilson can be hard because you don't know what to look for. Fortunatly for you, developers uploaded Ms. Wilson's brain into an online tool called <a href="http://nitpickertool.com/">Nitpicker</a>.</p>
+
+<p>Copy and paste the article of your text into Nitpicker and you will learn how bad of a writer you are. Remember, we put our well written draft into this tool and it still comes out red - or yellow in this case.</p>
+
+<p><img src="http://cl.ly/image/433N1E2t3y23/nitpicker.png" alt="Nitpicker Screenshot" /></p>
+
+<p>The first time you use nitpicker, you will not even know what it's complaining about. Do your research. This is why the first twenty articles are painful. There is a large hill to climb, but with repetition, you will learn about each of the items the tool is complaining about. Pay attention to <a href="http://web.cn.edu/kwheeler/gram_passive_voice.html">passive voice</a>.</p>
+
+<p>But, don't fix all the things nitpicker points out. The tool is making suggestions, but you are the author of the work. Use the highlights as suggestions. For instance, I like reading <a href="http://menwithpens.ca/9-clever-writing-tricks/">contractions for blog posts</a>. It's less formal and reads the way a friend talks. Keep in mind what type of reading your audience perfers.</p>
+
+<h2>Publishing</h2>
+
+<p>The Final step. Releasing your thoughts into the world is the final step in the writing process. It's the most important step. <strong>If you don't let others read your ideas, do they matter?</strong></p>
+
+<p>I can't emphasize enough how painful publishishing is initially. <a href="/2013/01/its-good-enough-ship-it/" title="Just Publish It">Letting other's read your work is hard, but necessary</a>.</p>
+
+<p>If you continue writing, editing, and using online tools you will become a stronger writer. You can write without involving anyone else. No one likes editing. Even people who do it for a living.</p>
+
+<p><strong>You can write on your own.</strong> Continue writing and keep hitting publish.</p>
+
+		</div>
+
+		<!-- Tags -->
+		<!--
+		<ul class="tag_box inline" style="margin-bottom: 15px">
+			
+			
+
+
+  
+     
+    	<li><a href="/tags.html#writing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'writing', 'A Better Writing Process in 5 Steps']);"><i class="icon-tags icon-white"></i> writing <span>6</span></a></li>
+     
+    	<li><a href="/tags.html#blogging-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'blogging', 'A Better Writing Process in 5 Steps']);"><i class="icon-tags icon-white"></i> blogging <span>11</span></a></li>
+     
+    	<li><a href="/tags.html#editing-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'editing', 'A Better Writing Process in 5 Steps']);"><i class="icon-tags icon-white"></i> editing <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#rewriting-ref" onclick="_gaq.push(['_trackEvent', 'clicked tag', 'rewriting', 'A Better Writing Process in 5 Steps']);"><i class="icon-tags icon-white"></i> rewriting <span>1</span></a></li>
+    
+  
+
+
+
+		</ul>
+		-->
+
+		<div class="sharing">
+	<div class="span1" style="margin-left: 0px;">
+		<span class="badge facebook">
+			<a href="http://www.facebook.com/share.php?u=bretthard.in/2013/01/a-better-writing-process-in-5-steps/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2013/01/a-better-writing-process-in-5-steps/">
+			<i class="icon-facebook-sign"></i> -</a>
+			</a>
+		</span>
+	</div>
+	
+	<div class="span1">
+		<span class="badge twitter">
+			<a href="http://twitter.com/home/?status=A Better Writing Process in 5 Steps - bretthard.in/2013/01/a-better-writing-process-in-5-steps/ - via @miscsecurity" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" data="http://bretthard.in/2013/01/a-better-writing-process-in-5-steps/">
+				<i class="icon-twitter-sign"></i> -</a> 
+		</span>
+	</div>
+
+	<div class="span1">
+		<span class="badge linkedin">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=A Better Writing Process in 5 Steps&amp;url=bretthard.in/2013/01/a-better-writing-process-in-5-steps/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;" data="http://bretthard.in/2013/01/a-better-writing-process-in-5-steps/">
+			<i class="icon-linkedin-sign"></i> -</a>
+		</span>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+		<!-- bottom footer -->
+		<div class="below-post" style="margin-top: 20px">
+			<h3>Subscribe</h3>
+			<div class="input-append">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bretthardin', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="margin-bottom: 0px">
+		<input type="text" placeholder="Subscribe via email" style="width: 300px" name="email"/>
+		<input type="hidden" value="bretthardin" name="uri"/>
+		<input type="hidden" name="loc" value="en_US"/>
+		<input type="submit" class="btn btn-success" value="Subscribe!" onclick="_kmq.push(['record', 'Email Subscribe']); _kmq.push(['identify', email.value]); _gaq.push(['_trackEvent', 'Subscribe', 'Email', 'Bottom of Post']);"/>
+	</form>
+</div>
+			
+			<h3>Recent Posts</h3>
+			<div class="recent_posts">
+	<ul class="thumbnails">
+		
+		  <li class="span2">
+		    <a href="/2013/07/foundational-rules-of-code-testing/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Foundational Rules of Code Testing', 'From A Better Writing Process in 5 Steps']);" class="thumbnail">
+	      <img src="http://farm1.staticflickr.com/123/359572656_51a00dc2a6_b.jpg" alt="">
+	    	<p>Foundational Rules of Code Testing</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/team-language-replication/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Team Language Replication', 'From A Better Writing Process in 5 Steps']);" class="thumbnail">
+	      <img src="http://farm3.staticflickr.com/2489/3768623542_474de8740b_b.jpg" alt="">
+	    	<p>Team Language Replication</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/refactoring-code-improves-the-customer-experience/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Refactoring Code Improves The Customer Experience', 'From A Better Writing Process in 5 Steps']);" class="thumbnail">
+	      <img src="http://farm8.staticflickr.com/7082/6893926948_24f3e219e4_b.jpg" alt="">
+	    	<p>Refactoring Code Improves The Customer Experience</p>
+		    </a>
+		  </li>
+  	
+		  <li class="span2">
+		    <a href="/2013/07/another-new-post/" onclick="_gaq.push(['_trackEvent', 'recent post', 'Clicked Purposes of Refactoring', 'From A Better Writing Process in 5 Steps']);" class="thumbnail">
+	      <img src="" alt="">
+	    	<p>Purposes of Refactoring</p>
+		    </a>
+		  </li>
+  	
+	</ul>
+</div>	
+		</div>
+
+		<div id="disqus_thread">
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'bretthardin'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>	
+</div> <!-- End of Post -->
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p style="float: left;">Site Built with Sublime Text2, BootStrap, and Jekyll</p>
+			<p style="float: right;">Copyright &copy; 2013 <a href="http://twitter.com/miscsecurity">Brett Hardin</a></p>
+		</div>
+	</footer>
+
+	<!-- HitTail Code -->
+<script type="text/javascript">
+	(function(){ var ht = document.createElement('script');ht.async = true;
+	  ht.type='text/javascript';ht.src = '//97082.hittail.com/mlt.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'dafa35b17bc5d6e0d179240ca4153189e23e9319';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('//i.kissmetrics.com/i.js');
+  _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script>
+  _kmq.push(['record', 'Page View']);
+</script>
+</body>
+</html>
